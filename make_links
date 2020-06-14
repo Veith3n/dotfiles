@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+[[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv ${BASE_DIR}/.gitconfig ~
+[[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~ 
+[[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
+
