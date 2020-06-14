@@ -1,0 +1,61 @@
+#!/bin/sh
+# (variable) -> converts variable to an array
+get_git_aliases() {
+	git config -l | grep alias | cut -c 7-
+}
+
+function split_by_new_line() {
+	#	echo 'inside f'
+	#		echo "$@"
+	local	 IFS=$'\n' # unix variable which defines by which char strings should be splited (default is ' ')
+	#	echo 'after'
+	#echo "$@"
+	local array=($@)
+	echo ${array[@]}
+	#echo ${array[@]}
+	#declare -p array
+	#(array)
+	# for some reason the array is merged to one after being returned
+	#for el in ${array[@]}; do echo "$el"; done
+}
+
+function generate_alias() {
+	echo "alias g${1}='git ${1}'"
+}
+
+ZSHRC_CONFIG_FILE_LOC="${HOME}/.zshrc"
+ZSHRC_ALIASES_FILE_NAME='.zsh_git_aliases'
+ZSHRC_ALIASES_FILE_LOC="${HOME}/${ZSHRC_ALIASES_FILE_NAME}"
+
+
+P_IFS=IFS
+IFS=$'\n' 
+#FOO=$(get_git_aliases)
+#FOO2=($(get_git_aliases))
+#FOO2="$(split_by_new_line "$FOO")"
+#FOO2=${FOO[0]}
+#echo ${FOO2}
+#echo 'test'
+#echo ${FOO2[3]}
+#echo $(type $FOO)
+#echo "after"
+#declare -a GIT_ALIASES=()
+#GIT_ALIASES=$(split_by_new_line $(get_git_aliases)) 
+
+# make an array 
+GIT_ALIASES=($(get_git_aliases))
+
+
+echo "alias g='git'" > $ZSHRC_ALIASES_FILE_LOC
+
+for ALIAS in ${GIT_ALIASES[@]}
+do
+	COMMANDS=($(echo $ALIAS | tr '=' '\n')) # split entry by '='
+	generate_alias ${COMMANDS[0]} >> $ZSHRC_ALIASES_FILE_LOC
+done
+
+are_aliases_binded=$(cat "$ZSHRC_CONFIG_FILE_LOC" | grep -c "[ -r ~/${ZSHRC_ALIASES_FILE_NAME} ] && . ~/${ZSHRC_ALIASES_FILE_NAME}")  
+
+if [ $are_aliases_binded -eq 0 ]; then
+	echo 'aliases are not linked in the zshrc config file'
+fi
