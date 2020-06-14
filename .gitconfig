@@ -1,0 +1,149 @@
+[user]
+	email = 28898861+Veith3n@users.noreply.github.com
+	name = Krzysztof Kopydłowski
+	signingkey = B02779255894DE49
+[branch]
+	autosetuprebase = always
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = ~/.gitignore
+[diff]
+	tool = vimdiff
+	external = git_diff_wrapper
+[difftool]
+	prompt = false
+[pager]
+	diff =
+[merge]
+	tool = vimdiff
+[mergetool]
+	keepBackup = false
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+	plain = white
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+	branch = red
+    #header = green
+[alias] 
+	i = init
+	rea = "!f() { git remote add origin $1 ; }; f"
+	rem = "!f() { git remote rm $1 ; }; f"
+	rel = remote -v
+	clo = clone
+
+	# utils
+	#l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	#l = log --graph --pretty=format:'%C(bold blue)%h%Creset -%C(yellow)%d%Creset %C(bold green)(%cr)%Creset %C(white)%s %C(dim white)<%an>%Creset' --abbrev-commit
+	l = "log --color --graph --pretty=format:'%C(#dc322f)%h%C(#b58900)%d %C(#eee8d5)%s %C(#dc322f)| %C(#586f75)%cr %C(#dc322f)| %C(#586e75)%an%Creset' --abbrev-commit"
+	ls = ! git l --stat
+	lsc = ! git ls -p
+	la = ! git l --all
+	lsa = ! git ls --all
+	lsca = ! git lsc --all
+	mt = mergetool
+	bclean = "!f() { git branch --merged ${1-master} | grep -v ${1-master} | xargs git branch -d; }; f" # Cleanup merged branches
+	count = shortlog -sn
+
+	# changes
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"' # Commits came in since last command $ git new HEAD
+	d = ! git gfuzm git diff 
+	da = diff 
+	ds = ! git gfuzs git difftool --cached 
+	dc  = "!f() { git diff $1~..$1; }; f"
+	dsa = difftool --cached 
+	dlc = difftool --cached HEAD~
+
+	# git flow
+	f = fetch --all
+	fo = fetch origin
+
+	s = status -s
+	sc = status -v
+
+	b = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout
+	bre = "!f() { git branch ${2-$(git currentBranch)} -m $1; }; f"
+	brm = "!f() { git branch -D $1; }; f"
+
+	ch = ! git gfuzm git checkout
+	cl = ! git gfuzu git clean 
+	cld = ! git gfuzu git clean -f
+	chb = checkout -b
+
+	a = ! git gfuza git add
+	ap = ! git gfuzm git add -p
+	aa = add -A
+	aap = add -p
+
+
+	re = !git gfuzs git restore --staged
+
+	rb = "!f() { git rebase ${1-master}; }; f"
+	ri = "!f() { git rebase -i ${1-master}; }; f"
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+
+	p = push 
+	pu = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push -u origin $remote_name; }; f"
+	pf = push --force-with-lease
+	prm = pull --rebase master master
+
+	c = commit 
+	ca = commit --amend
+	caa = commit -a --amend -C HEAD
+	caf = "!f() { git add -A && git commit --fixup :/$1; }; f"
+	cam = "!f() { git add -A && echo $(git validateCommitMsgLength "$*") | grep -v '^$'; git commit -m \"$*\"; }; f"
+	cf = "!f() { git commit --fixup :/$1; }; f"
+	cm = "!f() { echo $(git validateCommitMsgLength "$*") | grep -v '^$';  git commit -m \"$*\"; }; f"
+
+	cp = "!f() { git cherry-pick :/$1; }; f"
+	cpa = cherry-pick --abort
+	cps = cherry-pick --skip
+
+	sl = stash list --color=always --pretty=format:'%gd %C(yellow)%h %>(14)%C(green)%cr %C(blue)%gs'
+	sa = stash apply
+	ss = stash save --include-untracked
+	sh = stash show
+	sha = stash show -p
+	srm = "!f() { for i in ${@-0}; do git stash drop $i; done; }; f"
+
+	# ignoring files
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	ignored = ! git ls-files -v | grep '^[[:lower:]]'
+	assumed = ignored
+	unassumeall = !git assumed | xargs git update-index --no-assume-unchanged	
+
+	# resets
+	r = reset
+	rp = ! git gfuzs git reset -p
+	rpa = reset -p
+	rc = "!f() { git reset HEAD~$1 ; }; f"
+	rh = ! git reset --hard & git clean -df
+	rhc = "!f() { git reset HEAD~$1 --hard & git clean -df ; }; f"
+	rho = "!f() { git reset --hard origin/$(git currentBranch) & git clean -df ; }; f"
+
+	# scripts
+	aliases = "!git config -l | grep alias | cut -c 7-"
+	currentBranch= branch --show-current
+	validateCommitMsgLength = "! f() { msg="$*"; max_length=72; msg_length=${#msg}; [ $msg_length -gt $max_length ] && echo $(printf "%0.s${BLUE}-" {1..50} && echo "${RED}${BOLD} ⛔️⛔️⛔️⛔️⛔️ COMMIT MSG IS TOO LONG ⛔️⛔️⛔️⛔️⛔️ by $(($msg_length-$max_length)) characters" && printf "%0.s${BLUE}-${NO_COLOR}" {1..50}); }; f"
+	# requires fzf formula from brew
+	gfuza=! git ls-files -m -o --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # files ready to be staged with fuzzy search
+	gfuzm=! git ls-files -m --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # modefied ready to be staged with fuzzy search
+	gfuzu=! git ls-files -o --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # untracked files ready to be staged with fuzzy search
+	gfuzs=! git diff --name-only --cached | fzf --print0 -m -1 | xargs -0 -t -o # staged files with fuzzy search
