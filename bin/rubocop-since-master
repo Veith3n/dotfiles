@@ -1,0 +1,2 @@
+#!/bin/sh
+( git diff --staged --name-only --diff-filter=MA ; git diff --name-only --diff-filter=MA ; git diff master..HEAD --name-only --diff-filter=MA ; git ls-files -o --exclude-standard) | sort | uniq | grep '\.rb$' | grep -v '^db/schema.rb$' |  xargs bundle exec rubocop -a
