@@ -66,6 +66,7 @@
 	da = diff 
 	ds = ! git gfuzs git difftool --cached 
 	dc  = "!f() { git diff HEAD~$((${1-0}+1))..HEAD~${1-0}; }; f"
+	dcn = "!f() { hash=$(git log --pretty=format:'%h' :/$1 | head -1); git diff $hash~..$hash;}; f"
 	dch  = "!f() { git diff $1~..$1; }; f"	dsa = difftool --cached 
 	dlc = difftool --cached HEAD~
 
