@@ -78,6 +78,7 @@
 	sc = status -v
 
 	b = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout
+	bj = "!f() { generate-jira-branch-name $1; }; f"
 	bre = "!f() { git branch ${2-$(git currentBranch)} -m $1; }; f"
 	brm = "!f() { git branch -D $1; }; f"
 
