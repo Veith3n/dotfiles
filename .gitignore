@@ -1,3 +1,6 @@
+# nodenv version
+.node-version
+
 .byebug_history
 node_modules
 *.icloud
