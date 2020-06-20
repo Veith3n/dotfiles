@@ -4,7 +4,6 @@
 .byebug_history
 node_modules
 *.icloud
-.env*
 
 # JAVA
 *.iml
@@ -26,6 +25,8 @@ target
 # Env configuration files
 .env*
 !.env.example
+!.env_paths
+!.env_variables
 
 # RVM and rbenv
 /.rvmrc
