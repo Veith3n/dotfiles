@@ -2,7 +2,13 @@
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# git 
 [[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv ${BASE_DIR}/.gitconfig ~
 [[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~ 
+
+# shell
+[[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv ${BASE_DIR}/.env_paths ~ 
+[[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv ${BASE_DIR}/.env_variables ~ 
+
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
 
