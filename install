@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# Install xcode CLI
+xcode-select --install
+
+# Install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# update hombrew
+brew update
+brew upgrade
+
+# Install homebrew dependencies
+brew install fzf # fuzzy search
+brew install direnv # looks for .envrc file in each directory
+
+brew install gpg # managing keys 
+# Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
+brew upgrade gnupg
+brew link --overwrite gnupg
+brew install pinentry-mac
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+
+brew install zsh # neat CLI
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
+
+brew cask install iterm2 # install iterm2
+
+# Link config files to the root direcotry
+[ -r .make_links ] && ./make_links
+
+# Setup necessary entries to config files
+if [ -r ~/.zshrc ] 
+then
+	echo $'# direnv initialize\neval "$(direnv hook zsh)' >> ~/.zshrc
+else
+	echo '.zshrc config file does not exist'
+fi
