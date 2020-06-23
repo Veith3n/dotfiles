@@ -67,7 +67,8 @@
 	ds = ! git gfuzs git difftool --cached 
 	dc  = "!f() { git diff HEAD~$((${1-0}+1))..HEAD~${1-0}; }; f"
 	dcn = "!f() { hash=$(git log --pretty=format:'%h' :/$1 | head -1); git diff $hash~..$hash;}; f"
-	dch  = "!f() { git diff $1~..$1; }; f"	dsa = difftool --cached 
+	dch  = "!f() { git diff $1~..$1; }; f"	
+	dsa = difftool --cached 
 	dlc = difftool --cached HEAD~
 
 	# git flow
@@ -78,14 +79,17 @@
 	sc = status -v
 
 	b = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout
+	bm = ! git checkout master
 	bj = "!f() { generate-jira-branch-name $1; }; f"
 	bre = "!f() { git branch ${2-$(git currentBranch)} -m $1; }; f"
 	brm = "!f() { git branch -D $1; }; f"
+	brm = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git branch -D
 
 	ch = ! git gfuzm git checkout
+	chm = checkout master
+	chb = checkout -b
 	cl = ! git gfuzu git clean 
 	cld = ! git gfuzu git clean -f
-	chb = checkout -b
 
 	a = ! git gfuza git add
 	ap = ! git gfuzm git add -p
@@ -103,8 +107,11 @@
 
 	p = push 
 	pu = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push -u origin $remote_name; }; f"
+	puf = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push --force -u origin $remote_name; }; f"
 	pf = push --force-with-lease
-	prm = pull --rebase master master
+
+	pl = pull 
+	plm = fetch origin master:master
 
 	c = commit 
 	ca = commit --amend
