@@ -124,6 +124,8 @@
 	cm = "!f() { echo $(git validateCommitMsgLength "$*") | grep -v '^$';  git commit -m \"$*\"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
+	cpaa = "!f() { git log $1..${2-$(git currentBranch)} --reverse --pretty=format:'%h' | xargs git  cherry-pick; }; f" # cherry pick all commits after given commit hash
+	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
 	cps = cherry-pick --skip
 
