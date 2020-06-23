@@ -121,6 +121,7 @@
 	caf = "!f() { git add -A && git commit --fixup :/$1; }; f"
 	cam = "!f() { git add -A && echo $(git validateCommitMsgLength "$*") | grep -v '^$'; git commit -m \"$*\"; }; f"
 	cf = "!f() { git commit --fixup :/$1; }; f"
+	cfh = "!f() { git commit --fixup $1; }; f"
 	cm = "!f() { echo $(git validateCommitMsgLength "$*") | grep -v '^$';  git commit -m \"$*\"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
