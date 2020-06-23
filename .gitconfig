@@ -89,6 +89,7 @@
 	ch = ! git gfuzm git checkout
 	chm = checkout master
 	chb = checkout -b
+	chbo = "!f() { git branch -a | grep origin/ | grep -v '\\->' | sed 's/remotes\\/origin\\///' | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout; }; f"
 	cl = ! git gfuzu git clean 
 	cld = ! git gfuzu git clean -f
 
