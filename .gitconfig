@@ -13,6 +13,9 @@
 	external = git_diff_wrapper
 [difftool]
 	prompt = false
+[filter "sensitive_data"]
+	clean =  ./clean_sensitive_data
+	smudge = ./smudge_sensitive_data
 [pager]
 	diff =
 [merge]
