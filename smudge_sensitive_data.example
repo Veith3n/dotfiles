@@ -1,0 +1,20 @@
+#!/bin/sh
+
+build_gsed_arg() {
+	echo "/"${SENSTIVE_DATA[$1]}"/c\\"export ${SENSTIVE_DATA[$1]}=\'${YOUR_VALUES[$1]}\'""
+}
+
+
+SENSTIVE_DATA=('JIRA_USER' 'JIRA_TOKEN' 'JIRA_SUBDOMAIN')
+YOUR_VALUES=('PROVIDE_VALUE' 'PROVIDE_VALUE' 'PROVIDE_VALUE')
+
+sed -e '' > tmp
+
+for i in $(seq 0 $((${#SENSTIVE_DATA[@]}-1)))
+do
+	gsed -i "$(build_gsed_arg $i)" tmp;
+done
+
+cat tmp
+rm tmp
+
