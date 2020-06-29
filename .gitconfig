@@ -136,7 +136,7 @@
 	ss = stash save --include-untracked
 	sh = stash show
 	sha = stash show -p
-	srm = "!f() { for i in ${@-0}; do git stash drop $i; done; }; f"
+	srm = "!f() { for i in ${@-0}; do ! git stash drop $i && break; done; }; f"
 
 	# ignoring files
 	assume = update-index --assume-unchanged
