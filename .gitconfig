@@ -136,6 +136,7 @@
 
 	sl = stash list --color=always --pretty=format:'%gd %C(yellow)%h %>(14)%C(green)%cr %C(blue)%gs'
 	sa = stash apply
+	sap = checkout -p stash
 	ss = stash save --include-untracked
 	sh = stash show
 	sha = stash show -p
