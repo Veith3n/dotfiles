@@ -12,3 +12,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
 
+# vim 
+[[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv ${BASE_DIR}/.vimrc ~ 
+[[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv ${BASE_DIR}/.vim/colors ~/.vim
+
