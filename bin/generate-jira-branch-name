@@ -12,6 +12,7 @@ unless issue
   exit 1
 end
 
+issue_prefix = ENV['JIRA_ISSUE_PREFIX']&.downcase || ''
 issue = issue.downcase
 
 jira_user = ENV['JIRA_USER']
@@ -23,7 +24,7 @@ unless jira_user && jira_token
   exit 1
 end
 
-uri = URI("https://#{ENV['JIRA_SUBDOMAIN']}.atlassian.net/rest/api/2/issue/#{issue}")
+uri = URI("https://#{ENV['JIRA_SUBDOMAIN']}.atlassian.net/rest/api/2/issue/#{issue_prefix + issue}")
 
 req = Net::HTTP::Get.new(uri.request_uri)
 
@@ -41,4 +42,4 @@ summary = body['fields']['summary']
           .gsub(/\W+/, '-') # non alphabetical chars to -
           .gsub(/-+/, '-') # remove duplicated -
 
-`git checkout -b #{issue.upcase}-#{summary}`
+`git checkout -b #{issue_prefix.upcase + issue.upcase}-#{summary}`
