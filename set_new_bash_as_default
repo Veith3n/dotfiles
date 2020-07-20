@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ -r "/usr/local/bin/bash" ]; then
+	sudo rm /bin/bash
+	sudo ln -s /usr/local/bin/bash /bin/bash
+else
+	echo "Alternative bash version is not present"
+fi
