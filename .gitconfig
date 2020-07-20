@@ -123,10 +123,10 @@
 	ca = commit --amend
 	caa = commit -a --amend -C HEAD
 	caf = "!f() { git add -A && git commit --fixup :/$1; }; f"
-	cam = "!f() { git add -A && echo $(git validateCommitMsgLength "$*") | grep -v '^$'; git commit -m \"$*\"; }; f"
+	cam = "!f() { msg="$*"; git add -A && echo $(git validateCommitMsgLength $msg) | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
 	cf = "!f() { git commit --fixup :/$1; }; f"
 	cfh = "!f() { git commit --fixup $1; }; f"
-	cm = "!f() { echo $(git validateCommitMsgLength "$*") | grep -v '^$';  git commit -m \"$*\"; }; f"
+	cm = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$';  git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
@@ -163,6 +163,10 @@
 	aliases = "!git config -l | grep alias | cut -c 7-"
 	currentBranch= branch --show-current
 	validateCommitMsgLength = "! f() { msg="$*"; max_length=72; msg_length=${#msg}; [ $msg_length -gt $max_length ] && echo $(printf "%0.s${BLUE}-" {1..50} && echo "${RED}${BOLD} ⛔️⛔️⛔️⛔️⛔️ COMMIT MSG IS TOO LONG ⛔️⛔️⛔️⛔️⛔️ by $(($msg_length-$max_length)) characters" && printf "%0.s${BLUE}-${NO_COLOR}" {1..50}); }; f"
+	formatCommitMsg = "! f() { msg="$*"; regex=\"(\\[.*\\] )(.*)\"; if [[ $msg =~ $regex ]]; then echo "${BASH_REMATCH[1]} $(git upcaseFirstChar ${BASH_REMATCH[2]})"; else echo $(git upcaseFirstChar $msg); fi; }; f"
+
+	upcaseFirstChar = "! f() { echo "$*" | gsed 's/./\\U&/'; }; f"
+	
 	# requires fzf formula from brew
 	gfuza=! git ls-files -m -o --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # files ready to be staged with fuzzy search
 	gfuzm=! git ls-files -m --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # modefied ready to be staged with fuzzy search
