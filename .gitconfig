@@ -116,7 +116,8 @@
 	pf = push --force-with-lease
 
 	pl = pull 
-	plm = fetch origin master:master
+	#plm = fetch origin master:master
+	plm = "!f() { branch=$(git currentBranch); git bm; git pl; deletedBranches=$(git bclean); echo $deletedBranches; echo $deletedBranches | grep -q -v $branch && git checkout $branch;}; f"
 
 	c = commit 
 	ca = commit --amend
