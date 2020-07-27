@@ -2,6 +2,9 @@
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# aspell
+[[ -s "${BASE_DIR}/.aspell.en.pws" ]] && ln -fsv ${BASE_DIR}/.aspell.en.pws ~
+
 # git 
 [[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv ${BASE_DIR}/.gitconfig ~
 [[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~ 
