@@ -3,3 +3,7 @@ param
 english
 aspell
 repo
+matchers
+enum
+graphQL
+struct
