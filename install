@@ -32,6 +32,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 brew cask install iterm2 # install iterm2
 
+brew install nodenv # install node_env
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
@@ -43,6 +45,9 @@ if [ -r ~/.zshrc ]
 then
 	# initialize direnv in zshrc
 	echo $'# direnv initialize\neval "$(direnv hook zsh)' >> ~/.zshrc
+
+	# initialize nodenv in zshrc
+	echo $'# nodenv initialize\neval "$(nodenv init -)"' >> ~/.zshrc
 
 	# add git aliases
 	sed -i '' -e '/^# Example aliases/a\
