@@ -1,5 +1,5 @@
 """ Base config 
-set clipboard=unnamedplus
+set clipboard=unnamed
 set number relativenumber
 set nocompatible " disables revert support for vi
 set ignorecase " case unsensitive search
