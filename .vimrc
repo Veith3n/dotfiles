@@ -50,4 +50,4 @@ endfunction
 command! -range=% RemoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers() "-range=% default is whole file
 
 " remap for quick shortcut by gitblame
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
