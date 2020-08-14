@@ -38,7 +38,19 @@ Plug 'ngmy/vim-rubocop'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'zivyangll/git-blame.vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
+
+" Plugin config
+
+" Easy motion
+let g:EasyMotion_smartcase = 1
+nmap w <Plug>(easymotion-w)
+nmap s <Plug>(easymotion-s2)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 """ Commands
 " Delete all Git conflict markers
