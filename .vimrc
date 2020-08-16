@@ -33,14 +33,19 @@ endif
 """ Vim plug instalation if not present
 
 call plug#begin('~/.vim/plugged')
-Plug 'ngmy/vim-rubocop'
+" Utils
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'zivyangll/git-blame.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
+Plug 'zivyangll/git-blame.vim'
+
+" Syntax highlighting/colours
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
+
+" Ruby
+Plug 'ngmy/vim-rubocop'
 Plug 'jgdavey/vim-blockle'
 call plug#end()
 
