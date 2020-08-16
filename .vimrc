@@ -41,6 +41,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
+Plug 'jgdavey/vim-blockle'
 call plug#end()
 
 """ Colors
@@ -68,4 +69,4 @@ endfunction
 command! -range=% RemoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers() "-range=% default is whole file
 
 " remap for quick shortcut by gitblame
-nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
+nnoremap <Leader>g :<C-u>call gitblame#echo()<CR>
