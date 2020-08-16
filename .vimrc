@@ -22,6 +22,7 @@ set wildmenu
 
 """ Plugins 
 filetype plugin on
+runtime macros/matchit.vim " enables block matching for different languages
 
 """ Vim plug instalation if not present
 if empty(glob('~/.vim/autoload/plug.vim'))
