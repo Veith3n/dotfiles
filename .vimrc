@@ -19,8 +19,6 @@ set rtp+=/usr/local/opt/fzf
 " Display allmatching files with autocomplete 
 set wildmenu
 
-""" Colors
-colorscheme nice_diff " color scheme for nicer highlithing in merge confilicts
 
 """ Plugins 
 filetype plugin on
@@ -41,7 +39,12 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
 call plug#end()
+
+""" Colors
+colorscheme nice_diff " color scheme for nicer highlithing in merge confilicts
+colorscheme onedark " color scheme for nicer highlithing in merge confilicts
 
 " Plugin config
 
