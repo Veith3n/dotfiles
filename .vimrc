@@ -39,6 +39,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'zivyangll/git-blame.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 " Plugin config
