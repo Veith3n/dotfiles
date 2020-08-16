@@ -40,6 +40,7 @@ Plug 'tpope/vim-repeat'
 Plug 'zivyangll/git-blame.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Plugin config
