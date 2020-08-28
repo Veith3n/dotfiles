@@ -34,6 +34,10 @@ brew cask install iterm2 # install iterm2
 
 brew install nodenv # install node_env
 
+brew cask install java # install latest java version
+
+brew install jenv # version manager for java
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
@@ -48,6 +52,10 @@ then
 
 	# initialize nodenv in zshrc
 	echo $'# nodenv initialize\neval "$(nodenv init -)"' >> ~/.zshrc
+
+	# initialize jenv in zshrc
+	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+	echo 'eval "$(jenv init -)"' >> ~/.zshrc
 
 	# add git aliases
 	sed -i '' -e '/^# Example aliases/a\
