@@ -7,3 +7,8 @@ matchers
 enum
 graphQL
 struct
+auth
+config
+frontend
+backend
+readme
