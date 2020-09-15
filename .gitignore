@@ -28,6 +28,7 @@ target
 # Env configuration files
 .env*
 !.env.example
+!.env.sample
 !.env_paths
 !.env_variables
 
