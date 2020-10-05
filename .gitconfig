@@ -135,7 +135,7 @@
 	sl = stash list --color=always --pretty=format:'%gd %C(yellow)%h %>(14)%C(green)%cr %C(blue)%gs'
 	sa = stash apply
 	sap = checkout -p stash
-	ss = stash save --include-untracked
+	ss = "!f() { git stash save "$@" --include-untracked; }; f"
 	sh = stash show
 	sha = stash show -p
 	srm = "!f() { for i in ${@-0}; do ! git stash drop $i && break; done; }; f"
