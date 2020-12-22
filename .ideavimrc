@@ -2,3 +2,7 @@ source ~/.vimrc
 
 set surround
 set easymotion
+map  / /
+oma / /
+map  n n
+map  N N
