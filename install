@@ -38,6 +38,10 @@ brew cask install java # install latest java version
 
 brew install jenv # version manager for java
 
+brew install pyenv # version manager for python
+
+brew install pipenv # dependency manager for python
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
@@ -52,6 +56,9 @@ then
 
 	# initialize nodenv in zshrc
 	echo $'# nodenv initialize\neval "$(nodenv init -)"' >> ~/.zshrc
+
+	# initialize pyenv in zshrc
+	echo -e $'# pyenv initialize\neval "$(pyenv init -)"' >> ~/.zshrc
 
 	# initialize jenv in zshrc
 	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
