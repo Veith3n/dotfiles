@@ -39,6 +39,10 @@ Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'zivyangll/git-blame.vim'
+Plug 'vim-airline/vim-airline'
+
+" Linter
+Plug 'dense-analysis/ale'
 
 " Syntax highlighting/colours
 Plug 'sheerun/vim-polyglot'
@@ -55,6 +59,14 @@ colorscheme onedark " color scheme for nicer highlithing in merge confilicts
 
 " Plugin config
 
+" Ale 
+let g:ale_linters = { 'ruby': ['rubocop', 'ruby'], 'javascript': ['eslint'], '*': ['trim_whitespace', 'remove_trailing_lines'] }
+
+let g:ale_set_quickfix = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint'] } 
+
+let g:ale_completion_enabled = 1
 " Easy motion
 let g:EasyMotion_smartcase = 1
 nmap w <Plug>(easymotion-w)
@@ -64,7 +76,26 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
+" Airline
+let g:airline_section_d='%{strftime("%c")}'
+let g:airline_theme='onedark'
+
+function! Foo()
+	" silent !clear
+
+	let file_name = expand('%:p')
+	" echo file_name
+	" let file_name = %
+	 echom system('bundle exec rubocop -a &' )
+	 " echom system('echo %' )
+	 redraw!
+endfunction
 """ Commands
+" Scripts to run after action
+" autocmd BufWritePost *.rb :silent! !bundle exec rubocop -a % | :redraw!
+" autocmd BufWritePost *.rb :silent !bundle exec rubocop -a % | execute ':redraw!'
+autocmd BufWritePost *.rb :call Foo()
+
 " Delete all Git conflict markers
 function! RemoveConflictMarkers() range
   echom a:firstline.'-'.a:lastline
