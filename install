@@ -4,11 +4,14 @@
 xcode-select --install
 
 # Install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # update hombrew
 brew update
 brew upgrade
+
+# brew install homebrew/cask # homebrew cask (not sure if needed)
 
 # Install homebrew dependencies
 brew install fzf # fuzzy search
@@ -30,11 +33,11 @@ brew install aspell # spell checker
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
-brew cask install iterm2 # install iterm2
+brew install --cask iterm2 # install iterm2
 
 brew install nodenv # install node_env
 
-brew cask install java # install latest java version
+brew install java # install latest java version
 
 brew install jenv # version manager for java
 
@@ -52,13 +55,13 @@ brew install pipenv # dependency manager for python
 if [ -r ~/.zshrc ] 
 then
 	# initialize direnv in zshrc
-	echo $'# direnv initialize\neval "$(direnv hook zsh)' >> ~/.zshrc
+	echo $'# direnv initialize\neval "$(direnv hook zsh)"' >> ~/.zshrc
 
 	# initialize nodenv in zshrc
 	echo $'# nodenv initialize\neval "$(nodenv init -)"' >> ~/.zshrc
 
 	# initialize pyenv in zshrc
-	echo -e $'# pyenv initialize\neval "$(pyenv init -)"' >> ~/.zshrc
+	echo $'# pyenv initialize\neval "$(pyenv init -)"' >> ~/.zshrc
 
 	# initialize jenv in zshrc
 	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
@@ -75,6 +78,9 @@ then
 		# Link file with variables \
 		[ -r ~/.env_variables ] && . ~/.env_variables \
 		\' ~/.zshrc
+
+
+echo 'plugins added'
 else
 	echo '.zshrc config file does not exist'
 fi
