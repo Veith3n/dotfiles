@@ -38,6 +38,7 @@ brew install --cask docker # docker
 brew install --cask slack # slack
 brew install --cask visual-studio-code # visual-studio-code
 brew install --cask dash # dash
+brew install --cask soundcleod # soundcleod
 
 brew install nodenv # install node_env
 
