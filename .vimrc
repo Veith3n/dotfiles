@@ -19,8 +19,10 @@ set rtp+=/usr/local/opt/fzf
 " Display allmatching files with autocomplete 
 set wildmenu
 
-
 """ Plugins 
+" Polyglot
+let g:polyglot_disabled = ['typescript']
+
 filetype plugin on
 runtime macros/matchit.vim " enables block matching for different languages
 
@@ -54,7 +56,7 @@ Plug 'jgdavey/vim-blockle'
 call plug#end()
 
 """ Colors
-colorscheme nice_diff " color scheme for nicer highlithing in merge confilicts
+" colorscheme nice_diff " color scheme for nicer highlithing in merge confilicts
 colorscheme onedark " color scheme for nicer highlithing in merge confilicts
 
 " Plugin config
