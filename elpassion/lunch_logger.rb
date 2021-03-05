@@ -46,6 +46,6 @@ def upesert_activity_for_date(date)
 end
 
 
-(begging_of_month..end_of_month).each { |date| upesert_activity_for_date(date) }
+(begging_of_month..end_of_month).reject { |date| date.saturday? || date.sunday? }.each { |date| upesert_activity_for_date(date) }
 
 
