@@ -30,6 +30,7 @@ brew install gnu-sed # GNU based sed
 brew install bash # install new version of bash
 echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 brew install aspell # spell checker
+brew install gh # github cli
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
@@ -102,6 +103,9 @@ jenv add $java_path
 # Rvm install
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB # public key for rvm
 curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+# Authenticate fror github cli
+gh auth login
 
 # Mac os
 defaults write com.apple.Finder AppleShowAllFiles true # show hidden files in finder
