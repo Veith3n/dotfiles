@@ -54,6 +54,8 @@ brew install pyenv # version manager for python
 
 brew install pipenv # dependency manager for python
 
+brew install heroku/brew/heroku # heroku cli
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
@@ -106,6 +108,9 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # Authenticate fror github cli
 gh auth login
+
+# heroku
+heroku autocomplete
 
 # Mac os
 defaults write com.apple.Finder AppleShowAllFiles true # show hidden files in finder
