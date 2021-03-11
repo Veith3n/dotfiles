@@ -89,6 +89,7 @@
 	bre = "!f() { git branch ${2-$(git currentBranch)} -m $1; }; f"
 	brm = "!f() { git branch -D $1; }; f"
 	brm = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git branch -D
+  bprune = ! git branch | xargs git branch -D
 
 	ch = ! git gfuzm git checkout
 	chm = checkout master
