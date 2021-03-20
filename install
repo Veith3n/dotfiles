@@ -43,6 +43,7 @@ brew install --cask soundcleod # soundcleod
 brew install --cask spectacle
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
+brew install --cask boost-note # markdown notes <3
 
 brew install nodenv # install node_env
 
