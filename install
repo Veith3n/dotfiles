@@ -83,15 +83,15 @@ then
 
 	# add git aliases
 	sed -i '' -e '/^# Example aliases/a\
-		[ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
+[ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
 	# source varables and path files in zshrc
 	sed -i '' -e '1i \ 
-		# Link file with paths \
-		[ -r ~/.env_paths ] && . ~/.env_paths \
-		# Link file with variables \
-		[ -r ~/.env_variables ] && . ~/.env_variables \
-		\' ~/.zshrc
+# Link file with paths \
+[ -r ~/.env_paths ] && . ~/.env_paths \
+# Link file with variables \
+[ -r ~/.env_variables ] && . ~/.env_variables \
+\' ~/.zshrc
 
 	# source google-cloud-sdk
 	sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/a\
