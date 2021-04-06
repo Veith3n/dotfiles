@@ -1,0 +1,10 @@
+alias ghpr='gh pr'
+alias fuzzy_search_pr_list="gh pr list  | fzf --print0 -m -1 | xargs -0 -t -o | cut -f 1"
+alias ghprh='gh pr checks $(fuzzy_search_pr_list)'
+alias ghpra='gh pr review $(fuzzy_search_pr_list) --accept'
+alias ghprd='gh pr diff $(fuzzy_search_pr_list)'
+alias ghprm='gh pr merge $(fuzzy_search_pr_list) -m'
+alias ghprv='gh pr view $(fuzzy_search_pr_list)'
+alias ghprvw='gh pr view $(fuzzy_search_pr_list) -w'
+alias ghprc='gh pr create'
+alias ghprl='gh pr list'
