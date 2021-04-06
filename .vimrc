@@ -21,7 +21,7 @@ set wildmenu
 
 """ Plugins 
 " Polyglot
-let g:polyglot_disabled = ['typescript']
+let g:polyglot_disabled = ['typescript', 'jsx']
 
 filetype plugin on
 runtime macros/matchit.vim " enables block matching for different languages
