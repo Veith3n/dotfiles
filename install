@@ -85,6 +85,10 @@ then
 	sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
+	# add github aliases
+	sed -i '' -e '/^# Example aliases/a\
+[ -r ~/bin/.gh_cli_aliases ] && . ~/bin/.gh_cli_aliases' ~/.zshrc
+
 	# source varables and path files in zshrc
 	sed -i '' -e '1i \ 
 # Link file with paths \
