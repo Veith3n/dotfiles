@@ -1,5 +1,6 @@
 # custom
 smudge_sensitive_data
+activity_logger.rb
 
 # nodenv version
 .node-version
