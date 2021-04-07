@@ -48,6 +48,7 @@ brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
 brew install --cask google-chrome
+brew install --cask discord
 
 brew install nodenv # install node_env
 
