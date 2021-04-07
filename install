@@ -47,6 +47,7 @@ brew install --cask boost-note # markdown notes <3
 brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
+brew install --cask google-chrome
 
 brew install nodenv # install node_env
 
