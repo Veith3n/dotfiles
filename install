@@ -132,4 +132,7 @@ heroku autocomplete
 # Mac os
 defaults write com.apple.Finder AppleShowAllFiles true # show hidden files in finder
 killall Finder
+ 
+# enables easier movemnt in vim mode
+defaults write -g ApplePressAndHoldEnabled -bool false
 
