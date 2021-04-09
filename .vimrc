@@ -21,7 +21,7 @@ set wildmenu
 
 """ Plugins 
 " Polyglot
-let g:polyglot_disabled = ['typescript', 'jsx']
+let g:polyglot_disabled = []
 
 filetype plugin on
 runtime macros/matchit.vim " enables block matching for different languages
@@ -108,3 +108,6 @@ command! -range=% RemoveConflictMarkers <line1>,<line2>call RemoveConflictMarker
 
 " remap for quick shortcut by gitblame
 nnoremap <Leader>g :<C-u>call gitblame#echo()<CR>
+
+" fix highlighting issue
+set re=0
