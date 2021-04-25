@@ -31,6 +31,7 @@ brew install bash # install new version of bash
 echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 brew install aspell # spell checker
 brew install gh # github cli
+brew install jq
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
