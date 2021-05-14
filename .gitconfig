@@ -1,7 +1,7 @@
 [user]
 	email = 28898861+Veith3n@users.noreply.github.com
 	name = Krzysztof Kopydłowski
-	signingkey = A603547C70905453
+	signingkey = 72FBDF57E6EEDC9F
 [branch]
 	autosetuprebase = always
 [commit]
@@ -104,6 +104,7 @@
 	aap = add -p
 
 	rb = "!f() { git rebase ${1-master}; }; f"
+	rbmo = ! git plr master
 	ri = "!f() { git rebase -i ${1-master}; }; f"
 	rc = rebase --continue
 	ra = rebase --abort
@@ -117,6 +118,7 @@
 	pl = pull 
 	#plm = fetch origin master:master
 	plm = "!f() { branch=$(git currentBranch); git bm; git pl; deletedBranches=$(git bclean); echo $deletedBranches; echo $deletedBranches | grep -q -v $branch && git checkout $branch;}; f"
+	plr = "!f() { git pull origin $1 --rebase; }; f"
 
 	c = commit 
 	ca = commit --amend
