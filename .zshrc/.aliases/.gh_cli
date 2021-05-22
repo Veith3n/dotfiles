@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias ghpr='gh pr'
 alias fuzzy_search_pr_list="gh pr list  | fzf --print0 -m -1 | xargs -0 -t -o | cut -f 1"
 alias ghprh='gh pr checks $(fuzzy_search_pr_list)'

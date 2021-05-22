@@ -96,7 +96,7 @@ then
 
 	# add github aliases
 	sed -i '' -e '/^# Example aliases/a\
-[ -r ~/bin/.gh_cli_aliases ] && . ~/bin/.gh_cli_aliases' ~/.zshrc
+[ -r ~/.aliases/.gh_cli ] && . ~/.aliases/.gh_cli' ~/.zshrc
 
 	# autoload util functions
 	sed -i '' -e '1i \ 
