@@ -98,8 +98,16 @@ then
 	sed -i '' -e '/^# Example aliases/a\
 [ -r ~/bin/.gh_cli_aliases ] && . ~/bin/.gh_cli_aliases' ~/.zshrc
 
+	# autoload util functions
+	sed -i '' -e '1i \ 
+# Autoload util functions \
+[ -r ~/.functions ] && fpath=($fpath ~/.functions) \
+[ -r ~/.functions ] && autoload -Uz ~/.functions/**/* \
+\' ~/.zshrc
+
 	# source varables and path files in zshrc
 	sed -i '' -e '1i \ 
+\
 # Link file with paths \
 [ -r ~/.env_paths ] && . ~/.env_paths \
 # Link file with variables \
