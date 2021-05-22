@@ -91,6 +91,10 @@ then
 	sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
+	# add utils alises
+	sed -i '' -e '/^# Example aliases/a\
+[ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
+
   # comment out default git plugin from zsh config
 	sed -i '' -e 's/plugins=(git)/#plugins=(git)/' ~/.zshrc
 
