@@ -1,0 +1,9 @@
+#!/bin/sh
+
+function _run-commnad-from-package_json() {
+if [[ $# -eq 0 ]] ; then
+  echo "No param provided"
+else
+  _fetch-command-from-package_json $1 | xargs npm run 	
+fi
+}

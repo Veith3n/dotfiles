@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _fetch-command-from-package_json() {
+  cat package.json | grep $1 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+}
