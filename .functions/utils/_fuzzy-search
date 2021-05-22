@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _fuzzy-search() {
+  fzf --print0 -m -1 | xargs -0 -t -o 
+}
