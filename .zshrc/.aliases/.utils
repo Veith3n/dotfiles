@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+# navigation
+alias projects='cd $HOME/Projects'
+
+# utils
+alias szsh='source $HOME/.zshrc'
+alias vzsh='vim $HOME/.zshrc'
+alias vaspell='vim ~/.aspell.en.pws'
+
+alias nrpj='_run-commnad-from-package_json'
+
+# docker
+alias d='docker'
+alias ds='docker ps'
