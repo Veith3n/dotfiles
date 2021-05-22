@@ -13,7 +13,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv ${BASE_DIR}/.env_paths ~ 
 [[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv ${BASE_DIR}/.env_variables ~ 
 
-[[ -s "${BASE_DIR}/.functions" ]] && ln -fsv ${BASE_DIR}/.functions ~ 
+[[ -s "${BASE_DIR}/.zshrc/.functions" ]] && ln -fsv ${BASE_DIR}/.zshrc/.functions ~ 
 
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
 
