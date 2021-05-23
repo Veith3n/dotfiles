@@ -15,6 +15,9 @@ alias nrpj='_run-commnad-from-package_json'
 alias d='docker'
 alias ds='docker ps'
 
+# ruby
+alias rak='_run_rake'
+
 # rvm
 alias rvmg='rvm --default $(_rvm_installed | _fuzzy-search)'
 alias rvmi='rvm install $(_rvm_possible_to_install | _fuzzy-search)'
