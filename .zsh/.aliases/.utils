@@ -9,11 +9,19 @@ alias szsh='source ~/.zshrc'
 alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 
-alias nrpj='_run-commnad-from-package_json'
 
 # docker
 alias d='docker'
 alias ds='docker ps'
+
+# npm
+alias nrpj='_run-commnad-from-package_json'
+alias nid='npm i -D'
+alias ni='npm i -S'
+alias nu='npm update'
+alias nl='npm list'
+alias na='npm audit'
+alias no='npm outdated'
 
 # ruby
 alias rak='_run_rake'
