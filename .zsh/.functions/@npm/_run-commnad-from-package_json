@@ -1,5 +1,0 @@
-#!/bin/sh
-
-function _run-commnad-from-package_json() {
-  _fetch-command-from-package_json $1 | xargs npm run 	
-}

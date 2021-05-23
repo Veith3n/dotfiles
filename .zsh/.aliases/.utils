@@ -15,7 +15,7 @@ alias d='docker'
 alias ds='docker ps'
 
 # npm
-alias nrpj='_run-commnad-from-package_json'
+alias nrpj='_run-script-from-package_json'
 alias nid='npm i -D'
 alias ni='npm i -S'
 alias nu='npm update'

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _run-script-from-package_json() {
+  _fetch-script-from-package_json $1 | xargs npm run 	
+}
