@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _run_rake() {
+  rake $(_fetch_rakes $1 | _fuzzy-search)
+}
