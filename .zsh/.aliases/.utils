@@ -14,3 +14,13 @@ alias nrpj='_run-commnad-from-package_json'
 # docker
 alias d='docker'
 alias ds='docker ps'
+
+# rvm
+alias rvmg='rvm --default $(_rvm_installed | _fuzzy-search)'
+alias rvmi='rvm install $(_rvm_possible_to_install | _fuzzy-search)'
+alias rvml='rvm list'
+alias rvmu='rvm use $(_rvm_installed | _fuzzy-search)'
+alias rvmupdate='rvm get stable'
+
+alias _rvm_installed='rvm list strings' 
+alias _rvm_possible_to_install='rvm list known_strings'
