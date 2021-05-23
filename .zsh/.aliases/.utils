@@ -27,3 +27,7 @@ alias rvmupdate='rvm get stable'
 
 alias _rvm_installed='rvm list strings' 
 alias _rvm_possible_to_install='rvm list known_strings'
+
+# vscode
+alias vsc='code .'
+alias vsa='_make-dir-in-vscode-session'

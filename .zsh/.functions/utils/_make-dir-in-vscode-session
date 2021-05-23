@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _make-dir-in-vscode-session() {
+  code -a $1
+}
