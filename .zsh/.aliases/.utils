@@ -1,11 +1,12 @@
 #!/bin/zsh
 
 # navigation
-alias projects='cd $HOME/Projects'
+alias cddot='cd ~/dotfiles'
+alias cdpro='cd ~/Projects'
 
 # utils
-alias szsh='source $HOME/.zshrc'
-alias vzsh='vim $HOME/.zshrc'
+alias szsh='source ~/.zshrc'
+alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 
 alias nrpj='_run-commnad-from-package_json'
