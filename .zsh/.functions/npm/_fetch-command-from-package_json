@@ -1,5 +1,13 @@
 #!/bin/sh
 
 function _fetch-command-from-package_json() {
-  cat package.json | grep $1 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+  # cat package.json | grep $1 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+
+  # fetches only scripts field
+  if [ -z $1 ];
+  then
+  jq .scripts package.json | grep  -v "^{$" | grep -v "^}$" | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+  else
+  jq .scripts package.json | grep  -v "^{$" | grep -v "^}$" | grep $1 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+  fi;
 }
