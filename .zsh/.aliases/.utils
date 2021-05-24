@@ -11,6 +11,12 @@ alias vaspell='vim ~/.aspell.en.pws'
 
 alias e64s='_enode64_with_sprunge'
 
+# brew
+alias brewcl='brew cleanup'
+alias brewo='brew outdated'
+alias brewu='brew upgrade && brewcl'
+alias brewua='brew update && brewu'
+
 # docker
 alias d='docker'
 alias ds='docker ps'
