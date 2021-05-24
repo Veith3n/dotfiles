@@ -106,7 +106,7 @@
 	rb = "!f() { git rebase ${1-master}; }; f"
 	rbmo = ! git plr master
 	ri = "!f() { git rebase -i ${1-master}; }; f"
-	rc = rebase --continue
+	rcc = rebase --continue
 	ra = rebase --abort
 	rs = rebase --skip
 
