@@ -143,6 +143,8 @@
 	sh = stash show
 	sha = stash show -p
 	srm = "!f() { for i in ${@-0}; do git stash drop $i; done; }; f"
+	srmall = "!f() { for ((i=$(( $(git scount)-1)); i>=0; i--)); do git stash drop $i; done; }; f"
+	scount=!git rev-list --walk-reflogs --count refs/stash
 
 	# ignoring files
 	assume = update-index --assume-unchanged
