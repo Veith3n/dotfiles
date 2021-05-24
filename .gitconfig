@@ -142,7 +142,7 @@
 	ss = "!f() { git stash save "$@" --include-untracked; }; f"
 	sh = stash show
 	sha = stash show -p
-	srm = "!f() { for i in ${@-0}; do ! git stash drop $i && break; done; }; f"
+	srm = "!f() { for i in ${@-0}; do git stash drop $i; done; }; f"
 
 	# ignoring files
 	assume = update-index --assume-unchanged
