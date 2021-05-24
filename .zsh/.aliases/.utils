@@ -9,6 +9,7 @@ alias szsh='source ~/.zshrc'
 alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 
+alias e64s='_enode64_with_sprunge'
 
 # docker
 alias d='docker'

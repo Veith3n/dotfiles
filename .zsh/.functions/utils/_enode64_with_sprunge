@@ -1,0 +1,9 @@
+#!/bin/sh
+
+function _enode64_with_sprunge() {
+  if [[ $# -eq 0 ]] ; then
+  echo "No text for encoding was provided"
+  else
+  encode64 $1 | sprunge
+  fi
+}
