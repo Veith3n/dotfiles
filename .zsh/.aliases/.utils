@@ -10,6 +10,7 @@ alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 
 alias e64s='_enode64_with_sprunge'
+alias randomstring='_random_string'
 
 # brew
 alias brewcl='brew cleanup'
