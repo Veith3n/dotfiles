@@ -11,6 +11,7 @@ alias vaspell='vim ~/.aspell.en.pws'
 
 alias e64s='_enode64_with_sprunge'
 alias randomstring='_random_string'
+alias gif='_get_gif_from_giphy'
 
 # brew
 alias brewcl='brew cleanup'

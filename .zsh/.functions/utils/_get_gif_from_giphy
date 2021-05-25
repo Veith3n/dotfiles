@@ -1,0 +1,8 @@
+#!/bin/sh
+
+function _get_gif_from_giphy() {
+  giphy_object=$(giphy random $1 -k $GIPHY_API_KEY); 
+  echo $giphy_object; 
+  echo $giphy_object | tail -1 | pbcopy
+}
+
