@@ -163,3 +163,5 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Iterm
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true # load config from the folder
+
+npm install -g node-giphy # giphy ClI
