@@ -43,6 +43,8 @@
 	branch = red
     #header = green
 [alias] 
+	el=config --edit
+	eg=config --edit --global
 	i = init
 	rea = "!f() { git remote add origin $1 ; }; f"
 	rem = "!f() { git remote rm $1 ; }; f"
