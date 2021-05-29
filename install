@@ -66,6 +66,8 @@ brew install pipenv # dependency manager for python
 
 brew install heroku/brew/heroku # heroku cli
 
+brew install pygments # python package to colorize files 
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
