@@ -111,7 +111,7 @@
 	ri = "!f() { git rebase -i ${1-master}; }; f"
 	rcc = rebase --continue
 	ra = rebase --abort
-	rs = rebase --skip
+	rss = rebase --skip
 
 	p = push 
 	pu = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push -u origin $remote_name; }; f"
