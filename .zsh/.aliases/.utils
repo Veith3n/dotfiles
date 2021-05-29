@@ -9,6 +9,8 @@ alias szsh='source ~/.zshrc'
 alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 
+alias ccat='pygmentize -O style=emacs -g'
+
 alias e64s='_enode64_with_sprunge'
 alias randomstring='_random_string'
 alias gif='_get_gif_from_giphy'
