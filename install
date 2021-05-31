@@ -50,9 +50,9 @@ brew install --cask boost-note # markdown notes <3
 brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
-brew install --cask google-chrome
 brew install --cask discord
 brew install --cask cleanmymac
+brew install --cask firefox
 
 brew install nodenv # install node_env
 
@@ -99,7 +99,7 @@ then
 [ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
 
   # enable other plugins for zsh
-	sed -i '' -e 's/plugins=(git)/plugins=(alias-finder)/' ~/.zshrc
+	sed -i '' -e 's/plugins=(git)/plugins=(alias-finder colored-man-pages dash)/' ~/.zshrc
 
 	# enable lookup for aliases
 	sed -i '' -e '/^plugins=/a\
