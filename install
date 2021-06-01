@@ -53,6 +53,7 @@ brew install --cask gitkraken
 brew install --cask discord
 brew install --cask cleanmymac
 brew install --cask firefox
+brew install --cask brave-browser
 
 brew install nodenv # install node_env
 
