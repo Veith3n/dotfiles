@@ -36,10 +36,21 @@ alias no='npm outdated'
 
 # ruby
 alias rak='_run_rake'
+alias gemprune='gem uninstall -aIx'
+
+alias bras='bundle exec rails s'
+alias brac='bundle exec rails c'
+alias brs='bundle exec rspec'
+alias ba='bundle add'
+alias bu='bundle update $(_bundle_list | _fuzzy-search)'
+alias bru='bundle exec rubocop'
+
+alias _bundle_list='bundle list --name-only'
 
 # rvm
 alias rvmg='rvm --default $(_rvm_installed | _fuzzy-search)'
 alias rvmi='rvm install $(_rvm_possible_to_install | _fuzzy-search)'
+alias rvmui='rvm uninstall $(_rvm_installed | _fuzzy-search)'
 alias rvml='rvm list'
 alias rvmu='rvm use $(_rvm_installed | _fuzzy-search)'
 alias rvmupdate='rvm get stable'
