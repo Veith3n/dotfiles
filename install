@@ -75,6 +75,8 @@ brew install pygments # python package to colorize files
 # Generate file with git aliases for zshrc
 ./bin/generate_git_aliases_for_zshrc
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # Setup necessary entries to the config files
 if [ -r ~/.zshrc ] 
 then
@@ -99,13 +101,35 @@ then
 	sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
 
-  # enable other plugins for zsh
-	sed -i '' -e 's/plugins=(git)/plugins=(alias-finder colored-man-pages dash)/' ~/.zshrc
-
 	# enable lookup for aliases
 	sed -i '' -e '/^plugins=/a\
 \
 ZSH_ALIAS_FINDER_AUTOMATIC=true' ~/.zshrc
+
+	# enable option-stacking completion for docker
+  sed -i '' -e '/^plugins=/a\
+# completion for option-stacking (docker run -it <TAB>)\
+zstyle ':completion:*:*:docker:*' option-stacking yes\
+zstyle ':completion:*:*:docker-*:*' option-stacking yes\
+' ~/.zshrc
+
+  # set zsh plugins
+	sed -i '' -e 's/plugins=(git)/plugins=(\
+	alias-finder 
+	alias-finder\
+	colored-man-pages\
+	dash\
+	docker\
+	encode64\
+	extract\
+	gh\
+	git-auto-fetch\
+	heroku\
+	jira\
+	sprunge # url for text\/files\
+	transfer # url for uploading files\
+	zsh-syntax-highlighting\
+)/' ~/.zshrc
 
 	# add github aliases
 	sed -i '' -e '/^# Example aliases/a\
