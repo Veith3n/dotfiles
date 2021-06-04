@@ -1,4 +1,7 @@
 #!/bin/sh
+
 ruby_version=$(cat $1/Gemfile | grep '^ruby' | awk '{print $2}' | sed s/\'//g)
 
-rvm use $ruby_version; bundle exec rubocop -a $2
+source $(rvm $ruby_version do rvm env --path) # workaorund for non iteractive shell
+
+rvm use $ruby_version ; bundle exec rubocop -a $2
