@@ -75,6 +75,10 @@ brew install pygments # python package to colorize files
 # Generate file with git aliases for zshrc
 ./bin/generate_git_aliases_for_zshrc
 
+curl -s "https://get.sdkman.io" | bash # sdkman installation
+source "$HOME/.sdkman/bin/sdkman-init.sh" # init sdk man
+sdk install java # install latest java from sdk man
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Setup necessary entries to the config files
@@ -176,6 +180,8 @@ source ~/.zshrc # reload changes to the config file
 # add newest java version to the jenv path
 java_path=$(/usr/libexec/java_home -V)
 jenv add $java_path
+# add java to jenv from sdk man
+ls ~/.sdkman/candidates/java/ | grep -v current | xargs jenv add
 
 # Rvm install
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB # public key for rvm
