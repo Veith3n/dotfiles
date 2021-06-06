@@ -80,6 +80,7 @@ source "$HOME/.sdkman/bin/sdkman-init.sh" # init sdk man
 sdk install java # install latest java from sdk man
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/matthieusb/zsh-sdkman.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-sdkman # autocomplete for sdkman
 
 # Setup necessary entries to the config files
 if [ -r ~/.zshrc ] 
@@ -132,6 +133,7 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 	jira\
 	sprunge # url for text\/files\
 	transfer # url for uploading files\
+	zsh-sdkman\
 	zsh-syntax-highlighting\
 )/' ~/.zshrc
 
@@ -176,6 +178,9 @@ else
 fi
 
 source ~/.zshrc # reload changes to the config file
+
+# refresh completion suggestion for sdk man (comes from zsh-sdkman plugin)
+sdk-refresh-completion-files
 
 # add newest java version to the jenv path
 java_path=$(/usr/libexec/java_home -V)
