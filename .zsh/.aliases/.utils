@@ -60,4 +60,5 @@ alias _rvm_possible_to_install='rvm list known_strings'
 
 # vscode
 alias vsc='code .'
+alias vscdot='code ~/dotfiles'
 alias vsa='_make-dir-in-vscode-session'
