@@ -115,7 +115,7 @@
 
 	p = push 
 	pu = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push -u origin $remote_name; }; f"
-	puf = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push --force -u origin $remote_name; }; f"
+	puf = "!f() { remote_name=$(if [ -z $1 ]; then printf $(git currentBranch); else printf "$(git currentBranch):${1}"; fi;); git push --force-with-lease -u origin $remote_name; }; f"
 	pf = push --force-with-lease
 
 	pl = pull 
