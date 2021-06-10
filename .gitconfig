@@ -127,10 +127,10 @@
 	ca = commit --amend
 	caa = commit -a --amend -C HEAD
 	caf = "!f() { git add -A && git commit --fixup :/$1; }; f"
-	cam = "!f() { msg="$*"; git add -A && echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo $(git lookForTypos $msg) | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
+	cam = "!f() { msg="$*"; git add -A && echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
 	cf = "!f() { git commit --fixup :/$1; }; f"
 	cfh = "!f() { git commit --fixup $1; }; f"
-	cm = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo $(git lookForTypos $msg) | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
+	cm = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
@@ -171,9 +171,10 @@
 	currentBranch= branch --show-current
 	validateCommitMsgLength = "! f() { msg="$*"; max_length=72; msg_length=${#msg}; [ $msg_length -gt $max_length ] && echo $(printf "%0.s${BLUE}-" {1..50} && echo "${RED}${BOLD} ⛔️⛔️⛔️⛔️⛔️ COMMIT MSG IS TOO LONG ⛔️⛔️⛔️⛔️⛔️ by $(($msg_length-$max_length)) characters" && printf "%0.s${BLUE}-${NO_COLOR}" {1..50}); }; f"
 	# requires aspell formula from brew
-	lookForTypos = "! f() { msg="$*"; typos=$"(echo $msg | aspell list)"; [[ ! -z "$typos" ]] && echo $(printf "%.s${YELLOW}-" {1..50} && echo "⚠️ ⚠️ ⚠️ ⚠️ ⚠️  ${RED}${BOLD}THERE ARE TYPOS IN ${GREEN}${BOLD}$typos ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ " && printf "%.s${YELLOW}-${NO_COLOR}" {1..50}); }; f"
+	lookForTypos = "! f() { msg="$*"; typos=$"(echo $msg | aspell list)"; [[ ! -z "$typos" ]] && echo $(printf "%.s${YELLOW}-" {1..50} && echo "⚠️ ⚠️ ⚠️ ⚠️ ⚠️  ${RED}${BOLD}THERE ARE TYPOS IN ${GREEN}${BOLD}$typos ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ " && printf "%.s${YELLOW}-${NO_COLOR}" {1..50}) && echo \"${LIGHT_MAGENTA}${BOLD}$(git listAspellTyposWithSuggestions "$msg")${NO_COLOR}\"; }; f"
 	formatCommitMsg = "! f() { msg="$*"; regex=\"(\\[.*\\] )(.*)\"; if [[ $msg =~ $regex ]]; then echo "${BASH_REMATCH[1]} $(git upcaseFirstChar ${BASH_REMATCH[2]})"; else echo $(git upcaseFirstChar $msg); fi; }; f"
 
+	listAspellTyposWithSuggestions = "! f() { echo "$*" | aspell pipe | sed '/^@.*/d' | sed '/*/d' | tr '&' '\n' | grep -v '^$';  }; f"
 	upcaseFirstChar = "! f() { echo "$*" | gsed 's/./\\U&/'; }; f"
 	
 	# requires fzf formula from brew
