@@ -20,6 +20,11 @@ alias brewcl='brew cleanup'
 alias brewo='brew outdated'
 alias brewu='brew upgrade && brewcl'
 alias brewua='brew update && brewu'
+alias brewl='brew list'
+alias brewrm='brew remove $(_brewlf | _fuzzy-search)'
+
+alias _brewlf='brew list | grep -v Formulae | grep -v Casks'
+
 
 # docker
 alias d='docker'
