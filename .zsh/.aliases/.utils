@@ -37,6 +37,7 @@ alias ni='npm i -S'
 alias nu='npm update -dd'
 alias nl='npm list'
 alias na='npm audit'
+alias naf='npm audit fix'
 alias no='npm outdated'
 
 # ruby
