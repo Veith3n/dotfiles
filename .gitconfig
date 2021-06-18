@@ -106,9 +106,10 @@
 	aa = add -A
 	aap = add -p
 
-	rb = "!f() { git rebase ${1-master}; }; f"
+	rb = "!f() { git rebase -r ${1-master}; }; f"
+	rbm = "!f() { git rebase -r ${1-master}; }; f"
 	rbmo = ! git plr master
-	ri = "!f() { git rebase -i ${1-master}; }; f"
+	ri = "!f() { git rebase -i -r ${1-master}; }; f"
 	rcc = rebase --continue
 	ra = rebase --abort
 	rss = rebase --skip
