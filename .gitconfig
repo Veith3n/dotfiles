@@ -134,7 +134,8 @@
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
-	cpaa = "!f() { git log $1..${2-$(git currentBranch)} --reverse --pretty=format:'%h' | xargs git  cherry-pick; }; f" # cherry pick all commits after given commit hash
+	cpab = "!f() { git allCommitsHashesFromBranchSinceLastMerge $1 | xargs git  cherry-pick; }; f" # cherry pick all commits from given branch
+	cpah = "!f() { git log $1..${2-$(git currentBranch)} --reverse --pretty=format:'%h' | xargs git  cherry-pick; }; f" # cherry pick all commits after given commit hash
 	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
 	cps = cherry-pick --skip
@@ -166,6 +167,8 @@
 	rhc = "!f() { git reset HEAD~$1 --hard & git clean -df ; }; f"
 	rho = "!f() { git reset --hard origin/$(git currentBranch) & git clean -df ; }; f"
 
+	lastMergeHash = "! f() { git log ${1-$(git currentBranch)} --merges --pretty=format:'%h' | head -n1; }; f"
+	allCommitsHashesFromBranchSinceLastMerge = "! f() { branch=${1-$(git currentBranch)}; git log $(git lastMergeHash $branch)..$branch --pretty=format:'%h'; }; f"
 	# scripts
 	aliases = "!git config -l | grep alias | cut -c 7-"
 	currentBranch= branch --show-current
