@@ -134,7 +134,7 @@
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
-	cpab = "!f() { git allCommitsHashesFromBranchSinceLastMerge $1 | xargs git  cherry-pick; }; f" # cherry pick all commits from given branch
+	cpabl = "!f() { git allCommitsHashesFromBranchSinceLastMerge ${1-$(git gfuzb)} | xargs git  cherry-pick; }; f" # cherry pick all commits from given branch
 	cpah = "!f() { git log $1..${2-$(git currentBranch)} --reverse --pretty=format:'%h' | xargs git  cherry-pick; }; f" # cherry pick all commits after given commit hash
 	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
@@ -185,3 +185,4 @@
 	gfuzm=! git ls-files -m --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # modefied ready to be staged with fuzzy search
 	gfuzu=! git ls-files -o --exclude-standard | fzf --print0 -m -1 | xargs -0 -t -o # untracked files ready to be staged with fuzzy search
 	gfuzs=! git diff --name-only --cached | fzf --print0 -m -1 | xargs -0 -t -o # staged files with fuzzy search
+	gfuzb=! git branch | fzf --print0 -m -1 | xargs -0 -t -o # staged files with fuzzy search
