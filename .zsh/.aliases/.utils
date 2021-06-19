@@ -29,6 +29,7 @@ alias _brewlf='brew list | grep -v Formulae | grep -v Casks'
 # docker
 alias d='docker'
 alias ds='docker ps'
+alias dka='docker kill $(docker ps -q)'
 
 # npm
 alias nrpj='_run-script-from-package_json'
