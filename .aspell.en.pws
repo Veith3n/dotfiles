@@ -86,3 +86,9 @@ gitignore
 dotfiles
 ide
 sdk
+nats
+assertj
+dtos
+pojo
+urls
+organizations
