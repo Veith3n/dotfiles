@@ -215,3 +215,4 @@ defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iter
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true # load config from the folder
 
 npm install -g node-giphy # giphy ClI
+npm install -g organize-imports-cli
