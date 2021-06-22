@@ -2,5 +2,5 @@
 if [ "$2" = "/dev/null" ]; then
 	vim $1
 else
-	vimdiff "$1" "$2"
+	vimdiff "$2" "$1" 
 fi
