@@ -31,6 +31,10 @@ alias d='docker'
 alias ds='docker ps'
 alias dka='docker kill $(docker ps -q)'
 
+# linters
+alias el='dotenv-linter'
+alias elf='dotenv-linter fix'
+
 # npm
 alias nrpj='_run-script-from-package_json'
 alias nid='npm i -D'
