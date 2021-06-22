@@ -1,0 +1,10 @@
+#!/bin/sh
+
+function _fetch-keys-from-package_json {
+  if [ -z $2 ];
+  then
+  jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+  else
+  jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | grep $2 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+  fi;
+}
