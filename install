@@ -122,7 +122,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 
   # set zsh plugins
 	sed -i '' -e 's/plugins=(git)/plugins=(\
-	alias-finder 
 	alias-finder\
 	colored-man-pages\
 	dash\
