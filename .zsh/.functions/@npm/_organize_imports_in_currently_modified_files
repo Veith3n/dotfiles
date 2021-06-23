@@ -1,0 +1,7 @@
+#!/bin/sh
+
+function _organize_imports_in_currently_modified_files {
+  git status -s | grep -v '^D' | grep -v '^R' | awk '{print $2}' | xargs npx organize-imports-cli
+  git status -s | grep '^R' | awk '{print $4}' | xargs npx organize-imports-cli
+}
+

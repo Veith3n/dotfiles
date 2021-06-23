@@ -48,6 +48,7 @@ alias naf='npm audit fix'
 alias no='npm outdated'
 
 alias npxfi='npx organize-imports-cli tsconfig.json'
+alias npxfic='_organize_imports_in_currently_modified_files'
 
 # ruby
 alias rak='_run_rake'
