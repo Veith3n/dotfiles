@@ -1,0 +1,7 @@
+#!/bin/sh
+
+function _organize_imports_since_last_merge {
+  git diff --name-status  $(git lastmergehash) HEAD | grep -v '^D' | grep -v '^R' | awk '{print $2}' | xargs npx organize-imports-cli
+  git diff --name-status  $(git lastmergehash) HEAD | grep '^R' | awk '{print $4}' | xargs npx organize-imports-cli
+}
+

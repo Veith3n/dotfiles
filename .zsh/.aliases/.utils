@@ -49,6 +49,7 @@ alias no='npm outdated'
 
 alias npxfi='npx organize-imports-cli tsconfig.json'
 alias npxfic='_organize_imports_in_currently_modified_files'
+alias npxfim='_organize_imports_since_last_merge'
 
 # ruby
 alias rak='_run_rake'
