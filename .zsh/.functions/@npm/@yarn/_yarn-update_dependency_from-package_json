@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _yarn-update_dependency_from-package_json() {
+  _update_dependency_from-package_json "yarn upgrade" $1
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _yarn_run-script-from-package_json() {
+  _run-script-from-package_json "yarn run" $1
+}
