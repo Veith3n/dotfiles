@@ -36,10 +36,10 @@ alias el='dotenv-linter'
 alias elf='dotenv-linter fix'
 
 # npm
-alias nrpj='_run-script-from-package_json'
+alias nrpj='_npm-run-script-from-package_json'
 alias nid='npm i -D'
 alias ni='npm i -S'
-alias nu='_update_dependency_from-package_json'
+alias nu='_npm-update_dependency_from-package_json'
 alias nl='npm list --depth 0'
 alias nla='npm list'
 alias nlg='npm list -g --depth 0'

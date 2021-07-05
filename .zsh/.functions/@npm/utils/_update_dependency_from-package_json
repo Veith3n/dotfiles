@@ -1,5 +1,5 @@
 #!/bin/sh
 
 function _update_dependency_from-package_json() {
-  npm update -dd $(_fetch-dependecies-from-package_json $1) 	
+  eval $1 $(_fetch-dependecies-from-package_json $2) 	
 }

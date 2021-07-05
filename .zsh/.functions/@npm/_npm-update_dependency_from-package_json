@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _npm-update_dependency_from-package_json() {
+  _update_dependency_from-package_json "npm update -dd" $1
+}

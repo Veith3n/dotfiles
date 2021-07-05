@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _npm-run-script-from-package_json() {
+  _run-script-from-package_json "npm run" $1
+}

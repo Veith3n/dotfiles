@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _run-script-from-package_json() {
+  eval $1 $(_fetch-script-from-package_json $2) 		
+}
