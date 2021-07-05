@@ -59,6 +59,7 @@ brew install --cask firefox
 brew install --cask brave-browser
 
 brew install nodenv # install node_env
+brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
 
 brew install java # install latest java version
 
@@ -92,7 +93,7 @@ then
 	echo $'# direnv initialize\neval "$(direnv hook zsh)"' >> ~/.zshrc
 
 	# initialize nodenv in zshrc
-	echo $'# nodenv initialize\neval "$(nodenv init -)"' >> ~/.zshrc
+	echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >> ~/.zshrc
 
 	# initialize pyenv in zshrc
 	echo $'# pyenv initialize\neval "$(pyenv init -)"' >> ~/.zshrc
@@ -183,6 +184,9 @@ source ~/.zshrc # reload changes to the config file
 
 # refresh completion suggestion for sdk man (comes from zsh-sdkman plugin)
 sdk-refresh-completion-files
+
+# setup hook scripts for installed node versions
+nodenv package-hooks install --all
 
 # add newest java version to the jenv path
 java_path=$(/usr/libexec/java_home -V)
