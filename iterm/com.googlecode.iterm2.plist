@@ -15,6 +15,15 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x4e-0x120000-0x2d</key>
+		<dict>
+			<key>Action</key>
+			<integer>26</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>BE67F2DB-0AFF-4E02-88EC-2EF95356AFB8</string>
+		</dict>
 		<key>0x62-0x100000-0xb</key>
 		<dict>
 			<key>Action</key>
