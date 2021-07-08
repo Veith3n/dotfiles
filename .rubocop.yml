@@ -38,6 +38,9 @@ Lint/RaiseException:
 RSpec/ExampleLength:
   Max: 10
 
+RSpec/Focus:
+  AutoCorrect: false
+
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
