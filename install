@@ -37,6 +37,7 @@ brew install jq
 brew install ngrok
 brew install dotenv-linter
 brew install htop
+brew install macs-fan-control
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
