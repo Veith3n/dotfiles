@@ -56,6 +56,7 @@ alias npxfic='_organize_imports_in_currently_modified_files'
 alias npxfim='_organize_imports_since_last_merge'
 
 # ruby
+alias killr='_kill_process_on_port 3000'
 alias rak='_run_rake'
 alias gemprune='gem uninstall -aIx'
 
