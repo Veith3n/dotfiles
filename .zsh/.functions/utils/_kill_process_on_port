@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _kill_process_on_port() {
+ lsof -i :$1| grep ruby | awk '{print $2}' | uniq | xargs kill -9
+}
