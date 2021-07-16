@@ -48,8 +48,13 @@ alias naf='npm audit fix'
 alias no='npm outdated'
 
 # yarn
-alias yu='_yarn-update_dependency_from-package_json'
+alias ya='yarn audit'
+alias yaf='yarn audit fix'
+alias yi='yarn add'
+alias yid='yarn add --dev'
+alias yo='yarn outdated'
 alias yrpj='_yarn_run-script-from-package_json'
+alias yu='_yarn-update_dependency_from-package_json'
 
 alias npxfi='npx organize-imports-cli tsconfig.json'
 alias npxfic='_organize_imports_in_currently_modified_files'
