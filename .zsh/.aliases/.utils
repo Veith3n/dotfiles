@@ -18,8 +18,9 @@ alias gif='_get_gif_from_giphy'
 # brew
 alias brewcl='brew cleanup'
 alias brewo='brew outdated'
-alias brewu='brew upgrade && brewcl'
-alias brewua='brew update && brewu'
+alias brewu='brew update && brewcl'
+alias brewuf='brew upgrade $(_brewlf | _fuzzy-search) && brewcl'
+alias brewua='brewu && brew upgrade && brewcl'
 alias brewl='brew list'
 alias brewrm='brew remove $(_brewlf | _fuzzy-search)'
 
