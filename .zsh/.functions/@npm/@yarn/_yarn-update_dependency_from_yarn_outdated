@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _yarn-update_dependency_from_yarn_outdated() {
+  yarn upgrade $(yarn outdated | sed  '1,/Package/d' | grep -v Done | _fuzzy-search)
+}

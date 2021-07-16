@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _npm-update_dependency_from_npm_outdated() {
+  npm update -dd $(npm outdated | grep -v 'Package' | _fuzzy-search)
+}
