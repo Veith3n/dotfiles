@@ -33,6 +33,24 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x64-0x100000-0x2</key>
+		<dict>
+			<key>Action</key>
+			<integer>37</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>BE67F2DB-0AFF-4E02-88EC-2EF95356AFB8</string>
+		</dict>
+		<key>0x6c-0x100000-0x25</key>
+		<dict>
+			<key>Action</key>
+			<integer>37</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>CFF1A5A2-3D3E-4648-AF62-8FF4FE3900E9</string>
+		</dict>
 		<key>0x6e-0x100000-0x2d</key>
 		<dict>
 			<key>Action</key>
@@ -1464,6 +1482,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
