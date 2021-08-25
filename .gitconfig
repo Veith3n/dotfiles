@@ -122,7 +122,7 @@
 
 	pl = pull 
 	#plm = fetch origin master:master
-	plm = "!f() { branch=$(git currentBranch); git bm; git pl; deletedBranches=$(git bclean); echo $deletedBranches; echo $deletedBranches | grep -q -v $branch && git checkout $branch;}; f"
+	plm = "!f() { branch=$(git currentBranch); git fo; git bm; git pl; deletedBranches=$(git bclean); echo $deletedBranches; echo $deletedBranches | grep -q -v $branch && git checkout $branch;}; f"
 	plr = "!f() { git pull origin $1 --rebase; }; f"
 
 	c = commit 
