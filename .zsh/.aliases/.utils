@@ -11,6 +11,8 @@ alias vaspell='vim ~/.aspell.en.pws'
 
 alias ccat='pygmentize -O style=emacs -g'
 
+alias testinternet='ping 8.8.8.8'
+
 alias e64s='_enode64_with_sprunge'
 alias randomstring='_random_string'
 alias gif='_get_gif_from_giphy'
