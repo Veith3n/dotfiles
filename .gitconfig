@@ -168,7 +168,7 @@
 	rc = "!f() { git reset HEAD~$1 ; }; f"
 	rh = ! git reset --hard & git clean -df
 	rhc = "!f() { git reset HEAD~$1 --hard & git clean -df ; }; f"
-	rho = "!f() { git reset --hard origin/$(git currentBranch) & git clean -df ; }; f"
+	rho = "!f() { git fo; git reset --hard origin/$(git currentBranch) & git clean -df ; }; f"
 
 	lastMergeHash = "! f() { git log ${1-$(git currentBranch)} --merges --pretty=format:'%h' | head -n1; }; f"
 	allCommitsHashesFromBranchSinceLastMerge = "! f() { branch=${1-$(git currentBranch)}; git log $(git lastMergeHash $branch)..$branch --pretty=format:'%h'; }; f"
