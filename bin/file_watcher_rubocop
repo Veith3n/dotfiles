@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash --login
 
 ruby_version=$(cat $1/Gemfile | grep '^ruby' | awk '{print $2}' | sed s/\'//g)
 
