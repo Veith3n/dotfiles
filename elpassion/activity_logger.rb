@@ -51,6 +51,10 @@ def log_for_varner(date, reported_hours:, description:)
   upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 525)
 end
 
+def log_for_sharefox(date, reported_hours:, description:)
+  upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 580)
+end
+
 def log_for_training(date, reported_hours:, description:)
   upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 391)
 end
@@ -89,28 +93,36 @@ def retro_date?(date)
   calcualte_event_date(initial_date: RETRO, date_to_check: date, event_interval: BIWEEKLY)
 end
 
+def log_main_project(date, reported_hours:, description:)
+  log_for_sharefox(date, reported_hours: reported_hours, description: description)
+end
+
 case date
 when tuesday
   arek_meeting = arek_krzysiek_date?(date)
-  main_activity_time = arek_meeting ? 7 : 7.5
+  main_activity_time = arek_meeting ? 7.5 : 8
 
-  log_for_varner(date, reported_hours: custom_activity_time || main_activity_time, description: activity_description)
+  log_main_project(date, reported_hours: custom_activity_time || main_activity_time, description: activity_description)
+
   log_for_elp_meeting(date, reported_hours: 0.5, description: 'Arek/Krzysiek') if arek_meeting
-when wednesday
-  log_for_varner(date, reported_hours: custom_activity_time || 6.0, description: activity_description)
-  log_for_varner(date, reported_hours: custom_activity_time || 0.5, description: 'Prerelease review')
-  log_for_elp_meeting(date, reported_hours: 1, description: 'EL Churros sync')
-when thursday
-  log_for_varner(date, reported_hours: custom_activity_time || 6, description: activity_description)
-  log_for_elp_meeting(date,  reported_hours: 0.5, description: 'Company SU')
-  log_for_training(date, reported_hours: 1, description: 'AB')
-when friday
-  retro_meeting = retro_date?(date)
-  main_activity_time = retro_meeting ? 6.0 : 6.5
 
-  log_for_varner(date, reported_hours: custom_activity_time || 0.5, description: 'Retro') if retro_meeting
-  log_for_varner(date, reported_hours: custom_activity_time || 1, description: 'Grooming')
-  log_for_varner(date, reported_hours: custom_activity_time || main_activity_time, description: activity_description)
+when wednesday
+  log_main_project(date, reported_hours: custom_activity_time || 7.0, description: activity_description)
+
+  log_for_elp_meeting(date, reported_hours: 1, description: 'EL Churros sync')
+
+when thursday
+  log_main_project(date, reported_hours: custom_activity_time || 7.5, description: activity_description)
+
+  log_for_elp_meeting(date, reported_hours: 0.5, description: 'Company SU')
+# log_for_training(date, reported_hours: 1, description: 'AB')
+# when friday
+#   # retro_meeting = retro_date?(date)
+#   # main_activity_time = retro_meeting ? 6.0 : 6.5
+#
+#   # log_for_varner(date, reported_hours: custom_activity_time || 0.5, description: 'Retro') if retro_meeting
+#   # log_for_varner(date, reported_hours: custom_activity_time || 1, description: 'Grooming')
+#   log_for_varner(date, reported_hours: custom_activity_time || main_activity_time, description: activity_description)
 else
-  log_for_varner(date, reported_hours: custom_activity_time || 7.5, description: activity_description)
+  log_main_project(date, reported_hours: custom_activity_time || 8, description: activity_description)
 end
