@@ -13,7 +13,7 @@ end
 activity_description = ARGV[0]
 # custom_activity_time = ARGV[1]
 custom_activity_time = nil
-passed_date = ARGV[1] ? Date.parse(ARGV[1]) : nil
+passed_date = ARGV[1] ? Date.strptime(ARGV[1], '%d/%m/%y') : nil # dd/mm/yy
 
 unless api_token
   puts 'please set ELPASSION_API_TOKEN'
