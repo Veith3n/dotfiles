@@ -88,6 +88,7 @@ alias brds='bundle exec rails db:seed'
 alias brdm='bundle exec rails db:migrate'
 alias brdms='bundle exec rails db:migrate:status'
 alias brdmc='bundle exec rails generate migration'
+alias brdmr='bundle exec rails db:rollback'
 alias bras='bundle exec rails s'
 alias brac='bundle exec rails c'
 
