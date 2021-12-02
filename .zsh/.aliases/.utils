@@ -102,7 +102,7 @@ alias rvml='rvm list'
 alias rvmu='rvm use $(_rvm_installed | _fuzzy-search)'
 alias rvmupdate='rvm get stable'
 
-alias _rvm_installed='rvm list strings' 
+alias _rvm_installed='rvm list strings'
 alias _rvm_possible_to_install='rvm list known_strings'
 
 # vscode
