@@ -105,6 +105,17 @@ alias rvmupdate='rvm get stable'
 alias _rvm_installed='rvm list strings'
 alias _rvm_possible_to_install='rvm list known_strings'
 
+# nodenv
+alias nodenvc='nodenv version | cut -d " " -f1'
+alias nodenvi='version_to_install="$(_nodenv_possible_to_install | _fuzzy-search)" && nodenv install  $version_to_install  && curent_version=$(nodenvc) && nodenv global $version_to_install && _nodenv_install_global_dep && nodenv global $curent_version'
+alias nodenvui='nodenv uninstall $(_nodenv_installed | _fuzzy-search)'
+alias nodenvg='nodenv global $(_nodenv_installed | _fuzzy-search)'
+alias nodenvl='nodenv local $(_nodenv_installed | _fuzzy-search)'
+
+alias _nodenv_installed='nodenv versions'
+alias _nodenv_possible_to_install='nodenv install -l'
+alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_dependencies && cd $oldPath'
+
 # vscode
 alias vsc='code .'
 alias vscdot='code ~/dotfiles'

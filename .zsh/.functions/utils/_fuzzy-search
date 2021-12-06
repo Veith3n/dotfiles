@@ -1,5 +1,6 @@
 #!/bin/sh
 
 function _fuzzy-search() {
-  fzf --print0 -m -1 | xargs -0 -o 
+  fzf --print0 -m -1 | xargs -0 -o
+  # fzf --exit-0 --query="$1" --multi --exit-0
 }
