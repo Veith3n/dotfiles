@@ -1,0 +1,6 @@
+#!/bin/sh
+
+function _dash_case_to_camel_case() {
+	# ruby -e 'puts ARGV[0].split("-").map(&:capitalize).join' $@
+	text="$@" ruby -e 'puts ENV["text"].split("-").map(&:capitalize).join'
+}
