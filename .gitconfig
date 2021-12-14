@@ -133,6 +133,9 @@
 	cf = "!f() { git commit --fixup :/$1; }; f"
 	cfh = "!f() { git commit --fixup $1; }; f"
 	cm = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
+  cmb="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(backend) $msg\""; }; f"
+  cms="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(shared) $msg\""; }; f"
+  cmf="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(frontend) $msg\""; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
