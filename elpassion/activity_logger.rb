@@ -55,6 +55,10 @@ def log_for_sharefox(date, reported_hours:, description:)
   upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 580)
 end
 
+def log_for_fullkontrol(date, reported_hours:, description:)
+  upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 640)
+end
+
 def log_for_training(date, reported_hours:, description:)
   upsert_activity_for_date(date, reported_hours: reported_hours, description: description, project_id: 391)
 end
@@ -94,7 +98,7 @@ def retro_date?(date)
 end
 
 def log_main_project(date, reported_hours:, description:)
-  log_for_sharefox(date, reported_hours: reported_hours, description: description)
+  log_for_fullkontrol(date, reported_hours: reported_hours, description: description)
 end
 
 case date
