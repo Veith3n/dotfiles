@@ -47,7 +47,7 @@ brew install --cask slack # slack
 brew install --cask visual-studio-code # visual-studio-code
 brew install --cask dash # dash
 brew install --cask soundcleod # soundcleod
-brew install --cask spectacle
+brew install --cask rectangle
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
 brew install --cask boost-note # markdown notes <3
