@@ -1,0 +1,11 @@
+#!/bin/sh
+
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cp ~/Library/Preferences/com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist_old
+
+[[ -s "${BASE_DIR}/../com.apple.dock.plist" ]] && ln -fsv "${BASE_DIR}/../com.apple.dock.plist" ~/Library/Preferences/com.apple.dock.plist
+
+killall Dock
+
+echo "Run \"rm ~/Library/Preferences/com.apple.dock.plist_old\" if dock works correctly"
