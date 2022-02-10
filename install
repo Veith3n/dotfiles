@@ -221,3 +221,5 @@ defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iter
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
 
 ./install_npm_dependencies
+
+./macos/scripts/restore_dock_arragment
