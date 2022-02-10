@@ -16,23 +16,23 @@ brew upgrade
 # brew install homebrew/cask # homebrew cask (not sure if needed)
 
 # Install homebrew dependencies
-brew install fzf # fuzzy search
+brew install fzf    # fuzzy search
 brew install direnv # looks for .envrc file in each directory
 
-brew install gpg # managing keys 
+brew install gpg # managing keys
 # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
 brew upgrade gnupg
 brew link --overwrite gnupg
 brew install pinentry-mac
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
-brew install zsh # neat CLI
+brew install zsh     # neat CLI
 brew install gnu-sed # GNU based sed
-brew install bash # install new version of bash
+brew install bash    # install new version of bash
 echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 brew install aspell # spell checker
-brew install gh # github cli
+brew install gh     # github cli
 brew install jq
 brew install ngrok
 brew install dotenv-linter
@@ -41,12 +41,12 @@ brew install macs-fan-control
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
-brew install --cask iterm2 # install iterm2
-brew install --cask docker # docker
-brew install --cask slack # slack
+brew install --cask iterm2             # install iterm2
+brew install --cask docker             # docker
+brew install --cask slack              # slack
 brew install --cask visual-studio-code # visual-studio-code
-brew install --cask dash # dash
-brew install --cask soundcleod # soundcleod
+brew install --cask dash               # dash
+brew install --cask soundcleod         # soundcleod
 brew install --cask rectangle
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
@@ -59,7 +59,7 @@ brew install --cask cleanmymac
 brew install --cask firefox
 brew install --cask brave-browser
 
-brew install nodenv # install node_env
+brew install nodenv                              # install node_env
 brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
 
 brew install java # install latest java version
@@ -72,7 +72,9 @@ brew install pipenv # dependency manager for python
 
 brew install heroku/brew/heroku # heroku cli
 
-brew install pygments # python package to colorize files 
+brew install pygments # python package to colorize files
+
+brew install awscli # AWS cli
 
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
@@ -80,28 +82,27 @@ brew install pygments # python package to colorize files
 # Generate file with git aliases for zshrc
 ./bin/generate_git_aliases_for_zshrc
 
-curl -s "https://get.sdkman.io" | bash # sdkman installation
+curl -s "https://get.sdkman.io" | bash    # sdkman installation
 source "$HOME/.sdkman/bin/sdkman-init.sh" # init sdk man
-sdk install java # install latest java from sdk man
+sdk install java                          # install latest java from sdk man
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/matthieusb/zsh-sdkman.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-sdkman # autocomplete for sdkman
 
 # Setup necessary entries to the config files
-if [ -r ~/.zshrc ] 
-then
+if [ -r ~/.zshrc ]; then
 	# initialize direnv in zshrc
-	echo $'# direnv initialize\neval "$(direnv hook zsh)"' >> ~/.zshrc
+	echo $'# direnv initialize\neval "$(direnv hook zsh)"' >>~/.zshrc
 
 	# initialize nodenv in zshrc
-	echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >> ~/.zshrc
+	echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
 
 	# initialize pyenv in zshrc
-	echo $'# pyenv initialize\neval "$(pyenv init -)"' >> ~/.zshrc
+	echo $'# pyenv initialize\neval "$(pyenv init -)"' >>~/.zshrc
 
 	# initialize jenv in zshrc
-	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
-	echo 'eval "$(jenv init -)"' >> ~/.zshrc
+	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >>~/.zshrc
+	echo 'eval "$(jenv init -)"' >>~/.zshrc
 
 	# add git aliases
 	sed -i '' -e '/^# Example aliases/a\
@@ -117,13 +118,13 @@ then
 ZSH_ALIAS_FINDER_AUTOMATIC=true' ~/.zshrc
 
 	# enable option-stacking completion for docker
-  sed -i '' -e '/^plugins=/a\
+	sed -i '' -e '/^plugins=/a\
 # completion for option-stacking (docker run -it <TAB>)\
 zstyle ':completion:*:*:docker:*' option-stacking yes\
 zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 ' ~/.zshrc
 
-  # set zsh plugins
+	# set zsh plugins
 	sed -i '' -e 's/plugins=(git)/plugins=(\
 	alias-finder\
 	colored-man-pages\
@@ -158,7 +159,6 @@ path+=('$BASE_DIR/elpassion' $path) \
 [ -r ~/.functions ] && autoload -Uz ~/.functions/**/* \
 \' ~/.zshrc
 
-
 	# source varables and path files in zshrc
 	sed -i '' -e '1i \ 
 \
@@ -173,10 +173,10 @@ path+=('$BASE_DIR/elpassion' $path) \
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" \
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ' ~/.zshrc
 
-# Requires oh my zsh
-printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >> ~/.zprofile
+	# Requires oh my zsh
+	printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
 
-echo 'plugins added'
+	echo 'plugins added'
 else
 	echo '.zshrc config file does not exist'
 fi
@@ -201,7 +201,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 gem install rubocop
 gem install rubocop-rspec
-gem install  rubocop-rails
+gem install rubocop-rails
 
 # Authenticate fror github cli
 gh auth login
@@ -212,12 +212,12 @@ heroku autocomplete
 # Mac os
 defaults write com.apple.Finder AppleShowAllFiles true # show hidden files in finder
 killall Finder
- 
+
 # enables easier movemnt in vim mode
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Iterm
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
-defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true # load config from the folder
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
 
 ./install_npm_dependencies

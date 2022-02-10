@@ -5,23 +5,23 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # aspell
 [[ -s "${BASE_DIR}/.aspell.en.pws" ]] && ln -fsv ${BASE_DIR}/.aspell.en.pws ~
 
-# git 
+# git
 [[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv ${BASE_DIR}/.gitconfig ~
-[[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~ 
+[[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~
 
 # shell
-[[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv ${BASE_DIR}/.env_paths ~ 
-[[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv ${BASE_DIR}/.env_variables ~ 
+[[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv ${BASE_DIR}/.env_paths ~
+[[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv ${BASE_DIR}/.env_variables ~
 
-[[ -s "${BASE_DIR}/.zsh/.functions" ]] && ln -fsv ${BASE_DIR}/.zsh/.functions ~ 
-[[ -s "${BASE_DIR}/.zsh/.aliases" ]] && ln -fsv ${BASE_DIR}/.zsh/.aliases ~ 
+[[ -s "${BASE_DIR}/.zsh/.functions" ]] && ln -fsv ${BASE_DIR}/.zsh/.functions ~
+[[ -s "${BASE_DIR}/.zsh/.aliases" ]] && ln -fsv ${BASE_DIR}/.zsh/.aliases ~
 
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
 
-# vim 
-[[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv ${BASE_DIR}/.vimrc ~ 
-[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~ 
-[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~/.idevimrc 
+# vim
+[[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv ${BASE_DIR}/.vimrc ~
+[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~
+[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~/.idevimrc
 
 [[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv ${BASE_DIR}/.vim/colors ~/.vim
 
