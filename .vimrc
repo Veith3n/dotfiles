@@ -5,6 +5,8 @@ set nocompatible " disables revert support for vi
 set ignorecase " case unsensitive search
 " set mouse=a " enables mouse
 
+set encoding=UTF-8
+
 syntax enable " enables syntax highlight
 
 " Search down into subfolders 
@@ -42,6 +44,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'zivyangll/git-blame.vim'
 Plug 'vim-airline/vim-airline'
+
+" Nerd tree config
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Linter
 Plug 'dense-analysis/ale'
