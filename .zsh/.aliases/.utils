@@ -28,9 +28,9 @@ alias convertToCamelCase='_convert_to_camel_case'
 # brew
 alias brewcl='brew cleanup'
 alias brewo='brew outdated'
-alias brewu='brew update && brewcl'
+alias brewu='brew update && brew upgrade $(brew outdated | _fuzzy-search) && brewcl'
+alias brewua='brew update && brew upgrade && brewcl'
 alias brewuf='brew upgrade $(_brewlf | _fuzzy-search) && brewcl'
-alias brewua='brewu && brew upgrade && brewcl'
 alias brewl='brew list'
 alias brewrm='brew remove $(_brewlf | _fuzzy-search)'
 
