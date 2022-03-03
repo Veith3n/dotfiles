@@ -94,6 +94,7 @@ alias brdmc='bundle exec rails generate migration'
 alias brdmr='bundle exec rails db:rollback'
 alias bras='bundle exec rails s'
 alias brac='bundle exec rails c'
+alias brak='_run_rake'
 
 alias _bundle_list='bundle list --name-only'
 
