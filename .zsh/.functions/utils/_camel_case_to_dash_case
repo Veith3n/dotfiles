@@ -1,0 +1,7 @@
+#!/bin/sh
+
+function _camel_case_to_dash_case() {
+       echo $@ |
+              sed 's/\(.\)\([A-Z]\)/\1-\2/g' |
+              tr '[:upper:]' '[:lower:]'
+}
