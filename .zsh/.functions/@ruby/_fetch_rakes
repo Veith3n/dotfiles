@@ -1,10 +1,9 @@
 #!/bin/sh
 
 function _fetch_rakes() {
-  if [ -z $1 ];
-  then
-  rake --silent --tasks | cut -d " " -f 2 | sed 's/\[.*\]//g';
+  if [ -z $1 ]; then
+    rake --silent --tasks | sed 's/\[.*\]//g'
   else
-  rake --silent --tasks | cut -d " " -f 2 | sed 's/\[.*\]//g' | grep $1;
-  fi;
+    rake --silent --tasks | sed 's/\[.*\]//g' | grep $1
+  fi
 }
