@@ -8,6 +8,7 @@ alias cdpro='cd ~/Projects'
 alias szsh='source ~/.zshrc'
 alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
+alias trim='_trim_string'
 
 alias ccat='pygmentize -O style=emacs -g'
 
