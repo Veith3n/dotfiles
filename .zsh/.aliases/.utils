@@ -86,7 +86,8 @@ alias br='bundle exec rubocop'
 alias bra='bundle exec rubocop -A'
 alias brs='bundle exec rspec'
 alias ba='bundle add'
-alias bu='bundle update $(_bundle_list | _fuzzy-search)'
+alias bu='bundle update $(_bundle_outdated | _fuzzy-search | cut -d " " -f1)'
+alias bua='bundle update'
 alias bru='bundle exec rubocop'
 
 alias ber='bundle exec rails'
@@ -102,6 +103,7 @@ alias brac='bundle exec rails c'
 alias brak='_run_rake'
 
 alias _bundle_list='bundle list --name-only'
+alias _bundle_outdated='bundle outdated --only-explicit | sed "$((1)),$((3))d"'
 
 # rvm
 alias rvmg='rvm --default $(_rvm_installed | _fuzzy-search)'
