@@ -17,8 +17,12 @@ alias e64s='_enode64_with_sprunge'
 alias randomstring='_random_string'
 alias gif='_get_gif_from_giphy'
 
+alias camelCaseToDashCase='_camel_case_to_dash_case'
+
 alias snakeCaseToCamelCase='_snake_case_to_camel_case'
 alias dashCaseToCamelCase='_dash_case_to_camel_case'
+
+alias convertToCamelCase='_convert_to_camel_case'
 
 # brew
 alias brewcl='brew cleanup'
