@@ -83,6 +83,8 @@ brew install pygments # python package to colorize files
 
 brew install awscli # AWS cli
 
+brew install neovim
+
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
 
