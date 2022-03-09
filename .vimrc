@@ -21,6 +21,8 @@ set rtp+=/usr/local/opt/fzf
 " Display allmatching files with autocomplete 
 set wildmenu
 
+set iskeyword+=- " treats foo-bar as one word
+
 """ Plugins 
 " Polyglot
 let g:polyglot_disabled = []
