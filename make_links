@@ -25,6 +25,9 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv ${BASE_DIR}/.vim/colors ~/.vim
 
+# nvim
+[[ -s "${BASE_DIR}/.nvim" ]] && stow .nvim
+
 # utlis
 [[ -s "${BASE_DIR}/.rubocop.yml" ]] && ln -fsv ${BASE_DIR}/.rubocop.yml ~
 [[ -s "${BASE_DIR}/.irbrc" ]] && ln -fsv ${BASE_DIR}/.irbrc ~
