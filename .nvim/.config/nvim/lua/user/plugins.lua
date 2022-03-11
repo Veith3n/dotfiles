@@ -61,6 +61,10 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
+ -- Treesitter
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use "p00f/nvim-ts-rainbow" 
+  
 
   -- Automatically set up your configuration after cloning packer.nvim, must be after all plugins
   if packer_bootstrap then
