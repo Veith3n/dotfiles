@@ -69,6 +69,9 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow" 
   
 
+  -- Git
+  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim' } }
+
   -- Automatically set up your configuration after cloning packer.nvim, must be after all plugins
   if packer_bootstrap then
     require("packer").sync()
