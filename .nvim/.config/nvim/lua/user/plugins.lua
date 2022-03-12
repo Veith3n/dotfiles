@@ -74,6 +74,7 @@ return packer.startup(function(use)
 
   -- Tree
   use { 'kyazdani42/nvim-tree.lua',  requires = { 'kyazdani42/nvim-web-devicons' } }
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Automatically set up your configuration after cloning packer.nvim, must be after all plugins
   if packer_bootstrap then
