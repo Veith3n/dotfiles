@@ -1,1 +1,2 @@
 .env_variables filter=sensitive_data
+.gitconfig filter=git_signing_key

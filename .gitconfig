@@ -16,6 +16,9 @@
 [filter "sensitive_data"]
 	clean =  .git_scripts/clean_sensitive_data
 	smudge = .git_scripts/smudge_sensitive_data
+[filter "git_signing_key"]
+	clean =  .git_scripts/clean_gitconfig
+	smudge = .git_scripts/smudge_gitconfig
 [pager]
 	diff =
 [merge]

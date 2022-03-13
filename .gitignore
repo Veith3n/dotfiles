@@ -5,6 +5,7 @@ packer_compiled.lua
 
 # custom
 smudge_sensitive_data
+smudge_gitconfig
 
 # nodenv version
 .node-version

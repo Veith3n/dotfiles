@@ -1,0 +1,18 @@
+#!/bin/sh
+
+build_gsed_arg() {
+	# echo "/"${SENSTIVE_DATA[$1]}"/c\\"${SENSTIVE_DATA[$1]}=\'${YOUR_VALUES[$1]}\'""
+	echo "s/"ingkey =.*"/\\"ingkey = ${YOUR_VALUES[$1]}"/g"
+}
+
+SENSTIVE_DATA=('signingkey')
+YOUR_VALUES=('PROVIDE_VALUE')
+
+cp .gitconfig tmp
+
+for i in $(seq 0 $((${#SENSTIVE_DATA[@]} - 1))); do
+	gsed -i "$(build_gsed_arg $i)" tmp
+done
+
+cat tmp
+rm tmp

@@ -1,0 +1,47 @@
+#!/bin/sh
+
+blame_for_sensitive_data_lines() {
+	### git blame --date=unix $SENSTIVE_DATA_FILE_NAME | grep 'JIRA_USER\|JIRA_TOKEN\|JIRA_SUBDOMAIN' # alternative version
+	# sed 's/.$//' remove last char from the string
+	#git blame --date=unix $SENSTIVE_DATA_FILE_NAME | grep "$(printf "%s|" "${SENSTIVE_DATA[@]}" | sed 's/.$//')"
+
+	joined_senstive_data=$(for index in "${!SENSTIVE_DATA[@]}"; do if [ $index -lt $SENSTIVE_DATA_LAST_INDEX ]; then printf "${SENSTIVE_DATA[$index]}\|"; else printf ${SENSTIVE_DATA[$index]}; fi; done)
+
+	git blame HEAD --date=unix $SENSTIVE_DATA_FILE_NAME | grep $joined_senstive_data
+}
+
+get_previous_values_for_sensitive_data() {
+	for data_key in "${SENSTIVE_DATA[@]}"; do
+		for hash in "${commits_hashes[@]}"; do
+			previous_value=$(git show $hash --pretty=tformat:%h --minimal | grep $data_key | grep '^+' | head -n 1 | sed 's/^.//')
+			! [ -z "$previous_value" ] && OLD_VALUES+=("$previous_value") && break
+		done
+	done
+}
+
+SENSTIVE_DATA_FILE_NAME=.gitconfig
+SENSTIVE_DATA=('signingkey')
+SENSTIVE_DATA_LAST_INDEX=$((${#SENSTIVE_DATA[@]} - 1))
+OLD_VALUES=()
+
+# (?<!\w)\d{10}|\d{11}(?!\w) find first word that is 10 or 11 digits, (?!\w) insted of regex b in bash
+commits_hashes=($(blame_for_sensitive_data_lines | ruby -lne 'timestamp=/(?<!\w)\d{10}|\d{11}(?!\w)/.match($_); commit_hash=$_.split(" ").first; print [commit_hash, timestamp].join(",") ' | sort -t, -nk2 -r | uniq | awk -F, '{ print $1 }'))
+
+# echo  ${commits_hashes@]}
+
+get_previous_values_for_sensitive_data
+
+# echo  ${OLD_VALUES[@]}
+
+build_gsed_arg() {
+	echo "s/".*${SENSTIVE_DATA[$1]}.*"/${OLD_VALUES[$1]}/g"
+}
+
+cp $SENSTIVE_DATA_FILE_NAME tmp
+
+for i in $(seq 0 $SENSTIVE_DATA_LAST_INDEX); do
+	gsed -i "$(build_gsed_arg $i)" tmp
+done
+
+cat tmp
+rm tmp
