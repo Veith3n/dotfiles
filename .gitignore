@@ -1,3 +1,5 @@
+.vim/colors
+
 # neovim plugin manager (packer)
 packer_compiled.lua
 
