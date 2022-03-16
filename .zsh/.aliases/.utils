@@ -9,6 +9,8 @@ alias szsh='source ~/.zshrc'
 alias vzsh='vim ~/.zshrc'
 alias vaspell='vim ~/.aspell.en.pws'
 alias trim='_trim_string'
+alias nnvim='nvim ~/.config/nvim'
+alias nv='_nvim'
 
 alias ccat='pygmentize -O style=emacs -g'
 
