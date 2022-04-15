@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use 'tpope/vim-repeat'
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "folke/which-key.nvim" -- Neat shortcut for functions
+  use "akinsho/toggleterm.nvim"
 
   -- Colorschemes
   use "joshdick/onedark.vim"
