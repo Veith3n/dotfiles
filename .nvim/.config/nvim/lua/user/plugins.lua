@@ -48,6 +48,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "folke/which-key.nvim" -- Neat shortcut for functions
 
   -- Colorschemes
   use "joshdick/onedark.vim"
