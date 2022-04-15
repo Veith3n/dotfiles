@@ -32,6 +32,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<A-s>", ":split<CR>", opts)
 keymap("n", "<A-v>", ":vsplit<CR>", opts)
 
+-- Color scheme
+keymap("n", "<A-l>", ":colorscheme solarized<CR>", opts)
+keymap("n", "<A-d>", ":colorscheme onedarker<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<A-Up>", ":resize +2<CR>", opts)
 keymap("n", "<A-Down>", ":resize -2<CR>", opts)
