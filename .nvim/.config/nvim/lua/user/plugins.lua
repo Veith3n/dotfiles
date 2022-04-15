@@ -76,6 +76,9 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow" 
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- Spellchecking
+  use "lewis6991/spellsitter.nvim"
+
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
 
