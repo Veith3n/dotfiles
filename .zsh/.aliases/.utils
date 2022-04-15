@@ -11,6 +11,7 @@ alias vaspell='vim ~/.aspell.en.pws'
 alias trim='_trim_string'
 alias nnvim='nvim ~/.config/nvim'
 alias nv='_nvim'
+alias cl='clear'
 
 alias ccat='pygmentize -O style=emacs -g'
 
