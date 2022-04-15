@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- Colorschemes
   use "joshdick/onedark.vim"
@@ -73,6 +74,7 @@ return packer.startup(function(use)
  -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "p00f/nvim-ts-rainbow" 
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
