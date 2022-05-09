@@ -11,6 +11,8 @@ local function determine_color ()
   if current_hour > light_scheme_start_time then
     if current_hour < light_scheme_end_time then
       return light_scheme
+    else
+      return dark_scheme
     end
   else
     return dark_scheme
