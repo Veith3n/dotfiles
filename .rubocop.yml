@@ -6,22 +6,22 @@ AllCops:
   TargetRubyVersion: 3.0
   NewCops: enable
   Exclude:
-    - "bin/*"
-    - "db/schema.rb"
-    - "vendor/**/*"
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
 
 Metrics/BlockLength:
   Exclude:
-    - "**/*_spec.rb"
-    - "config/environments/*.rb"
-    - "config/routes.rb"
+    - '**/*_spec.rb'
+    - 'config/environments/*.rb'
+    - 'config/routes.rb'
 
 Metrics/MethodLength:
   Max: 20
 
 Metrics/ModuleLength:
   Exclude:
-    - "**/*_spec.rb"
+    - '**/*_spec.rb'
 
 Layout/LineLength:
   Max: 150
@@ -73,10 +73,10 @@ Style/HashTransformValues:
 
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
-    "%i": "[]"
-    "%I": "[]"
-    "%w": "[]"
-    "%W": "[]"
+    '%i': '[]'
+    '%I': '[]'
+    '%w': '[]'
+    '%W': '[]'
 
 Style/SignalException:
   Enabled: true
