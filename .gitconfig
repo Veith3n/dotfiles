@@ -57,7 +57,7 @@
 	# utils
 	#l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	#l = log --graph --pretty=format:'%C(bold blue)%h%Creset -%C(yellow)%d%Creset %C(bold green)(%cr)%Creset %C(white)%s %C(dim white)<%an>%Creset' --abbrev-commit
-	l = "log --color --graph --pretty=format:'%C(#dc322f)%h%C(#b58900)%d %C(#eee8d5)%s %C(#dc322f)| %C(#586f75)%cr %C(#dc322f)| %C(#586e75)%an%Creset' --abbrev-commit"
+	l = "log --color --graph --pretty=format:'%C(#dc322f)%h%C(#b58900)%d %C(#FC5900)%s %C(#dc322f)| %C(#586f75)%cr %C(#dc322f)| %C(#586e75)%an%Creset' --abbrev-commit"
 	ln = "!f() { IFS=$'\n'; i=0;commits=$(git l -n 30) ; for commit in ${commits[@]}; do echo $i $commit; ((i++)); done; }; f"
 	ls = ! git l --stat
 	lsc = ! git ls -p
