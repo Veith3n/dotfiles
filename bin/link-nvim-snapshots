@@ -1,0 +1,2 @@
+#!/bin/sh
+ln ~/.cache/nvim/packer.nvim/**  ~/dotfiles/.nvim/.config/nvim/plugin_snapshots
