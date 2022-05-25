@@ -221,10 +221,6 @@ gh auth login
 # heroku
 heroku autocomplete
 
-# Mac os
-defaults write com.apple.Finder AppleShowAllFiles true # show hidden files in finder
-killall Finder
-
 # enables easier movemnt in vim mode
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -235,3 +231,4 @@ defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true     
 ./install_npm_dependencies
 
 ./macos/scripts/restore_dock_arragment
+./macos/scripts/set_mac_os_settings
