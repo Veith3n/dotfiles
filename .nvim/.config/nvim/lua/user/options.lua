@@ -34,6 +34,8 @@ vim.opt.scrolloff      = 8 -- is one of my fav
 vim.opt.sidescrolloff  = 8
 vim.opt.guifont        = "monospace:h17" -- the font used in graphical neovim applications
 vim.opt.spell          = true -- enable spell checking
+-- vim.opt.spellfile      = "~/.en.utf-8.add" -- for some reason it does not work
+vim.cmd "set spellfile=~/.en.utf-8.add"
 
 vim.opt.shortmess:append "c"
 
