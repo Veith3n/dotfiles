@@ -61,6 +61,7 @@ brew install --cask discord
 brew install --cask cleanmymac
 brew install --cask firefox
 brew install --cask brave-browser
+brew install jumpcut
 
 brew install send-to-kindle
 brew install whatsapp
