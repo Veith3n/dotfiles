@@ -42,3 +42,11 @@ vim.opt.shortmess:append "c"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]] -- treats foo-bar as one word
 vim.cmd [[set formatoptions-=r formatoptions-=o formatoptions-=c]] -- TODO: this doesn't seem to work
+
+vim.cmd [[autocmd VimEnter * if (getftime(glob("~/.en.utf-8.add")) > getftime(glob("~/.en.utf-8.add.spl"))) | mkspell!  ~/.en.utf-8.add ]]
+
+-- vim.cmd [[autocmd VimEnterfor d in glob('~/.vim/spell/*.add', 1, 1)
+-- if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+-- exec 'mkspell! ' . fnameescape(d)
+-- endif
+-- endfor ]]
