@@ -5,11 +5,13 @@ alias cddot='cd ~/dotfiles'
 alias cdpro='cd ~/Projects'
 
 # utils
+alias _default_editor='nvim'
+
 alias szsh='source ~/.zshrc'
-alias vzsh='vim ~/.zshrc'
-alias vaspell='vim ~/.aspell.en.pws'
+alias vzsh='_default_editor ~/.zshrc'
+alias vaspell='_default_editor ~/.aspell.en.pws'
 alias trim='_trim_string'
-alias nnvim='nvim ~/.config/nvim'
+alias nnvim='_default_editor ~/.config/nvim'
 alias nv='_nvim'
 alias cl='clear'
 
