@@ -66,10 +66,11 @@
 	lsa = ! git ls --all
 	lsca = ! git lsc --all
 	mt = mergetool
-	bclean = "!f() { git branch --merged ${1-master} | grep -v ${1-master} | xargs git branch -d; }; f" # Cleanup merged branches
-	prelease = "!f() { git fo && git log origin/${1-production}..origin/master --oneline --merges --reverse | grep -v 'master' | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
-	prelease2 = "!f() { git fo && git log origin/${1-master}..origin/${2-$(git currentBranch)} --oneline --merges --reverse | grep -v 'master' | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
-	lmcm = "!f() { git fo && git log HEAD~500..origin/$(git currentBranch) --oneline --merges --reverse | grep -v 'master' | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
+	bclean = "!f() { git branch --merged ${1-"$(git defaultMainBranch)"} | grep -v ${1-"$(git defaultMainBranch)"} | xargs git branch -d; }; f" # Cleanup merged branches
+	prelease = "!f() { git fo && git log origin/${1-production}..origin/"$(git defaultMainBranch)" --oneline --merges --reverse | grep -v "$(git defaultMainBranch)" | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
+	prelease2 = "!f() { git fo && git log origin/${1-"$(git defaultMainBranch)"}..origin/${2-$(git currentBranch)} --oneline --merges --reverse | grep -v "$(git defaultMainBranch)" | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
+	# print merge commits from last 500 commits
+	lmcm = "!f() { git fo && git log HEAD~500..origin/$(git currentBranch) --oneline --merges --reverse | grep -v "$(git defaultMainBranch)" | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
 	count = shortlog -sn
 
 	# changes
@@ -91,7 +92,7 @@
 	sc = status -v
 
 	b = ! git branch | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout
-	bm = ! git checkout master
+	bm = "!f() { git checkout "$(git defaultMainBranch)"; }; f"
 	bj = "!f() { generate-jira-branch-name $1; }; f"
 	bre = "!f() { git branch ${2-$(git currentBranch)} -m $1; }; f"
 	brm = "!f() { git branch -D $1; }; f"
@@ -99,7 +100,7 @@
   bprune = ! git branch | xargs git branch -D
 
 	ch = ! git gfuzm git checkout
-	chm = checkout master
+	chm = "!f() { git checkout "$(git defaultMainBranch)"; }; f"
 	chb = checkout -b
 	chbo = "!f() { git fo ; git branch -a | grep origin/ | grep -v '\\->' | sed 's/remotes\\/origin\\///' | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout; }; f"
 	cl = ! git gfuzu git clean 
@@ -110,10 +111,10 @@
 	aa = add -A
 	aap = add -p
 
-	rb = "!f() { git rebase -r ${1-master}; }; f"
-	rbm = "!f() { git rebase -r ${1-master}; }; f"
-	rbmo = ! git plr master
-	ri = "!f() { git rebase -i -r ${1-master}; }; f"
+	rb = "!f() { git rebase -r ${1-"$(git defaultMainBranch)"}; }; f"
+	rbm = "!f() { git rebase -r ${1-"$(git defaultMainBranch)"}; }; f"
+	rbmo = "!f() { git plr "$(git defaultMainBranch)"; }; f"
+	ri = "!f() { git rebase -i -r ${1-"$(git defaultMainBranch)"}; }; f"
 	rih = "!f() { git rebase -i -r HEAD~${1-10}; }; f"
 	rcc = rebase --continue
 	ra = rebase --abort
@@ -197,3 +198,6 @@
 	gfuzs=! git diff --name-only --cached | fzf --print0 -m -1 | xargs -0 -t -o # staged files with fuzzy search
 	gfuzb=! git branch | fzf --print0 -m -1 | xargs -0 -t -o # branches with fuzzy search
 	gfuzbo=! git fo && git branch -r | fzf --print0 -m -1 | xargs -0 -t -o # remote branches with fuzzy search
+
+  # git
+  defaultMainBranch="! f() { [[ ! -z ${DEFAULT__GIT_MAIN_BRANCH+z} ]] && echo "$DEFAULT__GIT_MAIN_BRANCH" || echo "master";}; f"
