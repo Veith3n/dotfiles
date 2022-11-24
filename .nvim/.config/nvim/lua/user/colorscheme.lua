@@ -1,7 +1,7 @@
+local dark_scheme = "onedarker"
+local light_scheme = "solarized"
 
-local function determine_color ()
-  local dark_scheme = "onedarker"
-  local light_scheme = "solarized"
+local function determine_color_on_fixed_hours()
 
   local light_scheme_start_time = 6
   local light_scheme_end_time = 20
@@ -19,7 +19,21 @@ local function determine_color ()
   end
 end
 
-local colorscheme = determine_color()
+local function determine_color_based_on_OS_setting() -- works only for Macos
+  local Job = require("plenary.job")
+
+  local j = Job:new({ command = "defaults", args = { "read", "-g", "AppleInterfaceStyle" } })
+
+  j:start()
+
+  if j:result()[1] == "Dark" then
+    return dark_scheme
+  else
+    return light_scheme
+  end
+end
+
+local colorscheme = determine_color_based_on_OS_setting()
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
