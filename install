@@ -87,7 +87,10 @@ brew install awscli # AWS cli
 brew install neovim
 brew install stow # linking directories
 brew install ripgrep # file grepping for telescope in neovim
-brew install fd # file grepping for telescope in neovim
+brew install fd      # file grepping for telescope in neovim
+
+# Mac os related
+brew install switchaudio-osx # CLI for setting input/output sound device
 
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
