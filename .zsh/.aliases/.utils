@@ -136,3 +136,8 @@ alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_depen
 alias vsc='code .'
 alias vscdot='code ~/dotfiles'
 alias vsa='_make-dir-in-vscode-session'
+
+# macos related
+alias set_input_to_macbook_microphone='_set_input_to_macbook_microphone'
+alias SetInputToMacbookMicrophone='_set_input_to_macbook_microphone'
+alias sim='_set_input_to_macbook_microphone'

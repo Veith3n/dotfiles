@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _set_input_to_macbook_microphone() {
+       SwitchAudioSource -s "MacBook Pro Microphone" -t input
+}
