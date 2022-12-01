@@ -84,8 +84,12 @@ brew install pygments # python package to colorize files
 
 brew install awscli # AWS cli
 
-brew install neovim
-brew install stow # linking directories
+brew install asdf      # version manager
+asdf plugin add neovim # plugin for maanging neovim versions
+asdf install neovim 0.7.0
+asdf global neovim 0.7.0
+
+brew install stow    # linking directories
 brew install ripgrep # file grepping for telescope in neovim
 brew install fd      # file grepping for telescope in neovim
 
@@ -150,6 +154,7 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 	extract\
 	gh\
 	git-auto-fetch\
+	asdf\
 	heroku\
 	jira\
 	sprunge # url for text\/files\
