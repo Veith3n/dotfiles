@@ -24,6 +24,7 @@ alias randomstring='_random_string'
 alias gif='_get_gif_from_giphy'
 
 alias camelCaseToDashCase='_camel_case_to_dash_case'
+alias camelCaseToUnderscoreCase='_camel_case_to_underscore_case'
 
 alias snakeCaseToCamelCase='_snake_case_to_camel_case'
 alias dashCaseToCamelCase='_dash_case_to_camel_case'
