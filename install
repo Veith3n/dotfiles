@@ -86,6 +86,9 @@ brew install awscli # AWS cli
 
 brew install asdf      # version manager
 asdf plugin add neovim # plugin for maanging neovim versions
+
+brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
+
 asdf install neovim 0.7.0
 asdf global neovim 0.7.0
 
@@ -124,6 +127,9 @@ if [ -r ~/.zshrc ]; then
 	echo 'export PATH="$HOME/.jenv/bin:$PATH"' >>~/.zshrc
 	echo 'eval "$(jenv init -)"' >>~/.zshrc
 
+  # initialize z in zshrc
+  echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
+  
 	# add git aliases
 	sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
