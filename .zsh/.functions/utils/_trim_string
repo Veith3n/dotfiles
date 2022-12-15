@@ -1,6 +1,6 @@
 #!/bin/sh
 
 function _trim_string() {
-  echo "$@" | xargs | pbcopy
+  echo -n "$@" | xargs | pbcopy
   echo "$@" | xargs
 }

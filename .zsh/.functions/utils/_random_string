@@ -3,5 +3,5 @@
 function _random_string() {
   string="$(openssl rand -hex ${1-30})"
   print "$string"
-  print $string | pbcopy
+  print -n $string | pbcopy
 }
