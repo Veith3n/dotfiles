@@ -1,5 +1,0 @@
-#!/bin/sh
-
-function _convert_to_camel_case() {
-	text="$@" ruby -e 'text=ENV["text"]; x = text.include?("-") ? text.split("-").map(&:capitalize).join : text.split("_").map(&:capitalize).join; puts x'
-}

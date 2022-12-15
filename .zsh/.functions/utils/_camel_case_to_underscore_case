@@ -1,7 +1,8 @@
 #!/bin/sh
 
 function _camel_case_to_underscore_case() {
-       echo $@ |
-              sed 's/\(.\)\([A-Z]\)/\1_\2/g' |
-              tr '[:upper:]' '[:lower:]'
+       converted_string=$(echo -n $@ | sed 's/\(.\)\([A-Z]\)/\1_\2/g' | tr '[:upper:]' '[:lower:]')
+
+       echo $converted_string
+       echo -n $converted_string | pbcopy
 }

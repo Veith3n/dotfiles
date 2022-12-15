@@ -2,5 +2,8 @@
 
 function _snake_case_to_camel_case() {
 	# ruby -e 'puts ARGV[0].split("_").map(&:capitalize).join' $@
-	text="$@" ruby -e 'puts ENV["text"].split("_").map(&:capitalize).join'
+	converted_string=$(text="$@" ruby -e 'puts ENV["text"].split("_").map(&:capitalize).join')
+
+	echo $converted_string
+	echo -n $converted_string | pbcopy
 }

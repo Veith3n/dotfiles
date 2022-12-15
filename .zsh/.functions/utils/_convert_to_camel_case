@@ -1,0 +1,8 @@
+#!/bin/sh
+
+function _convert_to_camel_case() {
+	converted_string=$(text="$@" ruby -e 'text=ENV["text"]; x = text.include?("-") ? text.split("-").map(&:capitalize).join : text.split("_").map(&:capitalize).join; puts x')
+
+	echo $converted_string
+	echo -n $converted_string | pbcopy
+}
