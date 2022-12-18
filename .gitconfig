@@ -141,6 +141,7 @@
   cmb="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(backend) $msg\""; }; f"
   cms="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(shared) $msg\""; }; f"
   cmf="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(frontend) $msg\""; }; f"
+  cmwip="!f() { git aa && git cm "wip"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
