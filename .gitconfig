@@ -81,6 +81,7 @@
 	dc  = "!f() { git diff HEAD~$((${1-0}+1))..HEAD~${1-0}; }; f"
 	dcn = "!f() { hash=$(git log --pretty=format:'%h' :/$1 | head -1); git diff $hash~..$hash;}; f"
 	dch  = "!f() { git diff $1~..$1; }; f"	
+	do = "!f() { git fo && git diff $(git currentBranch) origin/$(git currentBranch); }; f" # diff between local and origin
 	dsa = difftool --cached 
 	dlc = difftool --cached HEAD~
 
