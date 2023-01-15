@@ -98,6 +98,7 @@ brew install fd      # file grepping for telescope in neovim
 
 # Mac os related
 brew install switchaudio-osx # CLI for setting input/output sound device
+brew install monitorcontrol  # app for adjusting external display brightness
 
 # Link config files to the root direcotry
 [ -r .make_links ] && ./make_links
