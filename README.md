@@ -15,3 +15,4 @@
 5. Run `PlugInstall` in vim tab
 6. Run `mkdir ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch &&  BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" && ln -fsv ${BASE_DIR}/iterm/iterm_color_switching.py ~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/`
 6. Set `save changes` option in preferences tab in `iterm` to `automatically`
+6. Fill out values in `.env_variables` file
