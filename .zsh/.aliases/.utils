@@ -32,6 +32,8 @@ alias snakeCaseToCamelCase='_snake_case_to_camel_case'
 alias dashCaseToCamelCase='_dash_case_to_camel_case'
 
 alias convertToCamelCase='_convert_to_camel_case'
+alias convertToUnderscoreCase='_convert_to_underscore_case'
+alias convertToDashCase='_convert_to_dash_case'
 
 # brew
 alias brewcl='brew cleanup'
