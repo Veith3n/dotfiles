@@ -1,7 +1,8 @@
 #!/bin/sh
 
 function _convert_to_camel_case() {
-	converted_string=$(text="$@" ruby -e 'text=ENV["text"]; x = text.include?("-") ? text.split("-").map(&:capitalize).join : text.split("_").map(&:capitalize).join; puts x')
+	# converted_string=$(text="$@" ruby -e 'text=ENV["text"]; x = text.include?("-") ? text.split("-").map(&:capitalize).join : text.split("_").map(&:capitalize).join; puts x')
+	converted_string=$(text="$@" ruby -e 'text=ENV["text"]; text = text.gsub(/_|-/, " "); puts text.split(" ").map.with_index { |word, i| i == 0 ? word.downcase : word.capitalize }.join')
 
 	echo $converted_string
 	echo -n $converted_string | pbcopy
