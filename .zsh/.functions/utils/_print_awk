@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _print_awk {
+  awk -v word_index=${1-1} '{print $word_index}'
+}

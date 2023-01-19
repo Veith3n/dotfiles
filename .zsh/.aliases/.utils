@@ -15,6 +15,7 @@ alias nnvim='_default_editor ~/.config/nvim'
 alias nv='_nvim'
 alias cl='clear'
 alias cpd='cp -R'
+alias awkprintword='_print_awk'
 
 alias ccat='pygmentize -O style=emacs -g'
 
