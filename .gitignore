@@ -1,3 +1,6 @@
+# custom local spelling file
+.local.aspell.spl
+
 .vim/colors
 
 # neovim plugin manager (packer)
