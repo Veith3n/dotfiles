@@ -92,9 +92,11 @@ brew install z # simple script for easier navigation in directories https://gith
 asdf install neovim 0.7.0
 asdf global neovim 0.7.0
 
-brew install stow    # linking directories
-brew install ripgrep # file grepping for telescope in neovim
-brew install fd      # file grepping for telescope in neovim
+brew install stow      # linking directories
+brew install ripgrep   # file grepping for telescope in neovim
+brew install fd        # file grepping for telescope in neovim
+brew install diffr     # tool for nicer diffs in git
+brew install git-delta # tool for nicer diffs in git
 
 # Mac os related
 brew install switchaudio-osx # CLI for setting input/output sound device
