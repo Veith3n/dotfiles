@@ -20,8 +20,20 @@
 [filter "git_signing_key"]
 	clean =  .git_scripts/clean_gitconfig
 	smudge = .git_scripts/smudge_gitconfig
+; [core]
+  ; pager = diffr | less 
+  ; pager = delta --color-only
+[interactive]
+  diffFilter = [[ ! -z "$(git checkIfSystemIsInDarkMode)" ]] && delta --color-only || delta --color-only --light
+  ; diffFilter = delta --color-only --light 
+  ; diffFilter = diffr | less -R ; a bit less readable diff
+[delta]
+    side-by-side = true
 [pager]
-	diff =
+	diff = ; needed for git_diff_wrapper to work
+  ; log = diffr | less
+  ; show = diffr | less
+  ; diff = diffr | less
 [merge]
 	tool = vimdiff
 [mergetool]
@@ -204,3 +216,4 @@
 
   # git
   defaultMainBranch="! f() { [[ ! -z ${DEFAULT__GIT_MAIN_BRANCH+z} ]] && echo "$DEFAULT__GIT_MAIN_BRANCH" || echo "master";}; f"
+  checkIfSystemIsInDarkMode="! f() { echo $(defaults read -g AppleInterfaceStyle);}; f"
