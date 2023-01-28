@@ -9,7 +9,7 @@ xcode-select --install
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# update hombrew
+# update homebrew
 brew update
 brew upgrade
 
@@ -85,7 +85,7 @@ brew install pygments # python package to colorize files
 brew install awscli # AWS cli
 
 brew install asdf      # version manager
-asdf plugin add neovim # plugin for maanging neovim versions
+asdf plugin add neovim # plugin for managing neovim versions
 
 brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 
@@ -103,7 +103,7 @@ brew install switchaudio-osx # CLI for setting input/output sound device
 brew install monitorcontrol  # app for adjusting external display brightness
 brew install muzzle # app for auto turning do not disturb mode when sharing screen
 
-# Link config files to the root direcotry
+# Link config files to the root directory
 [ -r .make_links ] && ./make_links
 
 # Generate file with git aliases for zshrc
@@ -138,7 +138,7 @@ if [ -r ~/.zshrc ]; then
   sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
-  # add utils alises
+  # add utils aliases
   sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
 
@@ -190,7 +190,7 @@ path+=('$BASE_DIR/elpassion' $path) \
 [ -r ~/.functions ] && autoload -Uz ~/.functions/**/* \
 \' ~/.zshrc
 
-  # source varables and path files in zshrc
+  # source variables and path files in zshrc
   sed -i '' -e '1i \ 
 \
 # Link file with paths \
@@ -240,7 +240,7 @@ gh auth login
 # heroku
 heroku autocomplete
 
-# enables easier movemnt in vim mode
+# enables easier movement in vim mode
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Iterm
