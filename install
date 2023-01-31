@@ -49,7 +49,6 @@ brew install --cask docker
 brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask dash
-brew install --cask soundcleod
 brew install --cask rectangle
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
