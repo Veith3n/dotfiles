@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function _convert_to_underscore_case() {
-	converted_string=$(text="$@" ruby -e 'text=ENV["text"]; puts text.gsub(/::/, "/").gsub(/([A-Z]+)([A-Z][a-z])/,"\1_\2").gsub(/([a-z\d])([A-Z])/,"\1_\2").tr("-", "_").downcase')
+	converted_string=$(text="$@" ruby -e 'text=ENV["text"]; puts text.gsub(/::/, "/").gsub(/([A-Z]+)([A-Z][a-z])/,"\1_\2").gsub(/([a-z\d])([A-Z])/,"\1_\2").tr("-", "_").tr(" ", "-").downcase')
 
 	echo $converted_string
 	echo -n $converted_string | pbcopy
