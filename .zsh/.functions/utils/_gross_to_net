@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _gross_to_net() {
+	echo "$(expr $@ \* 100 / 123)"
+}
