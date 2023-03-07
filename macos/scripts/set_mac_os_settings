@@ -10,6 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+# Disable 24 hour format in clock
+defaults write com.apple.menuextra.clock Show24Hour 0 
+
 ###############################################################################
 # Spotlight  search                                                           #
 ###############################################################################
