@@ -191,6 +191,7 @@
 	rc = "!f() { git reset HEAD~$1 ; }; f"
 	rh = ! git reset --hard & git clean -df
 	rhc = "!f() { git reset HEAD~$1 --hard & git clean -df ; }; f"
+	rhb = "!f() { git gfuzb | xargs git reset --hard & git clean -df ; }; f"
 	rho = "!f() { git fo; git reset --hard origin/$(git currentBranch) & git clean -df ; }; f"
 
 	lastMergeHash = "! f() { git log ${1-$(git currentBranch)} --merges --pretty=format:'%h' | head -n1; }; f"
