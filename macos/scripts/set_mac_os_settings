@@ -11,7 +11,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 osascript -e 'tell application "System Preferences" to quit'
 
 # Disable 24 hour format in clock
-defaults write com.apple.menuextra.clock Show24Hour 0 
+defaults write com.apple.menuextra.clock Show24Hour 0
 
 ###############################################################################
 # Spotlight  search                                                           #
@@ -21,7 +21,7 @@ defaults write com.apple.menuextra.clock Show24Hour 0
 #  0: APPLICATIONS
 #  1: MENU_SPOTLIGHT_SUGGESTIONS
 #  2: MENU_CONVERSION
-#  3: MENU_EXPRESSION 
+#  3: MENU_EXPRESSION
 #  4: MENU_DEFINITION
 #  5: SYSTEM_PREFS
 #  6: DOCUMENTS
@@ -89,7 +89,7 @@ sudo mdutil -E / > /dev/null
 defaults write com.apple.finder QuitMenuItem -bool true
 
 # Show hidden files in finder
-defaults write com.apple.Finder AppleShowAllFiles true 
+defaults write com.apple.Finder AppleShowAllFiles true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -147,7 +147,6 @@ defaults write com.apple.dock mru-spaces -bool false
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
 
-
 # Hot corners tl, tr, bl, br (top, bottom, left right)
 # Possible values:
 #  0: no-op
@@ -162,16 +161,16 @@ defaults write com.apple.dock mru-spaces -bool false
 # 12: Notification Center
 # 13: Lock Screen
 #
-# Modifiers codes: 
-# 1048576: Command key  
+# Modifiers codes:
+# 1048576: Command key
 
 # Top left screen corner → Lock screen
 defaults write com.apple.dock wvous-tl-corner -int 13
-defaults write com.apple.dock wvous-tl-modifier -int 1048576 
+defaults write com.apple.dock wvous-tl-modifier -int 1048576
 
 # Top right screen corner → Notification Centre
 defaults write com.apple.dock wvous-tr-corner -int 12
-defaults write com.apple.dock wvous-tr-modifier -int 1048576 
+defaults write com.apple.dock wvous-tr-modifier -int 1048576
 
 # Bottom left screen corner → Desktop
 defaults write com.apple.dock wvous-bl-corner -int 4
@@ -213,7 +212,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
 
 ###############################################################################
 # Mouse                                                                       #
