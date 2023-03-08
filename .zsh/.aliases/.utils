@@ -145,7 +145,10 @@ alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_depen
 alias asdfnvg='asdf global neovim $(_asdnv_installed | _fuzzy-search)'
 alias asdfnvl='asdf local neovim  $(_asdnv_installed | _fuzzy-search)'
 
+alias asdfnvi='asdf install neovim $(_asdnv_list_all_versions | _fuzzy-search)'
+
 alias _asdnv_installed='asdf list neovim'
+alias _asdnv_list_all_versions='asdf list all neovim'
 
 # vscode
 alias vsc='code .'
