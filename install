@@ -88,8 +88,8 @@ asdf plugin add neovim # plugin for managing neovim versions
 
 brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 
-asdf install neovim 0.7.0
-asdf global neovim 0.7.0
+asdf install neovim 0.8.3
+asdf global neovim 0.8.3
 
 brew install stow      # linking directories
 brew install ripgrep   # file grepping for telescope in neovim
