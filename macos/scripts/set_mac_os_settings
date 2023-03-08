@@ -193,6 +193,9 @@ sudo pmset -c sleep 11
 sudo pmset -b displaysleep 6
 sudo pmset -b sleep 7
 
+# disable weaker brightness on battery
+sudo pmset -b lessbright 0
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
