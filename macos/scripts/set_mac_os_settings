@@ -81,6 +81,14 @@ sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
 sudo mdutil -E / > /dev/null
 
+
+###############################################################################
+# Safari                                                                      #
+###############################################################################
+
+defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
