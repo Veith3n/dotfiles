@@ -16,3 +16,13 @@ choco install revo-uninstaller
 choco install driverbooster
 choco install teamviewer
 choco install virtualbox
+choco install hxd
+
+# debugging exe files (if they are malicous)
+choco install pestudio
+
+# task manager on steroids
+choco install procexp
+
+# all startup processes
+choco install autoruns
