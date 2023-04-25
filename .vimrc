@@ -47,6 +47,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'zivyangll/git-blame.vim'
 Plug 'vim-airline/vim-airline'
 
+Plug 'nicwest/vim-camelsnek' " convert to snake_case, camelCase
+
 " Nerd tree config
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -69,6 +71,10 @@ call plug#end()
 colorscheme onedark " color scheme for nicer highlithing in merge confilicts
 
 " Plugin config
+
+" vim-camelsnek
+map <Leader>cs :Snek <CR>
+map <Leader>cc :Camel <CR>
 
 " Ale 
 let g:ale_linters = { 'ruby': ['rubocop', 'ruby'], 'javascript': ['eslint'], '*': ['trim_whitespace', 'remove_trailing_lines'] }
