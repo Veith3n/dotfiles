@@ -1271,6 +1271,17 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
+		<key>0x64-0x40000-0x2</key>
+		<dict>
+			<key>Action</key>
+			<integer>40</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>Horizon</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x6c-0x100000-0x25</key>
 		<dict>
 			<key>Action</key>
@@ -1281,6 +1292,17 @@
 			<string>Solarized Light</string>
 			<key>Version</key>
 			<integer>0</integer>
+		</dict>
+		<key>0x6c-0x40000-0x25</key>
+		<dict>
+			<key>Action</key>
+			<integer>40</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>Horizon-light</string>
+			<key>Version</key>
+			<integer>1</integer>
 		</dict>
 		<key>0x6c-0x80000-0x25</key>
 		<dict>
