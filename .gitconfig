@@ -219,3 +219,4 @@
   # git
   defaultMainBranch="! f() { [[ ! -z ${DEFAULT__GIT_MAIN_BRANCH+z} ]] && echo "$DEFAULT__GIT_MAIN_BRANCH" || echo "master";}; f"
   checkIfSystemIsInDarkMode="! f() { echo $(defaults read -g AppleInterfaceStyle);}; f"
+  convertToDashCase = "!f() { text=\"$@\"; converted_string=$(ruby -e \"text=\\\"$text\\\"; puts text.gsub(/([a-z\\d])([A-Z])/, \\\"\\\\1-\\\\2\\\").gsub(/([A-Z])([A-Z][a-z])/, \\\"\\\\1-\\\\2\\\").gsub(/::/, \\\"/\\\").gsub(/\\s+/, \\\"-\\\").downcase\"); echo $converted_string; }; f"
