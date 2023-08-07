@@ -116,6 +116,8 @@
 	chm = "!f() { git checkout "$(git defaultMainBranch)"; }; f"
 	chf = "!f() { git checkout $1 "$(git defaultMainBranch)"; }; f"
 	chb = checkout -b
+        # checkout branch with dash case name
+	chb = "!f() { msg="$*"; name=$(git convertToDashCase $msg); git checkout -b $name; }; f"
 	chbo = "!f() { git fo ; git branch -a | grep origin/ | grep -v '\\->' | sed 's/remotes\\/origin\\///' | fzf --print0 -m | tr -d '[:space:]*' | xargs -0 -t -o git checkout; }; f"
 	cl = ! git gfuzu git clean 
 	cld = ! git gfuzu git clean -f
