@@ -153,11 +153,16 @@
 	cam = "!f() { msg="$*"; git add -A && echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
 	cf = "!f() { git commit --fixup :/$1; }; f"
 	cfh = "!f() { git commit --fixup $1; }; f"
-	cm = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
-  cmb="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(backend) $msg\""; }; f"
-  cms="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(shared) $msg\""; }; f"
-  cmf="!f() { msg="$(git upcasefirstchar $*)"; git cm "\"feat(frontend) $msg\""; }; f"
-  cmwip="!f() { git aa && git cm "wip"; }; f"
+	cmbase = "!f() { msg="$*"; echo $(git validateCommitMsgLength $msg) | grep -v '^$'; echo \"$(git lookForTypos $msg)\" | grep -v '^$'; git commit -m \"$(git formatCommitMsg $msg)\"; }; f"
+
+  cm="!f() {  msg="$(git upcasefirstchar $*)"; git cmbase "\"feat: $msg\""; }; f"
+  cmf="!f() { msg="$*"; git cmbase "\"fix: $msg\""; }; f"
+  cmr="!f() { msg="$*"; git cmbase "\"refactor: $msg\""; }; f"
+  cmc="!f() { msg="$*"; git cmbase "\"chore: $msg\""; }; f"
+  cmt="!f() { msg="$*"; git cmbase "\"test: $msg\""; }; f"
+  cmconfig="!f() { msg="$*"; git cmbase "\"config: $msg\""; }; f"
+
+  cmwip="!f() { git aa && git cmbase "wip"; }; f"
 
 	cp = "!f() { git cherry-pick :/$1; }; f"
 	cph = "!f() { git cherry-pick $1; }; f"
