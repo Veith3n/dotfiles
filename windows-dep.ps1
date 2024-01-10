@@ -17,6 +17,17 @@ choco install driverbooster
 choco install teamviewer
 choco install virtualbox
 choco install hxd
+choco install geforce-experience
+choco install autoclicker
+choco install throttlestop
+choco install auto-dark-mode
+choco install kdeconnect-kde
+choco install cheatengine
+choco install bluestacks
+choco install 7zip
+choco install adobereader
+choco install vortex
+choco install vlc
 
 # debugging exe files (if they are malicous)
 choco install pestudio
