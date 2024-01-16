@@ -48,3 +48,16 @@ choco install kdeconnect-kde
 choco install revo-uninstaller
 choco install vlc # better media player
 
+
+# Windows settings
+
+# always showing file extensions in file explorer
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+
+# show hidden files in file explorer
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hidden /t REG_DWORD /d 1 /f
+
+# windows open file explorer at this PC
+Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'LaunchTo' -Value 1
+
+
