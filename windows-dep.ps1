@@ -51,6 +51,9 @@ choco install vlc # better media player
 
 # Windows settings
 
+# disable "Show more options" feature (make Windows 11 show full menus right away)
+reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+
 # always showing file extensions in file explorer
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
 
