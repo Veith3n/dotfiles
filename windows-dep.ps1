@@ -59,6 +59,9 @@ choco install neovim
 
 # Windows settings
 
+# enable dev mode 
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowDevelopmentWithoutDevLicense" -Value 1
+
 # disable "Show more options" feature (make Windows 11 show full menus right away)
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 
