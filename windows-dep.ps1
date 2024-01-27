@@ -26,7 +26,9 @@ choco install git
 choco install teamviewer
 choco install virtualbox
 choco install vscode
-choco install hyper
+choco install nodejs
+choco install wezterm
+
 
 # games
 choco install bluestacks # android emulator
@@ -47,6 +49,12 @@ choco install hxd # hex file editor
 choco install kdeconnect-kde
 choco install revo-uninstaller
 choco install vlc # better media player
+
+
+# Vim dependencies
+choco install zig
+choco install nerd-fonts-hack
+choco install neovim
 
 
 # Windows settings
