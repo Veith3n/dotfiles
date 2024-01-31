@@ -1451,104 +1451,104 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25882354378700256</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.21176470816135406</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.027450980618596077</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.18431372940540314</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.19607843458652496</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.86274510622024536</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.45882353186607361</real>
+				<real>0.3333333432674408</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.43137255311012268</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.34509804844856262</real>
+				<real>0.3333333432674408</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.51372551918029785</real>
+				<real>0.3333333432674408</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.48235294222831726</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.3960784375667572</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.58823531866073608</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.58039218187332153</real>
+				<real>0.3333333432674408</real>
 				<key>Red Component</key>
-				<real>0.51372551918029785</real>
+				<real>0.3333333432674408</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.76862746477127075</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.44313725829124451</real>
+				<real>0.3333333432674408</real>
 				<key>Red Component</key>
-				<real>0.42352941632270813</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 14 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.63137257099151611</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.63137257099151611</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.57647061347961426</real>
+				<real>0.3333333432674408</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.89019608497619629</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.96470588445663452</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.99215686321258545</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -1557,11 +1557,11 @@
 				<key>Blue Component</key>
 				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.60000002384185791</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.5215686559677124</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -1570,89 +1570,89 @@
 				<key>Blue Component</key>
 				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.5372549295425415</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.70980393886566162</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.82352942228317261</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.54509806632995605</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.50980395078659058</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.21176470816135406</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.59607845544815063</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.63137257099151611</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.16470588743686676</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.83529412746429443</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.90980392694473267</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.93333333730697632</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.21176470816135406</real>
+				<real>0.3333333432674408</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.16862745583057404</real>
+				<real>0.3333333432674408</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.3333333432674408</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.086274512112140656</real>
+				<real>0.3333333432674408</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.29411765933036804</real>
+				<real>0.3333333432674408</real>
 				<key>Red Component</key>
-				<real>0.79607844352722168</real>
+				<real>1</real>
 			</dict>
 			<key>BM Growl</key>
 			<true/>
@@ -1661,13 +1661,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.89019608497619629</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.99215686321258545</real>
+				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1680,7 +1680,7 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14910027384757996</real>
+				<real>0.1491314172744751</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
@@ -1693,13 +1693,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.45882353186607361</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.43137255311012268</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.34509804844856262</real>
+				<real>1</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -1714,13 +1714,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.51372551918029785</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.48235294222831726</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.3960784375667572</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1731,22 +1731,22 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.92681378126144409</real>
+				<real>0.9268307089805603</real>
 				<key>Red Component</key>
-				<real>0.70214027166366577</real>
+				<real>0.70213186740875244</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.83529412746429443</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.90980392694473267</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.93333333730697632</real>
+				<real>1</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
@@ -1765,13 +1765,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.51372551918029785</real>
+				<real>0.73333334922790527</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.48235294222831726</real>
+				<real>0.73333334922790527</real>
 				<key>Red Component</key>
-				<real>0.3960784375667572</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Guid</key>
 			<string>BE67F2DB-0AFF-4E02-88EC-2EF95356AFB8</string>
@@ -2104,16 +2104,16 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73422712087631226</real>
+				<real>0.73423302173614502</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.35915297269821167</real>
+				<real>0.35916060209274292</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.39713541666666669</real>
+			<real>0.29987630208333332</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -2141,26 +2141,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.45882353186607361</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.43137255311012268</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.34509804844856262</real>
+				<real>0.0</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.83529412746429443</real>
+				<real>1</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.90980392694473267</real>
+				<real>0.8353000283241272</real>
 				<key>Red Component</key>
-				<real>0.93333333730697632</real>
+				<real>0.70980000495910645</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -2898,27 +2898,27 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects</string>
-											<string>/Users/veith3n/Projects</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/trash-fetcher</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects</string>
+											<string>/Users/krzysztofkopydlowski/Projects</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/trash-fetcher</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects</string>
+											<string>/Users/krzysztofkopydlowski/Projects</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -2962,7 +2962,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
+										<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -3618,28 +3618,28 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -3683,7 +3683,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
+										<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -4339,18 +4339,18 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll</string>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/lib/shared</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/lib/shared</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/apps/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/apps/backend</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -4394,7 +4394,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/fullkontrol/fullkontroll/lib/shared</string>
+										<string>/Users/krzysztofkopydlowski/Projects/fullkontrol/fullkontroll/lib/shared</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -6132,70 +6132,70 @@
 											<string>/Users/veith3n</string>
 											<string>/Users/veith3n</string>
 											<string>/Users/veith3n</string>
-											<string>/Users/veith3n/Projects</string>
-											<string>/Users/veith3n/Projects</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects</string>
+											<string>/Users/krzysztofkopydlowski/Projects</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -6239,7 +6239,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/widget</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/widget</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -7012,25 +7012,25 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -7074,7 +7074,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant/frontend/support</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/frontend/support</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -7847,63 +7847,63 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -7947,7 +7947,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -8720,48 +8720,48 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -8805,7 +8805,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -9578,47 +9578,47 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -9662,7 +9662,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -10435,75 +10435,75 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -10547,7 +10547,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -11318,14 +11318,14 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant/packages/backend</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/packages/backend</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/ramp/ramp-instant</string>
+											<string>/Users/krzysztofkopydlowski/Projects/ramp-instant</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -11369,7 +11369,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/ramp/ramp-instant/packages/backend</string>
+										<string>/Users/krzysztofkopydlowski/Projects/ramp-instant/packages/backend</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -12140,27 +12140,27 @@
 											<string>/Users/veith3n</string>
 											<string>/Users/veith3n</string>
 											<string>/Users/veith3n</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
 										</array>
 										<key>Environment</key>
 										<dict>
@@ -12209,7 +12209,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
+										<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -12861,39 +12861,39 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/shared</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/shared</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/shared</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/shared</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/shared</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/shared</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/.git/info</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/.git/info</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -12937,7 +12937,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/pricing-and-campaign/packages/shared</string>
+										<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/shared</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -13591,53 +13591,53 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/dev-dependencies</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/dev-dependencies</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -13681,7 +13681,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/pricing-and-campaign/packages/markdown</string>
+										<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/markdown</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -14335,19 +14335,19 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/website</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/website</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/website</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/website</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/pricings_db_migrator</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -14391,7 +14391,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/pricing-and-campaign/packages/website</string>
+										<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/website</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -15045,34 +15045,34 @@
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/website</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
-											<string>/Users/veith3n/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/website</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/veith3n/Projects/pricing-and-campaign/packages/website</string>
+											<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign/packages/website</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict/>
@@ -15116,7 +15116,7 @@
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/veith3n/Projects/pricing-and-campaign</string>
+										<string>/Users/krzysztofkopydlowski/Projects/pricing-and-campaign</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>

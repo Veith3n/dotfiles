@@ -4,7 +4,6 @@ set number relativenumber
 set nocompatible " disables revert support for vi
 set ignorecase " case unsensitive search
 " set mouse=a " enables mouse
-
 set encoding=UTF-8
 
 syntax enable " enables syntax highlight
@@ -20,7 +19,6 @@ set rtp+=/usr/local/opt/fzf
 
 " Display allmatching files with autocomplete 
 set wildmenu
-
 set iskeyword+=- " treats foo-bar as one word
 
 """ Plugins 

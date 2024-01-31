@@ -79,6 +79,8 @@ alias yi='yarn add'
 alias yid='yarn add --dev'
 alias yo='yarn outdated'
 alias yrpj='_yarn_run-script-from-package_json'
+alias yrpjs='yarn run start'
+alias yrpjt='_yarn_run_tests'
 alias yu='_yarn-update_dependency_from_yarn_outdated'
 alias yupj='_yarn-update_dependency_from-package_json'
 

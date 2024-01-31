@@ -1,6 +1,7 @@
 #!/bin/sh
 
 function _convert_to_dash_case() {
+        converted_string=$(text="$@" ruby -e 'text=ENV["text"]; puts text.gsub(/([a-z])([A-Z])/, "\\1-\\2").gsub(/([A-Z])([A-Z][a-z])/, "\\1-\\2").gsub(/::/, "/").gsub(/\s+/, "-").downcase'converted_string=$(text="$@" ruby -e 'text=ENV["text"]; puts text.gsub(/([a-z])([A-Z])/, "\\1-\\2").gsub(/([A-Z])([A-Z][a-z])/, "\\1-\\2").gsub(/::/, "/").gsub(/\s+/, "-").downcase'))
         converted_string=$(text="$@" ruby -e 'text=ENV["text"]; puts text.gsub(/([a-z])([A-Z])/, "\\1-\\2").gsub(/([A-Z])([A-Z][a-z])/, "\\1-\\2").gsub(/::/, "/").gsub(/\s+/, "-").downcase.split("-").reject(&:empty?).join("-")')
 
 	echo $converted_string

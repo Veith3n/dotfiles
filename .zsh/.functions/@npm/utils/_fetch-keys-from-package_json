@@ -1,10 +1,38 @@
 #!/bin/sh
 
+# function _fetch-keys-from-package_json {
+#   if [ -z $2 ];
+#   then
+#   jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+#   else
+#   jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | grep $2 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
+#   fi;
+# }
+
+# Fetches keys from the package.json file based on the provided parameters.
+# Usage: _fetch-keys-from-package_json [OPTIONS] [SEARCH_TERM]
+# Options:
+#   --without-fuzzy-search, -wfs: Skip fuzzy search in the command chain
+# Arguments:
+#   SEARCH_TERM: (optional) Search term to filter the keys
+
 function _fetch-keys-from-package_json {
-  if [ -z $2 ];
-  then
-  jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
-  else
-  jq $1 package.json | grep  -v "^{$" | grep -v "^}$" | grep $2 | _fuzzy-search | awk '{print $1}' | sed 's/^"//;s/":$//'	
-  fi;
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    echo "Usage: _fetch-keys-from-package_json [OPTIONS] [SEARCH_TERM]"
+    echo "Options:"
+    echo "  --without-fuzzy-search, -wfs: Skip fuzzy search in the command chain"
+    echo "Arguments:"
+    echo "  SEARCH_TERM: (optional) Search term to filter the keys"
+    return
+  fi
+
+  # Determine the search command based on the presence of "--without-fuzzy-search" or "-wfs" option
+  local search_cmd="_fuzzy-search"
+  if [ "$1" = "--without-fuzzy-search" ] || [ "$1" = "-wfs" ]; then
+    search_cmd="grep"
+    shift  # Remove the "--without-fuzzy-search" or "-wfs" option from the parameter list
+  fi
+
+  # Extract the specified key from package.json, filter out braces, and perform search
+  jq "$1" package.json | grep -v "^{$" | grep -v "^}$" | $search_cmd "${2:+$2 }" | awk -F'"' '{print $2}'
 }
