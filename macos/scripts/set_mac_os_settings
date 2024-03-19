@@ -257,7 +257,7 @@ defaults write com.apple.AppleBluetoothMultitouch.mouse MouseTwoFingerDoubleTapG
 defaults write com.apple.AppleBluetoothMultitouch.mouse MouseTwoFingerHorizSwipeGesture -int 2
 
 # Set mouse speed
-defaults write -g com.apple.mouse.scaling 1.5
+defaults write -g com.apple.mouse.scaling 3.0
 
 for app in "Activity Monitor" \
   "Finder" \
