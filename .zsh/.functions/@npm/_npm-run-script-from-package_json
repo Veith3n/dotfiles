@@ -1,5 +1,9 @@
 #!/bin/sh
 
 function _npm-run-script-from-package_json() {
+if [ -f "package-lock.json" ]; then
   _run-script-from-package_json "npm run" $1
+  else
+  _run-script-from-package_json "yarn run" $1
+  fi
 }
