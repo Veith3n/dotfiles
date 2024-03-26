@@ -6,6 +6,7 @@ alias cdpro='cd ~/Projects'
 
 # utils
 alias _default_editor='nvim'
+alias update_lvim_plugins='nvim --headless "+Lazy! sync" +qa'
 
 alias szsh='source ~/.zshrc'
 alias vzsh='_default_editor ~/.zshrc'
