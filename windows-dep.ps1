@@ -82,6 +82,9 @@ Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
 git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
 Remove-Item $env:LOCALAPPDATA\nvim.git -Recurse -Force
 
+# Allow running unsigned powershell scripts
+Set-ExecutionPolicy RemoteSigned
+
 # Run those after restarting terminal
 # nvim
 # Install parsers in Neovim via :TSInstall c, :TSInstall cpp
