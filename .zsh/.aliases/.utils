@@ -38,6 +38,9 @@ alias convertToCamelCase='_convert_to_camel_case'
 alias convertToUnderscoreCase='_convert_to_underscore_case'
 alias convertToDashCase='_convert_to_dash_case'
 
+alias extractAllArchivesToCurrentDir='find . -name "*.rar" -exec unrar e "{}" \; && find . -name "*.zip" -exec unzip -o -d . "{}" \;'
+alias removeAllArchivesFromCurrentDir='find . -name "*.rar" -exec rm "{}" \; && find . -name "*.zip" -exec rm "{}" \;'
+
 # brew
 alias brewcl='brew cleanup'
 alias brewo='brew outdated'
