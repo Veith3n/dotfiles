@@ -175,6 +175,8 @@
 	cpc = cherry-pick --continue
 	cpa = cherry-pick --abort
 	cps = cherry-pick --skip
+  # cherry-pick specifired commits from this branch after hard restting to proivded one ($1 -> branch name $2 -> number of cherry-picked commits)
+  rhcp ="!f() { branchName="$(git currentBranch)" && newbranchName="tmp-$(git currentBranch)" && git chb $newbranchName && git checkout $branchName && git reset --hard $1 &&  git cherry-pick $newbranchName~$2..$newbranchName && git branch -D $newbranchName; }; f"
 
 	sl = stash list --color=always --pretty=format:'%gd %C(yellow)%h %>(14)%C(green)%cr %C(blue)%gs'
 	sa = stash apply
