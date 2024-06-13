@@ -78,6 +78,9 @@
 	lsa = ! git ls --all
 	lsca = ! git lsc --all
 	mt = mergetool
+	mc = merge --continue
+	ma = merge --abort
+
 	bclean = "!f() { git branch --merged ${1-"$(git defaultMainBranch)"} | grep -v ${1-"$(git defaultMainBranch)"} | xargs git branch -d; }; f" # Cleanup merged branches
 	prelease = "!f() { git fo && git log origin/${1-production}..origin/"$(git defaultMainBranch)" --oneline --merges --reverse | grep -v "$(git defaultMainBranch)" | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
 	prelease2 = "!f() { git fo && git log origin/${1-"$(git defaultMainBranch)"}..origin/${2-$(git currentBranch)} --oneline --merges --reverse | grep -v "$(git defaultMainBranch)" | grep -v 'remote-tracking' | awk '{$1= \"\"; print \"-\"$0}'; }; f"
