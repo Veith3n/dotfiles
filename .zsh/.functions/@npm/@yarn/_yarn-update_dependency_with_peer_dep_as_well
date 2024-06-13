@@ -1,0 +1,5 @@
+#!/bin/sh
+
+function _yarn-_yarn-update_dependency_with_peer_dep_as_well-package_json() {
+  _update_dependency_from-package_json "yarn up " $1  "--recursive"
+}
