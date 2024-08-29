@@ -2,6 +2,8 @@
 	email = 28898861+Veith3n@users.noreply.github.com
 	name = Krzysztof Kopydłowski
 	signingkey = 72FBDF57E6EEDC9F
+[includeIf "gitdir:~/Projects/gitlab-projects/"] # set correct signingKey for gitlab
+        path = ~/Projects/gitlab-projects/.gitconfig
 [branch]
 	autosetuprebase = always
 [commit]
