@@ -252,7 +252,13 @@
 	gfuzbo=! git fo && git branch -r | fzf --print0 -m -1 | xargs -0 -t -o # remote branches with fuzzy search
 
   # git
-  defaultMainBranch="! f() { [[ ! -z ${DEFAULT__GIT_MAIN_BRANCH+z} ]] && git branch | grep -q $DEFAULT__GIT_MAIN_BRANCH && echo "$DEFAULT__GIT_MAIN_BRANCH" || git branch | grep -q 'master' && echo "master" || echo "main" ;}; f"
+    # check if $DEFAULT__GIT_MAIN_BRANCH is set and such branch is present and if it is checkout to it 
+    # if not look for master if not fallback for main
+  defaultMainBranch="! f() { \
+    [[ ! -z ${DEFAULT__GIT_MAIN_BRANCH+z} ]] && git branch | grep -q $DEFAULT__GIT_MAIN_BRANCH && echo "$DEFAULT__GIT_MAIN_BRANCH" || \
+    git branch | grep -q 'master' && echo "master" || \
+    echo "main" ; \
+    }; f"
   checkIfSystemIsInDarkMode="! f() { echo $(defaults read -g AppleInterfaceStyle);}; f"
 #   convertToDashCase = "!f() { text=\"$@\"; converted_string=$(ruby -e \"text=\\\"$text\\\"; puts text.gsub(/([a-z\\d])([A-Z])/, \\\"\\\\1-\\\\2\\\").gsub(/([A-Z])([A-Z][a-z])/, \\\"\\\\1-\\\\2\\\").gsub(/::/, \\\"/\\\").gsub(/\\s+/, \\\"-\\\").downcase\"); echo $converted_string; }; f"
   convertToDashCase="!f() { ruby -e \"text=ARGV.join(' '); puts text.gsub(/[ _]/, '-').gsub(/([a-z])([A-Z])/, '\\\\1-\\\\2').downcase\" \"$@\"; }; f"
