@@ -1,0 +1,16 @@
+#!/bin/sh
+
+brew install --cask iterm2
+brew install gnu-sed # GNU based sed
+
+brew install --cask rectangle # handling windows moving
+
+brew install macs-fan-control
+brew install bartender
+brew install --cask cleanmymac
+brew install jumpcut # copy history
+
+brew install switchaudio-osx # CLI for setting input/output sound device
+brew install monitorcontrol  # app for adjusting external display brightness
+brew install muzzle          # app for auto turning do not disturb mode when sharing screen
+brew install --cask skim     # pdfs with dark mode support

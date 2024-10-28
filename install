@@ -28,7 +28,6 @@ echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
 brew install zsh     # neat CLI
-brew install gnu-sed # GNU based sed
 brew install bash    # install new version of bash
 echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 brew install aspell # spell checker
@@ -37,8 +36,6 @@ brew install jq
 brew install ngrok
 brew install dotenv-linter
 brew install htop
-brew install macs-fan-control
-brew install bartender
 
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
@@ -46,12 +43,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
-brew install --cask iterm2
+# TODO: find nice terminal for other systems
+
 brew install --cask docker
 brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask dash
-brew install --cask rectangle
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
 brew install --cask boost-note # markdown notes <3
@@ -59,10 +56,10 @@ brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
 brew install --cask discord
-brew install --cask cleanmymac
 brew install --cask firefox
 brew install --cask brave-browser
-brew install jumpcut
+
+# TODO: find copy history program from other systems
 
 brew install send-to-kindle
 brew install whatsapp
@@ -100,10 +97,8 @@ brew install diffr     # tool for nicer diffs in git
 brew install git-delta # tool for nicer diffs in git
 
 # Mac os related
-brew install switchaudio-osx # CLI for setting input/output sound device
-brew install monitorcontrol  # app for adjusting external display brightness
-brew install muzzle # app for auto turning do not disturb mode when sharing screen
-brew install --cask skim # pdfs with dark mode support
+./macos/scripts/install_dependecies
+
 
 # Link config files to the root directory
 [ -r .make_links ] && ./make_links
