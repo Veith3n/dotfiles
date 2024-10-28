@@ -103,6 +103,7 @@ brew install git-delta # tool for nicer diffs in git
 brew install switchaudio-osx # CLI for setting input/output sound device
 brew install monitorcontrol  # app for adjusting external display brightness
 brew install muzzle # app for auto turning do not disturb mode when sharing screen
+brew install --cask skim # pdfs with dark mode support
 
 # Link config files to the root directory
 [ -r .make_links ] && ./make_links
