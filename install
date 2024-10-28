@@ -1,6 +1,7 @@
 #!/bin/sh
 
 is_mac_os() {
+  # TODO: handle calling this function on Windows
   if [[ "$(uname)" == "Darwin" ]]; then
     return 0  # Return true (success)
   else
