@@ -1,6 +1,16 @@
 #!/bin/sh
 
+is_mac_os() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    return 0  # Return true (success)
+  else
+    return 1  # Return false (failure)
+  fi
+}
+
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# TODO: wrap brew install in function and handle other systems
 
 # Install xcode CLI
 xcode-select --install
@@ -96,8 +106,10 @@ brew install fd        # file grepping for telescope in neovim
 brew install diffr     # tool for nicer diffs in git
 brew install git-delta # tool for nicer diffs in git
 
-# Mac os related
-./macos/scripts/install_dependecies
+# Mac os related dependencies
+if is_mac_os; then
+  ./macos/scripts/install_dependecies
+fi
 
 
 # Link config files to the root directory
@@ -237,14 +249,17 @@ gh auth login
 # heroku
 heroku autocomplete
 
-# enables easier movement in vim mode
-defaults write -g ApplePressAndHoldEnabled -bool false
-
-# Iterm
-defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
-defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
-
 ./install_npm_dependencies
 
-./macos/scripts/restore_dock_arragment
-./macos/scripts/set_mac_os_settings
+if is_mac_os; then
+  # Iterm
+  defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
+  defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
+
+  # System settings
+  ./macos/scripts/restore_dock_arragment
+  ./macos/scripts/set_mac_os_settings
+
+  # enables easier movement in vim mode
+  defaults write -g ApplePressAndHoldEnabled -bool false
+fi
