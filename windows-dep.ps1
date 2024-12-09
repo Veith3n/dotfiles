@@ -11,6 +11,7 @@ choco install auto-dark-mode
 choco install autoclicker
 choco install ccleaner
 choco install wiztree
+choco install protonpass # password manager
 
 # debugging exe files (if they are malicous)
 choco install pestudio
@@ -39,6 +40,8 @@ choco install steam
 choco install ubisoft-connect
 choco install throttlestop
 choco install vortex # nexus mod manager
+choco install msiafterburner # showing games fps
+# install rivatuner along with it
 
 ## Browsers and Tools
 choco install brave
@@ -49,6 +52,7 @@ choco install hxd # hex file editor
 choco install kdeconnect-kde
 choco install revo-uninstaller
 choco install vlc # better media player
+choco install autohotkey # for macros
 
 
 # Vim dependencies
