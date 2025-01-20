@@ -46,13 +46,15 @@ choco install msiafterburner # showing games fps
 ## Browsers and Tools
 choco install brave
 choco install firefox
-choco install driverbooster
-choco install geforce-experience
 choco install hxd # hex file editor
 choco install kdeconnect-kde
 choco install revo-uninstaller
 choco install vlc # better media player
 choco install autohotkey # for macros
+
+## Drivers
+choco install nvidia-app  # nvidia-app
+choco install driverbooster
 
 
 # Vim dependencies
