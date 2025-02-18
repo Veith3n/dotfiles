@@ -3,3 +3,4 @@
 npm install -g node-giphy # giphy ClI
 npm install -g organize-imports-cli
 npm install -g yarn
+npm install -g tsx
