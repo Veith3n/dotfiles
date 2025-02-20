@@ -156,6 +156,30 @@ alias asdfnvi='asdf install neovim $(_asdnv_list_all_versions | _fuzzy-search)'
 alias _asdnv_installed='asdf list neovim'
 alias _asdnv_list_all_versions='asdf list all neovim'
 
+# java
+
+# TODO: consider migrating to asdf
+
+# sdk man
+
+alias sdki='sdk install $1 && jenv_add_all_skds'
+alias sdki='sdk install $(_sdk_list_all_versions | _fuzzy-search) && jenv_add_all_skds'
+alias sdkin='sdk install java && jenv_add_all_skds'
+alias sdkin='sdki java'
+
+alias _sdk_list_all_versions="_sdk_list_all_versions"
+
+# alias
+
+# alias jenv
+
+alias jenvg='jenv global $(_jenv_list_all_versions | _fuzzy-search)'
+alias jenvl='jenv local $(_jenv_list_all_versions | _fuzzy-search)'
+
+alias jenv_add_all_skds='_add_java_versions_from_sdkman_to_jenv'
+
+alias _jenv_list_all_versions='jenv versions'
+
 # vscode
 alias vsc='code .'
 alias vscdot='code ~/dotfiles'
