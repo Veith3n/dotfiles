@@ -52,6 +52,10 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" Fzf (grep on files)
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Linter
 Plug 'dense-analysis/ale'
 
@@ -154,6 +158,12 @@ nnoremap <C-h> :wincmd h<CR>
 nnoremap <C-l> :wincmd l<CR>
 " Add file directly in NERDTree with 'a'
 " autocmd FileType nerdtree nnoremap <buffer> a :NERDTreeCWDAddFile<CR>
+
+" fzf.vim mappings
+" Search text from files in the current dir
+nnoremap <leader>f :RG<CR>
+" Search files in the current dir
+nnoremap <leader>p :Files<CR>
 
 " fix highlighting issue
 set re=0
