@@ -57,7 +57,11 @@ Plug 'dense-analysis/ale'
 
 " Syntax highlighting/colours
 Plug 'sheerun/vim-polyglot'
+
+" Themes
 Plug 'joshdick/onedark.vim'
+Plug 'altercation/vim-colors-solarized'
+
 
 " Ruby
 Plug 'ngmy/vim-rubocop'
