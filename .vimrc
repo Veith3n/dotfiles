@@ -184,3 +184,69 @@ nnoremap <leader>p :Files<CR>
 
 " fix highlighting issue
 set re=0
+
+" Automatically setting vim colorscheme based on the system settings
+" Function to get the current system's appearance
+function! s:GetAppearance()
+  if has('mac')
+    return s:GetMacAppearance()
+  elseif has('win32')
+    return s:GetWindowsAppearance()
+  elseif has('unix')
+    return s:GetLinuxAppearance()
+  else
+    return "light"
+  endif
+endfunction
+
+" macOS: Detect Dark Mode
+function! s:GetMacAppearance()
+  let result = system("defaults read -g AppleInterfaceStyle 2>/dev/null")
+  if result =~? "Dark"
+    return "dark"
+  else
+    return "light"
+  endif
+endfunction
+
+" Windows: Detect Dark Mode
+function! s:GetWindowsAppearance()
+  let result = system('powershell -command "(Get-ItemProperty -Path HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme).AppsUseLightTheme"')
+  if result =~? "0"
+    return "dark"
+  else
+    return "light"
+  endif
+endfunction
+
+" Linux (GNOME): Detect Dark Mode
+function! s:GetLinuxAppearance()
+  let result = system('gsettings get org.gnome.desktop.interface gtk-theme')
+  if result =~? "dark"
+    return "dark"
+  else
+    return "light"
+  endif
+endfunction
+
+let s:light_colorscheme = "solarized"
+let s:dark_colorscheme  = "onedark"
+
+" Set colorscheme on startup and focus gained
+augroup ColorschemeSwitch
+  autocmd!
+  autocmd VimEnter * call s:SetColorScheme()
+  autocmd FocusGained * call s:SetColorScheme()
+augroup END
+
+function! s:SetColorScheme()
+  let appearance = s:GetAppearance()
+  if appearance == "dark"
+    execute "set background=dark"
+    execute "colorscheme " . s:dark_colorscheme
+  else
+    execute "set background=light"
+    execute "colorscheme " . s:light_colorscheme
+  endif
+endfunction
+
