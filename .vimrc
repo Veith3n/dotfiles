@@ -111,6 +111,7 @@ function! Foo()
 	 " echom system('echo %' )
 	 redraw!
 endfunction
+
 """ Commands
 " Scripts to run after action
 " autocmd BufWritePost *.rb :silent! !bundle exec rubocop -a % | :redraw!
@@ -127,6 +128,22 @@ command! -range=% RemoveConflictMarkers <line1>,<line2>call RemoveConflictMarker
 
 " remap for quick shortcut by gitblame
 nnoremap <Leader>g :<C-u>call gitblame#echo()<CR>
+
+" Move text up and down
+vnoremap <A-j> :m '>+1<CR>gv
+vnoremap <A-k> :m '<-2<CR>gv
+
+" Yank to local clipboard in visual mode
+vnoremap <leader>y "*y
+
+" Yank to local clipboard whole file in normal mode
+nnoremap <leader>yy :%y+<CR>
+
+" Set light color scheme
+nnoremap <A-S-l> :set background=light<CR>:colorscheme solarized<CR>
+
+" Set dark color scheme
+nnoremap <A-S-d> :set background=dark<CR>:colorscheme onedark<CR>
 
 " fix highlighting issue
 set re=0
