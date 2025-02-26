@@ -130,6 +130,23 @@ endfunction
 
 command! -range=% RemoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers() "-range=% default is whole file
 
+" GitBlame
+" " Define a function to check if gitblame should run
+function! ShouldRunGitBlame()
+  " Check if the buffer is a normal, modifiable file
+  if &buftype is# "" && &modifiable
+    " Check if the buffer is NOT a NERDTree buffer
+    if !exists('b:NERDTree')
+      return 1
+    endif
+  endif
+  return 0
+endfunction
+
+" Show git blame automatically on cursor movement, but only in normal, modifiable file buffers
+autocmd CursorMoved * if ShouldRunGitBlame() | call gitblame#echo() | endif
+autocmd CursorMovedI * if ShouldRunGitBlame() | call gitblame#echo() | endif
+
 " remap for quick shortcut by gitblame
 nnoremap <Leader>g :<C-u>call gitblame#echo()<CR>
 
