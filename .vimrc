@@ -145,5 +145,15 @@ nnoremap <A-S-l> :set background=light<CR>:colorscheme solarized<CR>
 " Set dark color scheme
 nnoremap <A-S-d> :set background=dark<CR>:colorscheme onedark<CR>
 
+" NerdTree
+" Toggle
+nnoremap <leader>e :NERDTreeToggle<CR>
+" Switch focus to NERDTree with Ctrl+h
+nnoremap <C-h> :wincmd h<CR>
+" Switch focus to the file buffer with Ctrl+l
+nnoremap <C-l> :wincmd l<CR>
+" Add file directly in NERDTree with 'a'
+" autocmd FileType nerdtree nnoremap <buffer> a :NERDTreeCWDAddFile<CR>
+
 " fix highlighting issue
 set re=0
