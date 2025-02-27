@@ -137,12 +137,16 @@ function! ShouldRunGitBlame()
   if &buftype is# "" && &modifiable
     " Check if the buffer is NOT a NERDTree buffer
     if !exists('b:NERDTree')
-      return 1
+      " Check if we're in a git repository
+      let l:git_dir = system('git rev-parse --git-dir 2>/dev/null')
+      if v:shell_error == 0
+        return 1
+      endif
     endif
   endif
   return 0
 endfunction
-
+"
 " Show git blame automatically on cursor movement, but only in normal, modifiable file buffers
 autocmd CursorMoved * if ShouldRunGitBlame() | call gitblame#echo() | endif
 autocmd CursorMovedI * if ShouldRunGitBlame() | call gitblame#echo() | endif
