@@ -260,6 +260,6 @@
     echo "main" ; \
     }; f"
   checkIfSystemIsInDarkMode="! f() { echo $(defaults read -g AppleInterfaceStyle);}; f"
-#   convertToDashCase = "!f() { text=\"$@\"; converted_string=$(ruby -e \"text=\\\"$text\\\"; puts text.gsub(/([a-z\\d])([A-Z])/, \\\"\\\\1-\\\\2\\\").gsub(/([A-Z])([A-Z][a-z])/, \\\"\\\\1-\\\\2\\\").gsub(/::/, \\\"/\\\").gsub(/\\s+/, \\\"-\\\").downcase\"); echo $converted_string; }; f"
   convertToDashCase="!f() { ruby -e \"text=ARGV.join(' '); puts text.gsub(/[ _]/, '-').gsub(/([a-z])([A-Z])/, '\\\\1-\\\\2').downcase\" \"$@\"; }; f"
+  convertToDashCase = "!f() { echo \"$@\" | sed -E 's/[[:space:]_]+/-/g; s/([[:lower:]])([[:upper:]])/\\1-\\2/g' | tr '[:upper:]' '[:lower:]'; }; f"
 
