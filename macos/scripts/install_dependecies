@@ -14,3 +14,5 @@ brew install switchaudio-osx # CLI for setting input/output sound device
 brew install monitorcontrol  # app for adjusting external display brightness
 brew install muzzle          # app for auto turning do not disturb mode when sharing screen
 brew install --cask skim     # pdfs with dark mode support
+
+brew install eqmac # equalizer for macos
