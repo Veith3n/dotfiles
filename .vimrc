@@ -96,10 +96,10 @@ let g:ale_completion_enabled = 1
 let g:EasyMotion_smartcase = 1
 nmap w <Plug>(easymotion-w)
 nmap s <Plug>(easymotion-s2)
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+" map  / <Plug>(easymotion-sn)
+" omap / <Plug>(easymotion-tn)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
 
 " Airline
 let g:airline_section_d='%{strftime("%c")}'
