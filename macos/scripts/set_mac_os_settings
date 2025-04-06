@@ -259,6 +259,9 @@ defaults write com.apple.AppleBluetoothMultitouch.mouse MouseTwoFingerHorizSwipe
 # Set mouse speed
 defaults write -g com.apple.mouse.scaling 3.0
 
+# Show option to install not verified software in the privacy tab
+sudo spctl --master-disable
+
 for app in "Activity Monitor" \
   "Finder" \
   "Mail"; do
