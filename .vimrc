@@ -167,10 +167,10 @@ vnoremap <leader>y "*y
 " Yank to local clipboard whole file in normal mode
 nnoremap <leader>yy :%y+<CR>
 
-" Set light color scheme
-nnoremap <A-S-l> :set background=light<CR>:colorscheme solarized<CR>
+" Set light color scheme and highlight typos
+nnoremap <A-S-l> :set background=light<CR>:colorscheme solarized<CR>:highlight SpellBad cterm=underline ctermfg=red guifg=#dc322f gui=undercurl<CR>
 
-" Set dark color scheme
+" Set dark color scheme and highlight typos
 nnoremap <A-S-d> :set background=dark<CR>:colorscheme onedark<CR>
 
 " NerdTree
@@ -255,5 +255,8 @@ function! s:SetColorScheme()
     execute "set background=light"
     execute "colorscheme " . s:light_colorscheme
   endif
+  
+  " Highlight typos after setting colorscheme
+  execute "highlight SpellBad cterm=underline ctermfg=red guifg=#ff0000 gui=undercurl"
 endfunction
 
