@@ -213,9 +213,11 @@
 	# scripts
 	aliases = "!git config -l | grep alias | cut -c 7-"
 	currentBranch= branch --show-current
+  # might need echo -e on linux
 	validateCommitMsgLength = "! f() { msg="$*"; max_length=72; msg_length=${#msg}; [ $msg_length -gt $max_length ] && echo $(printf "%0.s${BLUE}-" {1..50} && echo "${RED}${BOLD} ⛔️⛔️⛔️⛔️⛔️ COMMIT MSG IS TOO LONG ⛔️⛔️⛔️⛔️⛔️ by $(($msg_length-$max_length)) characters" && printf "%0.s${BLUE}-${NO_COLOR}" {1..50}); }; f"
 	# requires aspell formula from brew
 	# Set LOCAL_ASPELL_DIC env variable with a custom dictionary to support project's specific domain without errors :)
+  # might need echo -e on linux
 	lookForTypos = "! f() { msg="$*";  if [[ ! -z ${LOCAL_ASPELL_DIC} ]]; then typos=$"(echo $msg | aspell list --extra-dicts="$LOCAL_ASPELL_DIC")"; else typos=$"(echo $msg | aspell list)"; fi; [[ ! -z "$typos" ]] && echo $(printf "%.s${YELLOW}-" {1..50} && echo "⚠️ ⚠️ ⚠️ ⚠️ ⚠️  ${RED}${BOLD}THERE ARE TYPOS IN ${GREEN}${BOLD}$typos ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ " && printf "%.s${YELLOW}-${NO_COLOR}" {1..50}) && echo \"${LIGHT_MAGENTA}${BOLD}$(git listAspellTyposWithSuggestions "$typos")${NO_COLOR}\"; }; f"
   formatCommitMsg = "! f() { msg="$*"; regex=\"(\\[.*\\] )(.*)\"; if [[ $msg =~ $regex ]]; then echo "${BASH_REMATCH[1]} $(git upcaseFirstChar ${BASH_REMATCH[2]})"; else echo $(git upcaseFirstChar $msg); fi; }; f"
 
