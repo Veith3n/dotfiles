@@ -6,6 +6,9 @@ set ignorecase " case unsensitive search
 " set mouse=a " enables mouse
 set encoding=UTF-8
 
+" enables spell check
+set spell!
+
 syntax enable " enables syntax highlight
 
 " Search down into subfolders 
