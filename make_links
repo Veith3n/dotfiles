@@ -24,6 +24,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~/.idevimrc
 
 [[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv ${BASE_DIR}/.vim/colors ~/.vim
+[[ -s "${BASE_DIR}/.vim/lib" ]] && ln -fsv ${BASE_DIR}/.vim/lib ~/.vim/lib
 
 # nvim
 [[ -s "${BASE_DIR}/.nvim" ]] && stow .nvim
