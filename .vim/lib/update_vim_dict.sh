@@ -10,6 +10,12 @@ VIM_SPELL_FILE="$VIM_SPELL_PATH/en-custom.utf-8.spl"
 # Ensure the Vim spell directory exists
 mkdir -p "$VIM_SPELL_PATH"
 
+# Check if the Aspell dictionary file exists
+if [ ! -f "$ASPPELL_DICT_PATH" ]; then
+  echo "Error: Aspell dictionary file '$ASPPELL_DICT_PATH' does not exist."
+  exit 1
+fi
+
 # Check if the Vim spell file exists or needs regeneration
 if [ ! -f "$VIM_SPELL_FILE" ] || [ -n "$(find "$ASPPELL_DICT_PATH" -type f -newer "$VIM_SPELL_FILE")" ]; then
   # Regenerate Vim's .spl file using Aspell dictionary and save it to the specified location
