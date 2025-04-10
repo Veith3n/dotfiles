@@ -5,6 +5,11 @@
 - Installed `homebrew`
 - For now only mac os is supported
 
+## Supported terminals
+
+- Iterm for mac os (config inside iterm dir)
+- Wezterm for Windows/Linux (config inside wezterm dir)
+
 ## Installation
 
 1. Run `./install` in the project's directory
