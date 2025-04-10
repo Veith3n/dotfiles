@@ -8,6 +8,8 @@ set encoding=UTF-8
 
 " enables spell check
 set spell!
+set spelllang=en,en-custom
+" Run to generate custom dictionary ~/.vim/lib/update_vim_dict.sh
 
 syntax enable " enables syntax highlight
 
