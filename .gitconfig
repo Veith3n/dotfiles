@@ -164,6 +164,7 @@
   cmf="!f() { msg="$*"; git cmbase "\"fix: $msg\""; }; f"
   cmr="!f() { msg="$*"; git cmbase "\"refactor: $msg\""; }; f"
   cmc="!f() { msg="$*"; git cmbase "\"chore: $msg\""; }; f"
+  cmcc="!f() { msg="$*"; git cmbase "\"config: $msg\""; }; f"
   cmt="!f() { msg="$*"; git cmbase "\"test: $msg\""; }; f"
   cmconfig="!f() { msg="$*"; git cmbase "\"config: $msg\""; }; f"
 
