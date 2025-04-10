@@ -264,3 +264,6 @@ if is_mac_os; then
   # enables easier movement in vim mode
   defaults write -g ApplePressAndHoldEnabled -bool false
 fi
+
+echo 'Generating custom vim dictionary based on aspell one'
+~/.vim/lib/update_vim_dict.sh
