@@ -1,5 +1,15 @@
 #!/bin/sh
 
-function _gross_to_net() {
-	echo "$(expr $@ \* 100 / 123)"
+_gross_to_net() {
+  # Old version
+  # echo "$(expr $@ \* 100 / 123)"
+
+  # Normalize input decimal separator from comma to dot
+  normalized=$(echo "$@" | sed 's/,/./g')
+
+  # Calculate (input * 100 / 123) with bc for floating point precision
+  result=$(echo "scale=4; $normalized * 100 / 123" | bc -l)
+
+  # Round to 2 decimal places and print
+  printf "%.2f\n" "$result"
 }
