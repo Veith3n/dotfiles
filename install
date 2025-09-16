@@ -51,7 +51,6 @@ brew install htop
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
-brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
 # TODO: find nice terminal for other systems
