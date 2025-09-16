@@ -25,3 +25,7 @@
 
 1. Run `~/.vim/lib/update_vim_dict.sh` to generate custom vim dictionary
 2. Run `PlugInstall` in vim tab
+
+### Neovim specific
+
+1. Run `generate_neovim_dict.sh` when adding new words to custom aspell dict

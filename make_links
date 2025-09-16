@@ -28,7 +28,6 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # nvim
 [[ -s "${BASE_DIR}/.nvim" ]] && stow .nvim
-[[ -s "${BASE_DIR}/.aspell.en.pws" ]] && ln -fsv ${BASE_DIR}/.aspell.en.pws ~/.en.utf-8.add
 
 # utlis
 [[ -s "${BASE_DIR}/.rubocop.yml" ]] && ln -fsv ${BASE_DIR}/.rubocop.yml ~
