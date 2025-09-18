@@ -3,34 +3,34 @@
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # aspell
-[[ -s "${BASE_DIR}/.aspell.en.pws" ]] && ln -fsv ${BASE_DIR}/.aspell.en.pws ~
+[[ -s "${BASE_DIR}/.aspell.en.pws" ]] && ln -fsv "${BASE_DIR}/.aspell.en.pws" ~
 
 # git
-[[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv ${BASE_DIR}/.gitconfig ~
-[[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv ${BASE_DIR}/.gitignore ~
+[[ -s "${BASE_DIR}/.gitconfig" ]] && ln -fsv "${BASE_DIR}/.gitconfig" ~
+[[ -s "${BASE_DIR}/.gitignore" ]] && ln -fsv "${BASE_DIR}/.gitignore" ~
 
 # shell
-[[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv ${BASE_DIR}/.env_paths ~
-[[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv ${BASE_DIR}/.env_variables ~
+[[ -s "${BASE_DIR}/.env_paths" ]] && ln -fsv "${BASE_DIR}/.env_paths" ~
+[[ -s "${BASE_DIR}/.env_variables" ]] && ln -fsv "${BASE_DIR}/.env_variables" ~
 
-[[ -s "${BASE_DIR}/.zsh/.functions" ]] && ln -fsv ${BASE_DIR}/.zsh/.functions ~
-[[ -s "${BASE_DIR}/.zsh/.aliases" ]] && ln -fsv ${BASE_DIR}/.zsh/.aliases ~
+[[ -s "${BASE_DIR}/.zsh/.functions" ]] && ln -fsv "${BASE_DIR}/.zsh/.functions" ~
+[[ -s "${BASE_DIR}/.zsh/.aliases" ]] && ln -fsv "${BASE_DIR}/.zsh/.aliases" ~
 
-[[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
+[[ -s "${BASE_DIR}/bin" ]] && ln -sv "${BASE_DIR}/bin" ~
 
-[[ -s "${BASE_DIR}/p10k/.p10k.zsh" ]] && ln -sv ${BASE_DIR}/p10k/.p10k.zsh ~
+[[ -s "${BASE_DIR}/p10k/.p10k.zsh" ]] && ln -fsv "${BASE_DIR}/p10k/.p10k.zsh" ~
 
 # vim
-[[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv ${BASE_DIR}/.vimrc ~
-[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~
-[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~/.idevimrc
+[[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv "${BASE_DIR}/.vimrc" ~
+[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv "${BASE_DIR}/.ideavimrc" ~
+[[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv "${BASE_DIR}/.ideavimrc" ~/.idevimrc
 
-[[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv ${BASE_DIR}/.vim/colors ~/.vim
-[[ -s "${BASE_DIR}/.vim/lib" ]] && ln -fsv ${BASE_DIR}/.vim/lib ~/.vim/lib
+[[ -s "${BASE_DIR}/.vim/colors" ]] && ln -fsv "${BASE_DIR}/.vim/colors" ~/.vim
+[[ -s "${BASE_DIR}/.vim/lib" ]] && ln -fsv "${BASE_DIR}/.vim/lib" ~/.vim/lib
 
 # nvim
 [[ -s "${BASE_DIR}/.nvim" ]] && stow .nvim
 
 # utlis
-[[ -s "${BASE_DIR}/.rubocop.yml" ]] && ln -fsv ${BASE_DIR}/.rubocop.yml ~
-[[ -s "${BASE_DIR}/.irbrc" ]] && ln -fsv ${BASE_DIR}/.irbrc ~
+[[ -s "${BASE_DIR}/.rubocop.yml" ]] && ln -fsv "${BASE_DIR}/.rubocop.yml" ~
+[[ -s "${BASE_DIR}/.irbrc" ]] && ln -fsv "${BASE_DIR}/.irbrc" ~
