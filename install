@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euo pipefail
+
 is_mac_os() {
   # TODO: handle calling this function on Windows
   if [[ "$(uname)" == "Darwin" ]]; then
