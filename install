@@ -18,6 +18,36 @@ is_mac_os() {
   [[ "$(uname)" == "Darwin" ]]
 }
 
+# Function to install brew packages from an array
+# Usage: install_packages array_name[@] [install_type]
+# array_name[@]: Pass array name with [@] (e.g., "my_packages[@]")
+# install_type: "brew" (default) for CLI tools/libraries, "cask" for GUI applications/fonts
+# Example: install_packages private_packages[@] "cask"
+install_packages() {
+  local -a package_array=("${!1}")
+  local install_type="${2:-brew}" # Default to regular brew, can be "cask"
+
+  for package in "${package_array[@]}"; do
+    log "Installing $package..."
+
+    if [[ "$install_type" == "cask" ]]; then
+      # GUI applications and fonts
+      if ! brew list --cask "$package" &>/dev/null; then
+        brew install --cask "$package" || error "Failed to install $package"
+      else
+        log "$package already installed"
+      fi
+    else
+      # CLI tools and libraries
+      if ! brew list "$package" &>/dev/null; then
+        brew install "$package" || error "Failed to install $package"
+      else
+        log "$package already installed"
+      fi
+    fi
+  done
+}
+
 install_package_manager_and_core_system_dependencies() {
   log "Installing package manager and core system dependencies..."
 
