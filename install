@@ -1,21 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 set -euo pipefail
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 log() {
-    echo "$(date '+%Y-%m-%d %I:%M:%S %p') [INFO] $*"
+  echo "$(date '+%Y-%m-%d %I:%M:%S %p') [INFO] $*"
 }
 
 error() {
-    echo "$(date '+%Y-%m-%d %I:%M:%S %p') [ERROR] $*" >&2
-    exit 1
+  echo "$(date '+%Y-%m-%d %I:%M:%S %p') [ERROR] $*" >&2
+  exit 1
 }
 
-
 is_mac_os() {
-    [[ "$(uname)" == "Darwin" ]]
+  [[ "$(uname)" == "Darwin" ]]
 }
 
 # TODO: wrap brew install in function and handle other systems
@@ -45,8 +44,8 @@ brew install pinentry-mac
 echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
-brew install zsh     # neat CLI
-brew install bash    # install new version of bash
+brew install zsh  # neat CLI
+brew install bash # install new version of bash
 echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 brew install aspell # spell checker
 brew install gh     # github cli
@@ -54,7 +53,6 @@ brew install jq
 brew install ngrok
 brew install dotenv-linter
 brew install htop
-
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
@@ -117,7 +115,6 @@ brew install git-delta # tool for nicer diffs in git
 if is_mac_os; then
   ./macos/scripts/install_dependecies
 fi
-
 
 # Link config files to the root directory
 [ -r .make_links ] && ./make_links
@@ -273,7 +270,6 @@ fi
 
 echo 'Generating custom vim dictionary based on aspell one'
 ~/.vim/lib/update_vim_dict.sh
-
 
 echo 'Generating custom neovim dictionary based on aspell one'
 generate_neovim_dict.sh
