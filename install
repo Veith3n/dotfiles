@@ -110,15 +110,20 @@ brew install --cask jetbrains-toolbox
 brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
-brew install --cask discord
 brew install --cask firefox
 brew install --cask brave-browser
 
-# TODO: find copy history program from other systems
+private_packages=(
+  discord
+  send-to-kindle
+  whatsapp
+  signal
+  proton-pass
+)
 
-brew install send-to-kindle
-brew install whatsapp
-brew install signal
+install_packages private_packages[@] "cask"
+
+# TODO: find copy history program from other systems
 
 brew install nodenv                              # install node_env
 brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
