@@ -343,7 +343,7 @@ if is_mac_os; then
   defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
 
   # System settings
-  ./macos/scripts/restore_dock_arragment
+  ./macos/scripts/restore_dock_arrangement
   ./macos/scripts/set_mac_os_settings
 
   # enables easier movement in vim mode
