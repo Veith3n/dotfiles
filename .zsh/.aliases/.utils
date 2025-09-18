@@ -148,6 +148,10 @@ alias _nodenv_possible_to_install='nodenv install -l'
 alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_dependencies && cd $oldPath'
 
 # asdf
+alias asdfpg='asdf_global python'
+alias asdfpl='asdf_local python'
+alias asdfpi='asdf_install python'
+
 alias asdfjg='asdf_global java'
 alias asdfjl='asdf_local java'
 alias asdfji='asdf_install java'

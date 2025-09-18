@@ -143,8 +143,6 @@ install_packages private_packages[@] "cask"
 brew install nodenv                              # install node_env
 brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
 
-brew install pyenv # version manager for python
-
 brew install pipenv # dependency manager for python
 
 brew install heroku/brew/heroku # heroku cli
@@ -156,6 +154,7 @@ brew install awscli # AWS cli
 brew install asdf      # version manager
 asdf plugin add neovim # plugin for managing neovim versions
 asdf plugin add java
+asdf plugin add python
 
 asdf install java oracle-21
 asdf global java oracle-21
@@ -191,9 +190,6 @@ if [ -r ~/.zshrc ]; then
 
   # initialize nodenv in zshrc
   echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
-
-  # initialize pyenv in zshrc
-  echo $'# pyenv initialize\neval "$(pyenv init -)"' >>~/.zshrc
 
   # initialize z in zshrc
   echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
