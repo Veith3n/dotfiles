@@ -18,6 +18,8 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv ${BASE_DIR}/bin ~
 
+[[ -s "${BASE_DIR}/p10k/.p10k.zsh" ]] && ln -sv ${BASE_DIR}/p10k/.p10k.zsh ~
+
 # vim
 [[ -s "${BASE_DIR}/.vimrc" ]] && ln -fsv ${BASE_DIR}/.vimrc ~
 [[ -s "${BASE_DIR}/.ideavimrc" ]] && ln -fsv ${BASE_DIR}/.ideavimrc ~
