@@ -144,25 +144,25 @@ core_packages=(
 
 # TODO: check if google-cloud-sdk is not deprecated
 cask_packages=(
-  docker
-  slack
-  visual-studio-code
-  dash
-  insomnia
-  jetbrains-toolbox
-  pgadmin4
-  google-cloud-sdk
-  gitkraken
-  firefox
-  brave-browser
+  "docker"
+  "slack"
+  "visual-studio-code"
+  "dash"
+  "insomnia"
+  "jetbrains-toolbox"
+  "pgadmin4"
+  "google-cloud-sdk"
+  "gitkraken"
+  "firefox"
+  "brave-browser"
 )
 
 private_packages=(
-  discord
-  send-to-kindle
-  whatsapp
-  signal
-  proton-pass
+  "discord"
+  "send-to-kindle"
+  "whatsapp"
+  "signal"
+  "proton-pass"
 )
 
 install_packages core_packages[@]
