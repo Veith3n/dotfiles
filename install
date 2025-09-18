@@ -109,17 +109,19 @@ brew install --cask font-hack-nerd-font
 
 # TODO: find nice terminal for other systems
 
-brew install --cask docker
-brew install --cask slack
-brew install --cask visual-studio-code
-brew install --cask dash
-brew install --cask insomnia
-brew install --cask jetbrains-toolbox
-brew install --cask pgadmin4
-brew install --cask google-cloud-sdk
-brew install --cask gitkraken
-brew install --cask firefox
-brew install --cask brave-browser
+cask_packages=(
+  docker
+  slack
+  visual-studio-code
+  dash
+  insomnia
+  jetbrains-toolbox
+  pgadmin4
+  google-cloud-sdk
+  gitkraken
+  firefox
+  brave-browser
+)
 
 private_packages=(
   discord
@@ -128,6 +130,8 @@ private_packages=(
   signal
   proton-pass
 )
+
+install_packages cask_packages[@] "cask"
 
 install_packages private_packages[@] "cask"
 
