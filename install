@@ -159,6 +159,7 @@ asdf plugin add ruby
 
 asdf install ruby 3.4.6
 asdf set --home ruby 3.4.6
+./install_ruby_gems
 
 asdf install java oracle-21
 asdf set --home java oracle-21
@@ -273,8 +274,6 @@ source ~/.zshrc # reload changes to the config file
 
 # setup hook scripts for installed node versions
 nodenv package-hooks install --all
-
-./install_ruby_gems
 
 # Authenticate fror github cli
 gh auth login
