@@ -77,7 +77,6 @@ brew install --cask visual-studio-code
 brew install --cask dash
 brew install --cask insomnia
 brew install --cask jetbrains-toolbox
-brew install --cask boost-note # markdown notes <3
 brew install --cask pgadmin4
 brew install --cask google-cloud-sdk
 brew install --cask gitkraken
