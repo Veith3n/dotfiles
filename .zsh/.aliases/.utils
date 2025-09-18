@@ -148,13 +148,38 @@ alias _nodenv_possible_to_install='nodenv install -l'
 alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_dependencies && cd $oldPath'
 
 # asdf
-alias asdfnvg='asdf global neovim $(_asdnv_installed | _fuzzy-search)'
-alias asdfnvl='asdf local neovim  $(_asdnv_installed | _fuzzy-search)'
 
-alias asdfnvi='asdf install neovim $(_asdnv_list_all_versions | _fuzzy-search)'
 
-alias _asdnv_installed='asdf list neovim'
-alias _asdnv_list_all_versions='asdf list all neovim'
+# neovim aliases
+alias asdfnvg='asdf_global neovim'
+alias asdfnvl='asdf_local neovim'
+alias asdfnvi='asdf_install neovim'
+
+_asdf_installed() {
+  asdf list "$1"
+}
+_asdf_list_all_versions() {
+  asdf list all "$1"
+}
+
+# Generic asdf commands for global, local, install with fuzzy search
+asdf_global() {
+  local plugin=$1
+  shift
+  asdf global "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
+}
+
+asdf_local() {
+  local plugin=$1
+  shift
+  asdf local "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
+}
+
+asdf_install() {
+  local plugin=$1
+  shift
+  asdf install "$plugin" "$(_asdf_list_all_versions "$plugin" | _fuzzy-search "$@")"
+}
 
 # java
 
