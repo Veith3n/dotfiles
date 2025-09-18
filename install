@@ -124,7 +124,7 @@ brew install git-delta # tool for nicer diffs in git
 
 # Mac os related dependencies
 if is_mac_os; then
-  ./macos/scripts/install_dependecies
+  ./macos/scripts/install_dependencies
 fi
 
 # Link config files to the root directory
