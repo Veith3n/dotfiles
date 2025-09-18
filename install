@@ -77,17 +77,25 @@ install_package_manager_and_core_system_dependencies
 brew install fzf    # fuzzy search
 brew install direnv # looks for .envrc file in each directory
 
-brew install gpg # managing keys
-# Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
-brew upgrade gnupg
-brew link --overwrite gnupg
-brew install pinentry-mac
-echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
-killall gpg-agent
+# Gpg installation and hack for mac os
+if is_mac_os; then
+  brew install gpg # managing keys
+  # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
+  brew upgrade gnupg
+  brew link --overwrite gnupg
+  brew install pinentry-mac
+  echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
+  killall gpg-agent
+fi
 
-brew install zsh  # neat CLI
-brew install bash # install new version of bash
-echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
+# Install newer version of bash and set it as default shell
+# TODO: confirm whether it's still needed
+if is_mac_os; then
+  brew install bash # install new version of bash
+  echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
+fi
+
+brew install zsh    # neat CLI
 brew install aspell # spell checker
 brew install gh     # github cli
 brew install jq
