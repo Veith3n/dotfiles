@@ -1,5 +1,9 @@
 #!/bin/bash
 
+is_private_machine() {
+  return 1 # false - change to 'return 0' when you want to install private packages
+}
+
 set -euo pipefail
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -158,7 +162,12 @@ private_packages=(
 install_packages core_packages[@]
 install_packages cask_packages[@] "cask"
 
-install_packages private_packages[@] "cask"
+if is_private_machine; then
+  log "Installing private packages for personal machine..."
+  install_packages private_packages[@] "cask"
+else
+  log "Skipping private packages (not a private machine)"
+fi
 
 # TODO: find copy history program from other systems
 
@@ -167,7 +176,12 @@ providers_cli_packages=(
   "heroku/brew/heroku" # Heroku CLI
 )
 
-install_packages providers_cli_packages[@]
+if is_private_machine; then
+  log "Installing providers_cli_packages for personal machine..."
+  install_packages providers_cli_packages[@]
+else
+  log "Skipping providers_cli_packages (not a private machine)"
+fi
 
 package_manager_packages=(
   "asdf"                                # version manager
@@ -312,7 +326,7 @@ nodenv package-hooks install --all
 gh auth login
 
 # heroku
-heroku autocomplete
+command -v heroku &>/dev/null && heroku autocomplete
 
 ./install_npm_dependencies
 
