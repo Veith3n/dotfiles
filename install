@@ -73,9 +73,6 @@ install_package_manager_and_core_system_dependencies() {
 install_package_manager_and_core_system_dependencies
 
 # TODO: wrap brew install in function and handle other systems
-# Install homebrew dependencies
-brew install fzf    # fuzzy search
-brew install direnv # looks for .envrc file in each directory
 
 # Gpg installation and hack for mac os
 if is_mac_os; then
@@ -95,20 +92,25 @@ if is_mac_os; then
   echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 fi
 
-brew install zsh    # neat CLI
-brew install aspell # spell checker
-brew install gh     # github cli
-brew install jq
-brew install ngrok
-brew install dotenv-linter
-brew install htop
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
 
 brew install --cask font-hack-nerd-font
 
 # TODO: find nice terminal for other systems
 
+core_packages=(
+  "fzf"    # fuzzy search, homebrew dep
+  "direnv" # looks for .envrc file in each directory, homebrew dep
+  "zsh"    # neat CLI
+  "aspell" # spell checker
+  "gh"     # github cli
+  "jq"
+  "ngrok"
+  "dotenv-linter"
+  "htop"
+)
+
+# TODO: check if google-cloud-sdk is not deprecated
 cask_packages=(
   docker
   slack
@@ -131,6 +133,7 @@ private_packages=(
   proton-pass
 )
 
+install_packages core_packages[@]
 install_packages cask_packages[@] "cask"
 
 install_packages private_packages[@] "cask"
