@@ -44,6 +44,7 @@ alias removeAllArchivesFromCurrentDir='find . -name "*.rar" -exec rm "{}" \; && 
 # brew
 alias brewcl='brew cleanup'
 alias brewo='brew outdated'
+alias brewuu='brew update'
 alias brewu='brew update && brew upgrade $(brew outdated | _fuzzy-search) && brewcl'
 alias brewua='brew update && brew upgrade && brewcl'
 alias brewuf='brew upgrade $(_brewlf | _fuzzy-search) && brewcl'
