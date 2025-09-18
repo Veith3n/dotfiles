@@ -1,9 +1,0 @@
-#!/bin/sh
-
-_add_java_versions_from_sdkman_to_jenv() {
-  for dir in ~/.sdkman/candidates/java/*; do
-    if [ -d "$dir" ] && [ "$(basename "$dir")" != "current" ]; then
-      jenv add "$dir"
-    fi
-  done
-}

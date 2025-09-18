@@ -143,10 +143,6 @@ install_packages private_packages[@] "cask"
 brew install nodenv                              # install node_env
 brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
 
-brew install java # install latest java version
-
-brew install jenv # version manager for java
-
 brew install pyenv # version manager for python
 
 brew install pipenv # dependency manager for python
@@ -159,6 +155,10 @@ brew install awscli # AWS cli
 
 brew install asdf      # version manager
 asdf plugin add neovim # plugin for managing neovim versions
+asdf plugin add java
+
+asdf install java oracle-21
+asdf global java oracle-21
 
 brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 
@@ -182,12 +182,7 @@ fi
 # Generate file with git aliases for zshrc
 ./bin/generate_git_aliases_for_zshrc
 
-curl -s "https://get.sdkman.io" | bash    # sdkman installation
-source "$HOME/.sdkman/bin/sdkman-init.sh" # init sdk man
-sdk install java                          # install latest java from sdk man
-
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/matthieusb/zsh-sdkman.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-sdkman # autocomplete for sdkman
 
 # Setup necessary entries to the config files
 if [ -r ~/.zshrc ]; then
@@ -199,10 +194,6 @@ if [ -r ~/.zshrc ]; then
 
   # initialize pyenv in zshrc
   echo $'# pyenv initialize\neval "$(pyenv init -)"' >>~/.zshrc
-
-  # initialize jenv in zshrc
-  echo 'export PATH="$HOME/.jenv/bin:$PATH"' >>~/.zshrc
-  echo 'eval "$(jenv init -)"' >>~/.zshrc
 
   # initialize z in zshrc
   echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
@@ -242,7 +233,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 	jira\
 	sprunge # url for text\/files\
 	transfer # url for uploading files\
-	zsh-sdkman\
 	zsh-syntax-highlighting\
 )/' ~/.zshrc
 
@@ -287,17 +277,8 @@ fi
 
 source ~/.zshrc # reload changes to the config file
 
-# refresh completion suggestion for sdk man (comes from zsh-sdkman plugin)
-sdk-refresh-completion-files
-
 # setup hook scripts for installed node versions
 nodenv package-hooks install --all
-
-# add newest java version to the jenv path
-java_path=$(/usr/libexec/java_home -V)
-jenv add $java_path
-# add java to jenv from sdk man
-ls ~/.sdkman/candidates/java/ | grep -v current | xargs jenv add
 
 # Rvm install
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB # public key for rvm

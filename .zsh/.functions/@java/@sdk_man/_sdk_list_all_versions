@@ -1,5 +1,0 @@
-#!/bin/sh
-
-_sdk_list_all_versions() {
-  sdk list java | awk '/-/ {for(i=1;i<=NF;i++) if($i ~ /-/) print $i}' | grep -v : | grep -v "\-\-\-"
-}
