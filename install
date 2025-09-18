@@ -86,15 +86,34 @@ if is_mac_os; then
 fi
 
 # Install newer version of bash and set it as default shell
+setup_oh_my_zsh() {
+  if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+    log "Installing Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  fi
+
+  # Install syntax highlighting plugin
+  # Needs to be added to the plugins array in .zshrc
+  local plugin_dir="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+
+  if [[ ! -d "$plugin_dir" ]]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$plugin_dir"
+  fi
+}
+
+setup_oh_my_zsh
+
+font_packages=(
+  "font-hack-nerd-font"
+)
+
+install_packages font_packages[@] "cask"
+
 # TODO: confirm whether it's still needed
 if is_mac_os; then
   brew install bash # install new version of bash
   echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
 fi
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # oh-my-zsh
-
-brew install --cask font-hack-nerd-font
 
 # TODO: find nice terminal for other systems
 
@@ -108,6 +127,9 @@ core_packages=(
   "ngrok"
   "dotenv-linter"
   "htop"
+  "asdf"     # version manager
+  "pygments" # python package to colorize files
+  "z"        # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 )
 
 # TODO: check if google-cloud-sdk is not deprecated
@@ -140,41 +162,54 @@ install_packages private_packages[@] "cask"
 
 # TODO: find copy history program from other systems
 
-brew install nodenv                              # install node_env
-brew install nodenv/nodenv/nodenv-package-rehash # rehash after installation of global package or new node version
+providers_cli_packages=(
+  "awscli"             # AWS CLI
+  "heroku/brew/heroku" # Heroku CLI
+)
 
-brew install pipenv # dependency manager for python
+install_packages providers_cli_packages[@]
 
-brew install heroku/brew/heroku # heroku cli
+package_manager_packages=(
+  "asdf"                                # version manager
+  "nodenv"                              # node version manager
+  "nodenv/nodenv/nodenv-package-rehash" # rehash after installation of global package or new node version
+  "pipenv"                              # dependency manager for python
+)
 
-brew install pygments # python package to colorize files
+custom_neovim_packages=(
+  "stow"    # linking directories
+  "ripgrep" # file grepping for telescope in neovim
+  "fd"      # file grepping for telescope in neovim
+)
 
-brew install awscli # AWS cli
+install_packages custom_neovim_packages[@]
 
-brew install asdf      # version manager
-asdf plugin add neovim # plugin for managing neovim versions
-asdf plugin add java
-asdf plugin add python
-asdf plugin add ruby
+custom_git_packages=(
+  "diffr"     # tool for nicer diffs in git
+  "git-delta" # tool for nicer diffs in git
+)
+install_packages custom_git_packages[@]
 
-asdf install ruby 3.4.6
-asdf set --home ruby 3.4.6
-./install_ruby_gems
+setup_asdf_and_languages() {
+  log "Setting up ASDF plugins and versions..."
 
-asdf install java oracle-21
-asdf set --home java oracle-21
+  asdf plugin add neovim || true
+  asdf plugin add java || true
+  asdf plugin add python || true
+  asdf plugin add ruby || true
 
-brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
+  asdf install ruby 3.4.6
+  asdf set --home ruby 3.4.6
+  ./install_ruby_gems
 
-asdf install neovim 0.8.3
-asdf set --home neovim 0.8.3
+  asdf install java oracle-21
+  asdf set --home java oracle-21
 
-brew install stow      # linking directories
-brew install ripgrep   # file grepping for telescope in neovim
-brew install fd        # file grepping for telescope in neovim
-brew install diffr     # tool for nicer diffs in git
-brew install git-delta # tool for nicer diffs in git
+  asdf install neovim 0.8.3
+  asdf set --home neovim 0.8.3
+}
 
+setup_asdf_and_languages
 # Mac os related dependencies
 if is_mac_os; then
   ./macos/scripts/install_dependencies
@@ -185,8 +220,6 @@ fi
 
 # Generate file with git aliases for zshrc
 ./bin/generate_git_aliases_for_zshrc
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Setup necessary entries to the config files
 if [ -r ~/.zshrc ]; then
