@@ -6,7 +6,6 @@ brew install gnu-sed # GNU based sed
 brew install --cask rectangle # handling windows moving
 
 brew install macs-fan-control
-brew install bartender
 brew install --cask cleanmymac
 brew install jumpcut # copy history
 
