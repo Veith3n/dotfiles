@@ -10,6 +10,7 @@ log() {
 
 error() {
   echo "$(date '+%Y-%m-%d %I:%M:%S %p') [ERROR] $*" >&2
+
   exit 1
 }
 
@@ -17,21 +18,31 @@ is_mac_os() {
   [[ "$(uname)" == "Darwin" ]]
 }
 
+install_package_manager_and_core_system_dependencies() {
+  log "Installing package manager and core system dependencies..."
+
+  if is_mac_os; then
+
+    log "Installing Xcode Command Line Tools..."
+    xcode-select --install || log "Xcode tools already installed"
+
+    if ! command -v brew &>/dev/null; then
+      log " Installing Homebrew..."
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+      brew update
+      brew upgrade
+    else
+      log "Homebrew is already installed."
+    fi
+  else
+    error "Unsupported OS. This script currently supports only macOS."
+  fi
+}
+
+install_package_manager_and_core_system_dependencies
+
 # TODO: wrap brew install in function and handle other systems
-
-# Install xcode CLI
-xcode-select --install
-
-# Install homebrew
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-# update homebrew
-brew update
-brew upgrade
-
-# brew install homebrew/cask # homebrew cask (not sure if needed)
-
 # Install homebrew dependencies
 brew install fzf    # fuzzy search
 brew install direnv # looks for .envrc file in each directory
