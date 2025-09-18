@@ -123,19 +123,6 @@ alias brak='_run_rake'
 alias _bundle_list='bundle list --name-only'
 alias _bundle_outdated='bundle outdated --only-explicit | sed "$((1)),$((3))d"'
 
-# rvm
-alias rvmg='rvm --default $(_rvm_installed | _fuzzy-search)'
-alias rvmi='rvm install $(_rvm_possible_to_install | _fuzzy-search)'
-alias rvmui='rvm uninstall $(_rvm_installed | _fuzzy-search)'
-alias rvml='rvm list'
-alias rvmu='rvm use $(_rvm_installed | _fuzzy-search)'
-alias rvmupdate='rvm get stable'
-alias rvmdocs='rvm docs generate-ri'
-alias rvmdocsforall='rvm all do rvm docs generate'
-
-alias _rvm_installed='rvm list strings'
-alias _rvm_possible_to_install='rvm list known_strings'
-
 # nodenv
 alias nodenvc='nodenv version | cut -d " " -f1'
 alias nodenvi='version_to_install="$(_nodenv_possible_to_install | _fuzzy-search)" && nodenv install  $version_to_install  && curent_version=$(nodenvc) && nodenv global $version_to_install && _nodenv_install_global_dep && nodenv global $curent_version'
@@ -148,6 +135,10 @@ alias _nodenv_possible_to_install='nodenv install -l'
 alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_dependencies && cd $oldPath'
 
 # asdf
+alias asdfrg='asdf_global ruby'
+alias asdfrl='asdf_local ruby'
+alias asdfri='asdf_install ruby'
+
 alias asdfpg='asdf_global python'
 alias asdfpl='asdf_local python'
 alias asdfpi='asdf_install python'
