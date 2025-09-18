@@ -165,13 +165,13 @@ _asdf_list_all_versions() {
 asdf_global() {
   local plugin=$1
   shift
-  asdf global "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
+  asdf set --home "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
 }
 
 asdf_local() {
   local plugin=$1
   shift
-  asdf local "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
+  asdf set "$plugin" $(_asdf_installed "$plugin" | _fuzzy-search "$@")
 }
 
 asdf_install() {

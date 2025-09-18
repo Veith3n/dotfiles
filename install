@@ -158,15 +158,15 @@ asdf plugin add python
 asdf plugin add ruby
 
 asdf install ruby 3.4.6
-asdf global ruby 3.4.6
+asdf set --home ruby 3.4.6
 
 asdf install java oracle-21
-asdf global java oracle-21
+asdf set --home java oracle-21
 
 brew install z # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 
 asdf install neovim 0.8.3
-asdf global neovim 0.8.3
+asdf set --home neovim 0.8.3
 
 brew install stow      # linking directories
 brew install ripgrep   # file grepping for telescope in neovim
