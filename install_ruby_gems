@@ -1,0 +1,5 @@
+#!/bin/sh
+
+gem install rubocop
+gem install rubocop-rspec
+gem install rubocop-rails

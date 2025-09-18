@@ -274,9 +274,7 @@ source ~/.zshrc # reload changes to the config file
 # setup hook scripts for installed node versions
 nodenv package-hooks install --all
 
-gem install rubocop
-gem install rubocop-rspec
-gem install rubocop-rails
+./install_ruby_gems
 
 # Authenticate fror github cli
 gh auth login

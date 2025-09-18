@@ -138,6 +138,9 @@ alias _nodenv_install_global_dep='oldPath=$(pwd) && cddot && ./install_npm_depen
 alias asdfrg='asdf_global ruby'
 alias asdfrl='asdf_local ruby'
 alias asdfri='asdf_install ruby'
+# alias asdfri='version_to_install="$(_asdf_list_all_versions ruby | _fuzzy-search)" && asdf install ruby $version_to_install && current_version=$(asdf current ruby | cut -d " " -f2) && asdf global ruby $version_to_install && _asdf_ruby_install_global_gems && asdf global ruby $current_version'
+alias _asdf_ruby_install_global_gems='oldPath=$(pwd) && cddot && ./install_ruby_gems && cd $oldPath'
+
 
 alias asdfpg='asdf_global python'
 alias asdfpl='asdf_local python'
