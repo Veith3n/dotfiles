@@ -52,6 +52,7 @@ install_packages() {
   done
 }
 
+# TODO: handle other systems
 install_package_manager_and_core_system_dependencies() {
   log "Installing package manager and core system dependencies..."
 
@@ -76,17 +77,29 @@ install_package_manager_and_core_system_dependencies() {
 
 install_package_manager_and_core_system_dependencies
 
-# TODO: wrap brew install in function and handle other systems
-
-# Gpg installation and hack for mac os
 if is_mac_os; then
-  brew install gpg # managing keys
-  # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
-  brew upgrade gnupg
-  brew link --overwrite gnupg
-  brew install pinentry-mac
-  echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
-  killall gpg-agent
+  setup_gpg() {
+    log "Setting up GPG..."
+
+    brew install gpg # managing keys
+    # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
+    brew upgrade gnupg
+    brew link --overwrite gnupg
+    brew install pinentry-mac
+    echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
+    killall gpg-agent
+  }
+
+  # TODO: confirm whether it's still needed
+  setup_bash() {
+    log "Installing newer version of bash..."
+    local bash_packages=("bash") # install new version of bash
+    install_packages bash_packages[@]
+    log "NOTE: enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
+  }
+
+  setup_gpg
+  setup_bash
 fi
 
 # Install newer version of bash and set it as default shell
@@ -113,12 +126,6 @@ font_packages=(
 
 install_packages font_packages[@] "cask"
 
-# TODO: confirm whether it's still needed
-if is_mac_os; then
-  brew install bash # install new version of bash
-  echo "enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
-fi
-
 # TODO: find nice terminal for other systems
 
 core_packages=(
@@ -131,7 +138,6 @@ core_packages=(
   "ngrok"
   "dotenv-linter"
   "htop"
-  "asdf"     # version manager
   "pygments" # python package to colorize files
   "z"        # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
 )
@@ -224,6 +230,7 @@ setup_asdf_and_languages() {
 }
 
 setup_asdf_and_languages
+
 # Mac os related dependencies
 if is_mac_os; then
   ./macos/scripts/install_dependencies
