@@ -236,12 +236,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
   sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.gh_cli ] && . ~/.aliases/.gh_cli' ~/.zshrc
 
-  # Add elpassion scripts
-  sed -i '' -e '1i \ 
-# Autoload elpassion scripts \
-path+=('$BASE_DIR/elpassion' $path) \
-\' ~/.zshrc
-
   # autoload util functions
   sed -i '' -e '1i \ 
 # Autoload util functions \
