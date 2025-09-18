@@ -2,16 +2,21 @@
 
 set -euo pipefail
 
-is_mac_os() {
-  # TODO: handle calling this function on Windows
-  if [[ "$(uname)" == "Darwin" ]]; then
-    return 0  # Return true (success)
-  else
-    return 1  # Return false (failure)
-  fi
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+log() {
+    echo "$(date '+%Y-%m-%d %I:%M:%S %p') [INFO] $*"
 }
 
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+error() {
+    echo "$(date '+%Y-%m-%d %I:%M:%S %p') [ERROR] $*" >&2
+    exit 1
+}
+
+
+is_mac_os() {
+    [[ "$(uname)" == "Darwin" ]]
+}
 
 # TODO: wrap brew install in function and handle other systems
 
