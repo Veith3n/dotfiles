@@ -9,7 +9,8 @@ _gross_to_net() {
 
   # Calculate (input * 100 / 123) with bc for floating point precision
   result=$(echo "scale=4; $normalized * 100 / 123" | bc -l)
+  saved=$(echo "scale=4; $normalized - $result" | bc -l)
 
-  # Round to 2 decimal places and print
-  printf "%.2f\n" "$result"
+  printf "Net amount: %.2f\n" "$result"
+  printf "Saved: %.2f\n" "$saved"
 }
