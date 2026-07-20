@@ -338,7 +338,7 @@ setup_asdf_and_languages() {
 setup_zshrc() {
 
   # Link config files to the root directory
-  [ -r .make_links ] && ./make_links
+  [[ -x "$BASE_DIR/make_links" ]] && "$BASE_DIR/make_links"
 
   # Generate file with git aliases for zshrc
   ./bin/generate_git_aliases_for_zshrc
