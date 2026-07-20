@@ -1,0 +1,15 @@
+#!/bin/sh
+
+_net_to_gross() {
+  # Join all arguments into one continuous string without spaces
+  input=$(echo "$*" | tr -d ' ')
+  
+  # Normalize comma decimal to dot
+  normalized=$(echo "$input" | sed 's/,/./g')
+  
+  # Calculate (input * 123 / 100)
+  result=$(echo "scale=4; $normalized * 123 / 100" | bc -l)
+  
+  # Format to 2 decimals
+  printf "%.2f\n" "$result"
+}

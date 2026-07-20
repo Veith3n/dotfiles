@@ -23,6 +23,7 @@ alias ccat='pygmentize -O style=emacs -g'
 alias testinternet='ping 8.8.8.8'
 
 alias grossToNet='_gross_to_net'
+alias netToGross='_net_to_gross'
 
 alias e64s='_enode64_with_sprunge'
 alias randomstring='_random_string'
