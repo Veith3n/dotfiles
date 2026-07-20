@@ -1,6 +1,9 @@
 # choco install
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+## Todo add git delta install
+#choco install delta # nicer diffs for git
+
 # disable install confirmation
 choco feature enable -n allowGlobalConfirmation
 
