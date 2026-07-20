@@ -1,26 +1,109 @@
 #!/bin/bash
 
-is_private_machine() {
-  return 1 # false - change to 'return 0' when you want to install private packages
-}
+# =============================================================================
+# Configuration & Utils
+# =============================================================================
 
 set -euo pipefail
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-log() {
-  echo "$(date '+%Y-%m-%d %I:%M:%S %p') [INFO] $*"
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+# Options
+SILENT=${SILENT:-false}
+INSTALL_PRIVATE_PACKAGES=${INSTALL_PRIVATE_PACKAGES:-false}
+
+show_usage() {
+  cat <<EOF
+Usage: $0 [OPTIONS]
+
+Install and configure dotfiles with development environment.
+Supports macOS
+
+OPTIONS:
+  -h, --help         Show this help
+  -p, --private      Install private packages
+  -s, --silent      Show less detailed output
+
+EXAMPLES:
+  $0                 # Standard installation
+  $0 -p              # Include private packages
+  $0 -p -s           # Private packages with less detailed output
+EOF
 }
 
-error() {
-  echo "$(date '+%Y-%m-%d %I:%M:%S %p') [ERROR] $*" >&2
+main() {
+  # Parse arguments (same as before)
+  while [[ $# -gt 0 ]]; do
+    case $1 in
+    -h | --help)
+      show_usage
+      exit 0
+      ;;
+    -p | --private) INSTALL_PRIVATE_PACKAGES=true ;;
+    -s | --silent) SILENT=true ;;
+    *) error "Unknown option: $1. $(show_usage)" ;;
+    esac
+    shift
+  done
 
+  # Validation
+  if ! is_mac_os; then
+    error "Unsupported OS. This script supports macOS."
+  fi
+
+  [[ -d "$BASE_DIR" ]] || error "Base directory not found: $BASE_DIR"
+
+  # Installation flow
+  install_package_manager_and_core_system_dependencies
+
+  setup_oh_my_zsh
+  # TODO: find nice terminal for other systems
+  install_core_packages
+  install_development_tools
+
+  log "Starting dotfiles installation on $(uname -s)..."
+  [[ "$INSTALL_PRIVATE_PACKAGES" == "true" ]] && log "Installing private packages"
+
+  # macOS-specific apps only run on macOS
+  is_mac_os && install_macos_specific
+
+  install_private_packages
+  setup_zshrc
+  finalize_setup
+
+  success "Installation completed! Please restart your terminal."
+  log "Or run 'source ~/.zshrc' to apply shell changes"
+}
+
+
+# =============================================================================
+# Logging Functions
+# =============================================================================
+
+log() { echo "$(date '+%H:%M:%S') [INFO] $*"; }
+warn() { echo -e "${YELLOW}[WARN]${NC} $*" >&2; }
+error() {
+  echo -e "${RED}[ERROR]${NC} $*" >&2
   exit 1
 }
+success() { echo -e "${GREEN}✓${NC} $*"; }
+verbose() { [[ "$SILENT" != "true" ]] && log "$*"; }
 
-is_mac_os() {
-  [[ "$(uname)" == "Darwin" ]]
-}
+# =============================================================================
+# System Detection
+# =============================================================================
+
+is_mac_os() { [[ "$(uname)" == "Darwin" ]]; }
+
+# =============================================================================
+# Package Management
+# =============================================================================
 
 # Function to install brew packages from an array
 # Usage: install_packages array_name[@] [install_type]
@@ -52,6 +135,10 @@ install_packages() {
   done
 }
 
+# =============================================================================
+# Core System Packages Installation
+# =============================================================================
+
 # TODO: handle other systems
 install_package_manager_and_core_system_dependencies() {
   log "Installing package manager and core system dependencies..."
@@ -75,34 +162,6 @@ install_package_manager_and_core_system_dependencies() {
   fi
 }
 
-install_package_manager_and_core_system_dependencies
-
-if is_mac_os; then
-  setup_gpg() {
-    log "Setting up GPG..."
-
-    brew install gpg # managing keys
-    # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
-    brew upgrade gnupg
-    brew link --overwrite gnupg
-    brew install pinentry-mac
-    echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
-    killall gpg-agent
-  }
-
-  # TODO: confirm whether it's still needed
-  setup_bash() {
-    log "Installing newer version of bash..."
-    local bash_packages=("bash") # install new version of bash
-    install_packages bash_packages[@]
-    log "NOTE: enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
-  }
-
-  setup_gpg
-  setup_bash
-fi
-
-# Install newer version of bash and set it as default shell
 setup_oh_my_zsh() {
   if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
     log "Installing Oh My Zsh..."
@@ -118,97 +177,144 @@ setup_oh_my_zsh() {
   fi
 }
 
-setup_oh_my_zsh
+# =============================================================================
+# Macos Specific Installations
+# =============================================================================
+install_macos_specific_core_dev() {
+  log "Installing macOS specific packages..."
 
-font_packages=(
-  "font-hack-nerd-font"
-)
+  setup_gpg
+  setup_bash
 
-install_packages font_packages[@] "cask"
+}
 
-# TODO: find nice terminal for other systems
+install_macos_specific() {
+  log "Installing macOS specific packages..."
+  ./macos/scripts/install_dependencies
+}
 
-core_packages=(
-  "fzf"    # fuzzy search, homebrew dep
-  "direnv" # looks for .envrc file in each directory, homebrew dep
-  "zsh"    # neat CLI
-  "aspell" # spell checker
-  "gh"     # github cli
-  "jq"
-  "ngrok"
-  "dotenv-linter"
-  "htop"
-  "pygments" # python package to colorize files
-  "z"        # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
-)
+setup_gpg() {
+  log "Setting up GPG..."
 
-# TODO: check if google-cloud-sdk is not deprecated
-cask_packages=(
-  "docker"
-  "slack"
-  "visual-studio-code"
-  "dash"
-  "insomnia"
-  "jetbrains-toolbox"
-  "pgadmin4"
-  "google-cloud-sdk"
-  "gitkraken"
-  "firefox"
-  "brave-browser"
-)
+  brew install gpg # managing keys
+  # Hack for gpg https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
+  brew upgrade gnupg
+  brew link --overwrite gnupg
+  brew install pinentry-mac
+  echo "pinentry-program /usr/local/bin/pinentry-mac" >>~/.gnupg/gpg-agent.conf
+  killall gpg-agent
+}
 
-private_packages=(
-  "discord"
-  "send-to-kindle"
-  "whatsapp"
-  "signal"
-  "proton-pass"
-)
+# TODO: confirm whether it's still needed
+# Install newer version of bash and set it as default shell
+setup_bash() {
+  log "Installing newer version of bash..."
+  local bash_packages=("bash") # install new version of bash
+  install_packages bash_packages[@]
+  log "NOTE: enter recovery mode and run csrutil disable, restart run set_new_bash_as_default, enter recovery mode again and run csrutil enable"
+}
 
-install_packages core_packages[@]
-install_packages cask_packages[@] "cask"
+# =============================================================================
+# Installation Functions For Packages
+# =============================================================================
 
-if is_private_machine; then
-  log "Installing private packages for personal machine..."
-  install_packages private_packages[@] "cask"
-else
-  log "Skipping private packages (not a private machine)"
-fi
+install_core_packages() {
+  local core_packages=(
+    "fzf"    # fuzzy search, homebrew dep
+    "direnv" # looks for .envrc file in each directory, homebrew dep
+    "zsh"    # neat CLI
+    "aspell" # spell checker
+    "gh"     # github cli
+    "jq"
+    "ngrok"
+    "dotenv-linter"
+    "htop"
+    "pygments" # python package to colorize files
+    "z"        # simple script for easier navigation in directories https://github.com/rupa/z (alias for cd)
+  )
 
-# TODO: find copy history program from other systems
+  # TODO: check if google-cloud-sdk is not deprecated
+  local cask_packages=(
+    "docker"
+    "slack"
+    "visual-studio-code"
+    "dash"
+    "insomnia"
+    "jetbrains-toolbox"
+    "pgadmin4"
+    "google-cloud-sdk"
+    "gitkraken"
+    "firefox"
+    "brave-browser"
+  )
 
-providers_cli_packages=(
-  "awscli"             # AWS CLI
-  "heroku/brew/heroku" # Heroku CLI
-)
+  install_packages core_packages[@]
+  install_packages cask_packages[@] "cask"
+}
 
-if is_private_machine; then
-  log "Installing providers_cli_packages for personal machine..."
-  install_packages providers_cli_packages[@]
-else
-  log "Skipping providers_cli_packages (not a private machine)"
-fi
+install_development_tools() {
+  log "Setting up development environment..."
 
-package_manager_packages=(
-  "asdf"                                # version manager
-  "nodenv"                              # node version manager
-  "nodenv/nodenv/nodenv-package-rehash" # rehash after installation of global package or new node version
-  "pipenv"                              # dependency manager for python
-)
+  local font_packages=(
+    "font-hack-nerd-font"
+  )
 
-custom_neovim_packages=(
-  "stow"    # linking directories
-  "ripgrep" # file grepping for telescope in neovim
-  "fd"      # file grepping for telescope in neovim
-)
+  local package_manager_packages=(
+    "asdf"                                # version manager
+    "nodenv"                              # node version manager
+    "nodenv/nodenv/nodenv-package-rehash" # rehash after installation of global package or new node version
+    "pipenv"                              # dependency manager for python
+  )
 
-install_packages custom_neovim_packages[@]
+  local custom_neovim_packages=(
+    "stow"    # linking directories
+    "ripgrep" # file grepping for telescope in neovim
+    "fd"      # file grepping for telescope in neovim
+  )
 
-custom_git_packages=(
-  "diffr"     # tool for nicer diffs in git
-  "git-delta" # tool for nicer diffs in git
-)
-install_packages custom_git_packages[@]
+  local custom_git_packages=(
+    "diffr"     # tool for nicer diffs in git
+    "git-delta" # tool for nicer diffs in git
+  )
+
+  install_packages font_packages[@] "cask"
+  install_packages package_manager_packages[@]
+  install_packages custom_neovim_packages[@]
+  install_packages custom_git_packages[@]
+
+  log "Setting up ASDF plugins and versions..."
+
+  setup_asdf_and_languages
+
+  is_mac_os && install_macos_specific_core_dev
+
+  success "Development environment ready"
+}
+
+install_private_packages() {
+  if [[ "$INSTALL_PRIVATE_PACKAGES" != "true" ]]; then
+    log "Skipping private packages (use --private to include)"
+    return
+  fi
+
+  log "Installing private packages..."
+
+  local private_cask_packages=(
+    "discord"
+    "send-to-kindle"
+    "whatsapp"
+    "signal"
+    "proton-pass"
+  )
+
+  local private_cli_packages=(
+    "awscli"
+    "heroku/brew/heroku"
+  )
+
+  install_packages private_cask_packages[@] "cask"
+  install_packages private_cli_packages[@]
+}
 
 setup_asdf_and_languages() {
   log "Setting up ASDF plugins and versions..."
@@ -229,52 +335,47 @@ setup_asdf_and_languages() {
   asdf set --home neovim 0.8.3
 }
 
-setup_asdf_and_languages
+setup_zshrc() {
 
-# Mac os related dependencies
-if is_mac_os; then
-  ./macos/scripts/install_dependencies
-fi
+  # Link config files to the root directory
+  [ -r .make_links ] && ./make_links
 
-# Link config files to the root directory
-[ -r .make_links ] && ./make_links
+  # Generate file with git aliases for zshrc
+  ./bin/generate_git_aliases_for_zshrc
 
-# Generate file with git aliases for zshrc
-./bin/generate_git_aliases_for_zshrc
+  # Setup necessary entries to the config files
+  if [ -r ~/.zshrc ]; then
+    # initialize direnv in zshrc
+    echo $'# direnv initialize\neval "$(direnv hook zsh)"' >>~/.zshrc
 
-# Setup necessary entries to the config files
-if [ -r ~/.zshrc ]; then
-  # initialize direnv in zshrc
-  echo $'# direnv initialize\neval "$(direnv hook zsh)"' >>~/.zshrc
+    # initialize nodenv in zshrc
+    echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
 
-  # initialize nodenv in zshrc
-  echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
+    # initialize z in zshrc
+    echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
 
-  # initialize z in zshrc
-  echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
-
-  # add git aliases
-  sed -i '' -e '/^# Example aliases/a\
+    # add git aliases
+    sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
-  # add utils aliases
-  sed -i '' -e '/^# Example aliases/a\
+    # add utils aliases
+    sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
 
-  # enable lookup for aliases
-  sed -i '' -e '/^plugins=/a\
+    # enable lookup for aliases
+    sed -i '' -e '/^plugins=/a\
 \
 ZSH_ALIAS_FINDER_AUTOMATIC=true' ~/.zshrc
 
-  # enable option-stacking completion for docker
-  sed -i '' -e '/^plugins=/a\
+    # enable option-stacking completion for docker
+    sed -i '' -e '/^plugins=/a\
 # completion for option-stacking (docker run -it <TAB>)\
 zstyle ':completion:*:*:docker:*' option-stacking yes\
 zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 ' ~/.zshrc
 
-  # set zsh plugins
-  sed -i '' -e 's/plugins=(git)/plugins=(\
+    # set zsh plugins
+    sed -i '' -e 's/plugins=(git)/plugins=(\
 	alias-finder\
 	colored-man-pages\
 	dash\
@@ -291,19 +392,19 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 	zsh-syntax-highlighting\
 )/' ~/.zshrc
 
-  # add github aliases
-  sed -i '' -e '/^# Example aliases/a\
+    # add github aliases
+    sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.gh_cli ] && . ~/.aliases/.gh_cli' ~/.zshrc
 
-  # autoload util functions
-  sed -i '' -e '1i \ 
+    # autoload util functions
+    sed -i '' -e '1i \ 
 # Autoload util functions \
 [ -r ~/.functions ] && fpath=($fpath ~/.functions) \
 [ -r ~/.functions ] && autoload -Uz ~/.functions/**/* \
 \' ~/.zshrc
 
-  # source variables and path files in zshrc
-  sed -i '' -e '1i \ 
+    # source variables and path files in zshrc
+    sed -i '' -e '1i \ 
 \
 # Link file with paths \
 [ -r ~/.env_paths ] && . ~/.env_paths \
@@ -311,47 +412,54 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 [ -r ~/.env_variables ] && . ~/.env_variables \
 \' ~/.zshrc
 
-  # source google-cloud-sdk
-  sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/a\
+    # source google-cloud-sdk
+    sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/a\
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" \
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ' ~/.zshrc
 
-  # Requires oh my zsh
-  printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
+    # Requires oh my zsh
+    printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
 
-  echo 'plugins added'
-else
-  echo '.zshrc config file does not exist'
-fi
+    echo 'plugins added'
+  else
+    error '.zshrc config file does not exist'
+  fi
 
-source ~/.zshrc # reload changes to the config file
+  source ~/.zshrc # reload changes to the config file
+}
 
-# setup hook scripts for installed node versions
-nodenv package-hooks install --all
+finalize_setup() {
 
-# Authenticate fror github cli
-gh auth login
+  # setup hook scripts for installed node versions
+  nodenv package-hooks install --all
 
-# heroku
-command -v heroku &>/dev/null && heroku autocomplete
+  # Authenticate fror github cli
+  gh auth login
 
-./install_npm_dependencies
+  # heroku
+  command -v heroku &>/dev/null && heroku autocomplete
 
-if is_mac_os; then
-  # Iterm
-  defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
-  defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
+  ./install_npm_dependencies
 
-  # System settings
-  ./macos/scripts/restore_dock_arrangement
-  ./macos/scripts/set_mac_os_settings
+  if is_mac_os; then
+    # Iterm
+    defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$BASE_DIR/iterm" # set config folder
+    defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
 
-  # enables easier movement in vim mode
-  defaults write -g ApplePressAndHoldEnabled -bool false
-fi
+    # System settings
+    ./macos/scripts/restore_dock_arrangement
+    ./macos/scripts/set_mac_os_settings
 
-echo 'Generating custom vim dictionary based on aspell one'
-~/.vim/lib/update_vim_dict.sh
+    # enables easier movement in vim mode
+    defaults write -g ApplePressAndHoldEnabled -bool false
+  fi
 
-echo 'Generating custom neovim dictionary based on aspell one'
-generate_neovim_dict.sh
+  echo 'Generating custom vim dictionary based on aspell one'
+  ~/.vim/lib/update_vim_dict.sh
+
+  echo 'Generating custom neovim dictionary based on aspell one'
+  generate_neovim_dict.sh
+}
+
+
+main "$@"
