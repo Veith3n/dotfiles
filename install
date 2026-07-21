@@ -339,8 +339,12 @@ setup_asdf_and_languages() {
   asdf install java oracle-21
   asdf set --home java oracle-21
 
-  asdf install neovim 0.8.3
-  asdf set --home neovim 0.8.3
+  # works with custom neovim setup
+  # asdf install neovim 0.8.3
+  # asdf set --home neovim 0.8.3
+
+  asdf install neovim 0.11.4
+  asdf set --home neovim 0.11.4
 }
 
 setup_zshrc() {
