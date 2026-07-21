@@ -190,7 +190,7 @@ install_macos_specific_core_dev() {
 
 install_macos_specific() {
   log "Installing macOS specific packages..."
-  ./macos/scripts/install_dependencies
+  "$BASE_DIR/macos/scripts/install_dependencies"
 }
 
 setup_gpg() {
@@ -326,7 +326,7 @@ setup_asdf_and_languages() {
 
   asdf install ruby 3.4.6
   asdf set --home ruby 3.4.6
-  ./install_ruby_gems
+  "$BASE_DIR/install_ruby_gems"
 
   asdf install java oracle-21
   asdf set --home java oracle-21
@@ -341,7 +341,7 @@ setup_zshrc() {
   [[ -x "$BASE_DIR/make_links" ]] && "$BASE_DIR/make_links"
 
   # Generate file with git aliases for zshrc
-  ./bin/generate_git_aliases_for_zshrc
+  "$BASE_DIR/bin/generate_git_aliases_for_zshrc"
 
   # Setup necessary entries to the config files
   if [ -r ~/.zshrc ]; then
@@ -439,7 +439,7 @@ finalize_setup() {
   # heroku
   command -v heroku &>/dev/null && heroku autocomplete
 
-  ./install_npm_dependencies
+  "$BASE_DIR/install_npm_dependencies"
 
   if is_mac_os; then
     # Iterm
@@ -447,8 +447,8 @@ finalize_setup() {
     defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true        # load config from the folder
 
     # System settings
-    ./macos/scripts/restore_dock_arrangement
-    ./macos/scripts/set_mac_os_settings
+    "$BASE_DIR/macos/scripts/restore_dock_arrangement"
+    "$BASE_DIR/macos/scripts/set_mac_os_settings"
 
     # enables easier movement in vim mode
     defaults write -g ApplePressAndHoldEnabled -bool false
@@ -458,7 +458,7 @@ finalize_setup() {
   ~/.vim/lib/update_vim_dict.sh
 
   echo 'Generating custom neovim dictionary based on aspell one'
-  generate_neovim_dict.sh
+  "$BASE_DIR/bin/generate_neovim_dict.sh"
 }
 
 
