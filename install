@@ -428,6 +428,21 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
     # Requires oh my zsh
   grep -qF 'FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' ~/.zprofile 2>/dev/null || printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
 
+    # set oh my zsh theme
+  if grep -q '^ZSH_THEME=' ~/.zshrc; then
+    sed -i '' -e 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+  else
+    sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/i\
+ZSH_THEME="powerlevel10k\/powerlevel10k"' ~/.zshrc
+  fi
+
+    # load powerlevel10k config
+  if ! grep -qF '# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.' ~/.zshrc; then
+    echo '' >>~/.zshrc
+    echo '# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.' >>~/.zshrc
+    echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >>~/.zshrc
+  fi
+
     echo 'plugins added'
   else
     error '.zshrc config file does not exist'
