@@ -41,7 +41,8 @@ end
 local colorscheme = determine_color_on_fixed_hours()
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
--- if not status_ok then
--- vim.notify("colorscheme " .. colorscheme .. " not found!")
--- return
--- end
+-- local status_ok, _ = pcall(vim.cmd, "colorscheme solarized")
+if not status_ok then
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
+end
