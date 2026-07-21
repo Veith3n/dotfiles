@@ -346,36 +346,36 @@ setup_zshrc() {
   # Setup necessary entries to the config files
   if [ -r ~/.zshrc ]; then
     # initialize direnv in zshrc
-    echo $'# direnv initialize\neval "$(direnv hook zsh)"' >>~/.zshrc
+  grep -qF 'eval "$(direnv hook zsh)"' ~/.zshrc || echo $'# direnv initialize\neval "$(direnv hook zsh)"' >>~/.zshrc
 
     # initialize nodenv in zshrc
-    echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
+  grep -qF 'eval "$(nodenv init - --no-rehash)"' ~/.zshrc || echo $'# nodenv initialize\neval "$(nodenv init - --no-rehash)"' >>~/.zshrc
 
     # initialize z in zshrc
-    echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
+  grep -qF '. $(brew --prefix)/etc/profile.d/z.sh' ~/.zshrc || echo '. $(brew --prefix)/etc/profile.d/z.sh' >>~/.zshrc
 
     # add git aliases
-    sed -i '' -e '/^# Example aliases/a\
+  grep -qF '[ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc || sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.zsh_git_aliases ] && . ~/.zsh_git_aliases' ~/.zshrc
 
     # add utils aliases
-    sed -i '' -e '/^# Example aliases/a\
+  grep -qF '[ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc || sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.utils ] && . ~/.aliases/.utils' ~/.zshrc
 
     # enable lookup for aliases
-    sed -i '' -e '/^plugins=/a\
+  grep -qF 'ZSH_ALIAS_FINDER_AUTOMATIC=true' ~/.zshrc || sed -i '' -e '/^plugins=/a\
 \
 ZSH_ALIAS_FINDER_AUTOMATIC=true' ~/.zshrc
 
     # enable option-stacking completion for docker
-    sed -i '' -e '/^plugins=/a\
+  grep -qF "zstyle ':completion:*:*:docker:*' option-stacking yes" ~/.zshrc || sed -i '' -e '/^plugins=/a\
 # completion for option-stacking (docker run -it <TAB>)\
 zstyle ':completion:*:*:docker:*' option-stacking yes\
 zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 ' ~/.zshrc
 
     # set zsh plugins
-    sed -i '' -e 's/plugins=(git)/plugins=(\
+  grep -qF 'alias-finder' ~/.zshrc || sed -i '' -e 's/plugins=(git)/plugins=(\
 	alias-finder\
 	colored-man-pages\
 	dash\
@@ -393,18 +393,18 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 )/' ~/.zshrc
 
     # add github aliases
-    sed -i '' -e '/^# Example aliases/a\
+  grep -qF '[ -r ~/.aliases/.gh_cli ] && . ~/.aliases/.gh_cli' ~/.zshrc || sed -i '' -e '/^# Example aliases/a\
 [ -r ~/.aliases/.gh_cli ] && . ~/.aliases/.gh_cli' ~/.zshrc
 
     # autoload util functions
-    sed -i '' -e '1i \ 
+  grep -qF '# Autoload util functions' ~/.zshrc || sed -i '' -e '1i \ 
 # Autoload util functions \
 [ -r ~/.functions ] && fpath=($fpath ~/.functions) \
 [ -r ~/.functions ] && autoload -Uz ~/.functions/**/* \
 \' ~/.zshrc
 
     # source variables and path files in zshrc
-    sed -i '' -e '1i \ 
+  grep -qF '# Link file with paths' ~/.zshrc || sed -i '' -e '1i \ 
 \
 # Link file with paths \
 [ -r ~/.env_paths ] && . ~/.env_paths \
@@ -413,12 +413,12 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes\
 \' ~/.zshrc
 
     # source google-cloud-sdk
-    sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/a\
+  grep -qF 'google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ~/.zshrc || sed -i '' -e '/^source $ZSH\/oh-my-zsh.sh/a\
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" \
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ' ~/.zshrc
 
     # Requires oh my zsh
-    printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
+  grep -qF 'FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' ~/.zprofile 2>/dev/null || printf '\n# Enables autocompletion for homebrew\nFPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH' >>~/.zprofile
 
     echo 'plugins added'
   else
