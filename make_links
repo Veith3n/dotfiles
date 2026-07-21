@@ -29,7 +29,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [[ -s "${BASE_DIR}/.vim/lib" ]] && ln -fsv "${BASE_DIR}/.vim/lib" ~/.vim/lib
 
 # nvim config
-[[ -s "${BASE_DIR}/.config/nvim" ]] && stow .config/nvim
+[[ -d "${BASE_DIR}/.config/nvim" ]] && ln -sv "${BASE_DIR}/.config/nvim" "$HOME/.config/nvim"
 
 # utlis
 [[ -s "${BASE_DIR}/.rubocop.yml" ]] && ln -fsv "${BASE_DIR}/.rubocop.yml" ~
