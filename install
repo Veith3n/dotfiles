@@ -171,11 +171,14 @@ setup_oh_my_zsh() {
   # Install syntax highlighting plugin
   # Needs to be added to the plugins array in .zshrc
   local plugins_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
-  local themes_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
 
   if [[ ! -d "$plugins_dir/zsh-syntax-highlighting" ]]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$plugins_dir/zsh-syntax-highlighting"
   fi
+
+  # Install custom theme plugin
+  # Can be set as ZSH_THEME="powerlevel10k/powerlevel10k" in .zshrc
+  local themes_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
 
   if [[ ! -d "$themes_dir/powerlevel10k" ]]; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$themes_dir/powerlevel10k"
