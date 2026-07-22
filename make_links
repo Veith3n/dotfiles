@@ -15,6 +15,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -s "${BASE_DIR}/.zsh/.functions" ]] && ln -fsv "${BASE_DIR}/.zsh/.functions" ~
 [[ -s "${BASE_DIR}/.zsh/.aliases" ]] && ln -fsv "${BASE_DIR}/.zsh/.aliases" ~
+[[ -s "${BASE_DIR}/.zsh/.zshrc" ]] && ln -fsv "${BASE_DIR}/.zsh/.zshrc" ~
 
 [[ -s "${BASE_DIR}/bin" ]] && ln -sv "${BASE_DIR}/bin" ~
 

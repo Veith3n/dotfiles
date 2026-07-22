@@ -17,6 +17,8 @@ NC='\033[0m'
 # Options
 SILENT=${SILENT:-false}
 INSTALL_PRIVATE_PACKAGES=${INSTALL_PRIVATE_PACKAGES:-false}
+# Should be only run when installing from raw zshrc config (repo clone)
+SED_CUSTOM_CONFIG_TO_INITIAL_ZSHRC=${SED_CUSTOM_CONFIG_TO_INITIAL_ZSHRC:-false}
 
 show_usage() {
   cat <<EOF
@@ -355,6 +357,19 @@ setup_zshrc() {
   # Generate file with git aliases for zshrc
   "$BASE_DIR/bin/generate_git_aliases_for_zshrc"
 
+  # In make links there should be custom zshrc file linked to the home directory
+  [[ "$SED_CUSTOM_CONFIG_TO_INITIAL_ZSHRC" == "true" ]] && customize_initial_zshrc
+
+  source "$HOME/.zshrc" # reload changes to the config file
+}
+
+customize_initial_zshrc() {
+  # Backup the original .zshrc if it exists
+  if [ -f "$HOME/.zshrc" ]; then
+    cp "$HOME/.zshrc" "$HOME/.zshrc.backup"
+    log "Backed up existing .zshrc to .zshrc.backup"
+  fi
+
   # Setup necessary entries to the config files
   if [ -r ~/.zshrc ]; then
     # initialize direnv in zshrc
@@ -451,8 +466,6 @@ ZSH_THEME="powerlevel10k\/powerlevel10k"' ~/.zshrc
   else
     error '.zshrc config file does not exist'
   fi
-
-  source ~/.zshrc # reload changes to the config file
 }
 
 finalize_setup() {
