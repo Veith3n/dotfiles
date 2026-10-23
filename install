@@ -236,6 +236,7 @@ install_core_packages() {
     "aspell" # spell checker
     "gh"     # github cli
     "jq"
+    "rq # ripgrep for nice search
     "ngrok"
     "dotenv-linter"
     "htop"
